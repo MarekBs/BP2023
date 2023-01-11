@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "find-extrema": "^1.0.0",
+    "function-plot": "^1.23.1",
+    "mathjs": "^11.3.3",
+    "matrix-inverse": "^2.0.0",
+    "plotly.js-dist-min": "^2.16.1",
+    "robust-determinant": "^1.1.0"
+  }
+}
