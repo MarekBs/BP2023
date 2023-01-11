@@ -1,5 +1,3 @@
-var robustDeterminant = require("robust-determinant")
-
 let matrix = [
     [-3 ,2, 2, 1],
     [1, -3, 2, 4],
@@ -19,8 +17,6 @@ for(let i =0; i<4;i++){
     }
 }
 }
-
-
 
 
 function calcDet(matrix){
@@ -52,11 +48,10 @@ function calcDet(matrix){
         console.log(aPoz+"*",matr,"+");
     
 
-        det[i]=robustDeterminant(matr);
+        det[i]=math.det(matr);
         nasobok[i]=aPoz;
 
         
-
         
     }
 
