@@ -33,10 +33,15 @@ var parameters = {
     var point = document.querySelector("#bodDotyku").value;
 
     
-
+    if(f.includes("ln")){
+        f =f.replace("ln", "log");
+        
+    }
      
 
     let result1 = calcNormal(f,point);
+
+    
     
     
     parameters.data[0].fn = f;
@@ -45,8 +50,8 @@ var parameters = {
     parameters.data[0].color = color;
     parameters.data[0].derivative.x0 = parseFloat(point);
     parameters.data[0].derivative.fn = calcDerivate(f);
-
     /* parameters.data[1].fn = result1 */
+  
 
     
     
