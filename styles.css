@@ -1,9 +1,45 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Rowdies&display=swap');
+
+
+
 .pad {
     margin: 12px;
     font-size: x-large;
+    font-family: 'Dosis', sans-serif;
+    padding: 5px;
+    border-radius: 6px;
+    
 }
 
-#logo{
-    border-radius: 8px;
-    padding-bottom: 4px;
+.pad:hover {
+    background-color: rgb(158, 208, 224);
 }
+
+.navbar {
+    background-color: lightblue;
+}
+
+.nav-item {
+    font-family: 'Dosis', sans-serif;
+}
+#logo{
+    border-radius: 50%;
+    padding-bottom: 4px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+    background-image: url("images/bcg.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    body {
+        background-size: auto;
+    }
+  }
