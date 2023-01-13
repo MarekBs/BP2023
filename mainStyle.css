@@ -17,10 +17,9 @@ body {
 #carousel-container {
     width: 40rem;
     height: 25rem;
-    margin: auto;
-    margin-top: 13rem;
+    margin: 10rem auto 13rem auto;
     border-radius: 8px;
     
     background-color: white;
-    border: 2px solid black;
+    box-shadow:5px 5px 5px grey;
 }

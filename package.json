@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
     "find-extrema": "^1.0.0",
     "function-plot": "^1.23.1",
     "mathjs": "^11.3.3",
