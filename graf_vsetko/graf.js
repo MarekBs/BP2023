@@ -51,8 +51,11 @@ var parameters = {
     parameters.data[0].color = color;
     parameters.data[0].derivative.x0 = parseFloat(point);
     parameters.data[0].derivative.fn = calcDerivate(f);
-
     parameters.width = width;
+    if(window.innerWidth<903){
+      parameters.width = window.innerWidth*0.95;
+    }
+    
     /* parameters.data[1].fn = result1 */
   
 
@@ -71,7 +74,7 @@ var parameters = {
 
 function changeSize(){
     if(window.innerWidth<903){
-      plot(window.innerWidth*0.8);
+      plot(window.innerWidth*0.95);
     }else {
       plot(550)
     }
