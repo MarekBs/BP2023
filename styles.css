@@ -7,21 +7,44 @@
     margin: 12px;
     font-size: x-large;
     font-family: 'Dosis', sans-serif;
-    padding: 5px;
     border-radius: 6px;
+    padding: 1rem;
+    background-color: rgba(255, 255,255,0.7);
     
 }
 
 .pad:hover {
-    background-color: rgb(158, 208, 224);
+    text-decoration: underline;
 }
 
-.navbar {
-    background-color: lightblue;
-}
 
+
+.navbar-nav {
+    margin-right: 5rem;
+}
 .nav-item {
     font-family: 'Dosis', sans-serif;
+    font-size: 1.1rem;
+    
+}
+#bordered {
+    border: 2px solid rgb(146, 211, 233);
+}
+
+#bordered:hover {
+    background-color: rgb(146, 211, 233);
+    color: white;
+}
+
+.nav-link {
+    margin: 1.5rem;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.nav-link:hover {
+    background-color: rgb(146, 211, 233);
+    color:black
 }
 #logo{
     border-radius: 50%;
