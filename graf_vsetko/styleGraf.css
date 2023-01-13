@@ -31,9 +31,12 @@ section {
 }
 
 #plot {
-  width: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
 }
+
 
 .rovnica {
   text-align: center;
@@ -65,6 +68,10 @@ body {
   #plot {
     margin: auto;
     width: 95%;
+  }
+  .pad {
+    font-size: large;
+  
   }
  
   

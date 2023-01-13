@@ -9,7 +9,7 @@ var parameters = {
         fn: "cos(x)",
         graphType: 'polyline',
         x0: 5,
-    
+        
       }
    }/* ,{
     fn:"sin(1)-(1/cos(1))(x-1)"
@@ -23,7 +23,7 @@ var parameters = {
     xAxis: {domain: [0, 2*Math.PI]}
   };
   
-  function plot() {
+  function plot(width) {
     var f = document.querySelector("#function").value;
     var xMin = document.querySelector("#xMin").value;
     var xMax = document.querySelector("#xMax").value;
@@ -31,6 +31,7 @@ var parameters = {
     var yMax = document.querySelector("#yMax").value;
     var color = document.querySelector("#color").value;
     var point = document.querySelector("#bodDotyku").value;
+
 
     
     if(f.includes("ln")){
@@ -50,6 +51,8 @@ var parameters = {
     parameters.data[0].color = color;
     parameters.data[0].derivative.x0 = parseFloat(point);
     parameters.data[0].derivative.fn = calcDerivate(f);
+
+    parameters.width = width;
     /* parameters.data[1].fn = result1 */
   
 
@@ -61,4 +64,18 @@ var parameters = {
    
 
     functionPlot(parameters);
+  }
+
+
+  
+
+function changeSize(){
+    if(window.innerWidth<903){
+      plot(window.innerWidth*0.8);
+    }else {
+      plot(550)
+    }
+    
+    
+    
   }
