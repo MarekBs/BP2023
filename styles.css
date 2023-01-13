@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Rowdies&display=swap');
 
 
@@ -30,16 +29,3 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-body {
-    background-image: url("images/bcg.png");
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-}
-
-
-
-@media screen and (max-width: 1100px) {
-    body {
-        background-size: auto;
-    }
-  }
