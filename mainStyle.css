@@ -1,6 +1,6 @@
 body {
     
-     background-image: url("images/bgb.png");  
+     background-image: url("images/bg4.png");  
     background-size: 100vw 50vh;
     background-repeat: no-repeat;
 }
@@ -15,11 +15,52 @@ body {
 
 
 #carousel-container {
-    width: 40rem;
-    height: 25rem;
-    margin: 10rem auto 13rem auto;
+    width: 35rem;
+    margin: 11rem auto 6rem auto;
     border-radius: 8px;
-    
     background-color: white;
     box-shadow:5px 5px 5px grey;
+}
+
+#info {
+    margin-left:25rem;
+    width: 17rem;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Dosis', sans-serif;
+    border: 1px solid white;
+    background-color: white;
+}
+
+h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 903px) {
+    #info {
+        margin: auto;
+        margin-top: 5rem;
+    }
+    #carousel-container {
+        width: 80%;
+        
+    }
+    .pad {
+        font-size: x-large;
+        padding: 4px;
+      
+      }
+    .navbar-nav {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 403px) {
+    #info{
+        width: 70%;
+    }
+    .pad {
+        font-size: large;
+        padding: 4px;
+      
+      }
 }

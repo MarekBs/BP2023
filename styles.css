@@ -5,11 +5,11 @@
 
 .pad {
     margin: 12px;
-    font-size: x-large;
+    font-size: xx-large;
     font-family: 'Dosis', sans-serif;
     border-radius: 6px;
     padding: 1rem;
-    background-color: rgba(255, 255,255,0.7);
+    /* background-color: rgba(255, 255,255,0.7); */
     
 }
 
@@ -28,11 +28,11 @@
     
 }
 #bordered {
-    border: 2px solid rgb(146, 211, 233);
+    border: 2px solid rgb(78, 161, 189);
 }
 
 #bordered:hover {
-    background-color: rgb(146, 211, 233);
+    background-color: rgb(78, 161, 189);
     color: white;
 }
 
