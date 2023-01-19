@@ -1,9 +1,9 @@
 h2 {
   text-align: center;
+  margin-top: 2rem;
 }
 .layer {
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,8 @@ section {
 
 #normala {
   font-size: x-large;
-  color: red;
+  color: brown;
+  margin-top: 2rem;
 }
 
 body {
@@ -49,6 +50,30 @@ body {
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
+
+nav {
+  background: linear-gradient(to bottom, #96d3e7, #d9d9d9);
+}
+
+
+input {
+  border: none;
+  border-bottom: 2px solid lightblue;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+#plotSettings #color {
+  width: 30%;
+  border: none;
+}
+#farba {
+  display: block;
+}
+
 
 
 @media screen and (max-width: 903px) {
