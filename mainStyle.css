@@ -1,7 +1,6 @@
 body {
     
-     background-image: url("images/bg4.png");  
-    background-size: 100vw 50vh;
+    background-image: url("images/MAT1 (1).png"); 
     background-repeat: no-repeat;
 }
 
@@ -23,7 +22,8 @@ body {
 }
 
 #info {
-    margin-left:25rem;
+    margin-left:5rem;
+    margin-top: 1rem;
     width: 17rem;
     border-radius: 8px;
     padding: 1rem;

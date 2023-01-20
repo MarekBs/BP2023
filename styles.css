@@ -40,11 +40,17 @@
     margin: 1rem;
     border-radius: 8px;
     padding: 4px;
+    color: black;
 }
 
 .nav-link:hover {
-    background-color: rgb(146, 211, 233);
-    color:black
+    background-color: rgb(146, 211, 233);  
+}
+
+#la {
+    background-color: rgb(78, 161, 189);
+    color: white;
+
 }
 #logo{
     border-radius: 50%;
