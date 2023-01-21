@@ -41,9 +41,6 @@ var parameters = {
      
 
     let result1 = calcNormal(f,point);
-
-    
-    
     
     parameters.data[0].fn = f;
     parameters.xAxis.domain = [xMin, xMax];
@@ -67,6 +64,24 @@ var parameters = {
    
 
     functionPlot(parameters);
+    var xMin = 0;
+    var xMax = 2*Math.PI;
+
+var min = Infinity;
+var max = -Infinity;
+for (var x = xMin; x <= xMax; x += 0.01) {
+    var y = math.evaluate(f, { x: x });
+    if (y > max) {
+        max = y;
+    }
+    if (y < min) {
+        min = y;
+    }
+}
+console.log("min:", min, "max:", max);
+
+
+    
   }
 
 

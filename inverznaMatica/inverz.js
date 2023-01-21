@@ -1,12 +1,7 @@
-const matrixInverse = require('matrix-inverse')
- 
-const M = [
-  [3, 2],
-  [1, 5],
-]
- 
-const M_inv = matrixInverse(M)
+const math = require('mathjs');
 
-console.log(M_inv);
+let matrix = [[1, 2], [3, 4]];
+let inverse = math.inv(matrix);
+console.log(inverse);  // [[-2, 1], [1.5, -0.5]]
 
-console.log(Math.max(sin(x)));
+//mathjs
