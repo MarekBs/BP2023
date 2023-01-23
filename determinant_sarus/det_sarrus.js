@@ -62,8 +62,8 @@ function calcDet(matrix){
         vysledok += nasobok[i]*det[i];
     }
 
-    console.log("="+vysledok)
-    
+    console.log("="+vysledok);
+
   
 }
 

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(201, 223, 201);
+    background-color: rgb(250, 248, 248);
     background-image: url("images/MAT1 (1).png"); 
     background-repeat: no-repeat;
     background-size: 100vw auto;
@@ -30,7 +30,7 @@ body {
     border-radius: 8px;
     padding: 1rem;
     font-family: 'Dosis', sans-serif;
-    border: 1px solid white;
+    border: 1px solid grey;
     background-color: white;
 }
 
@@ -52,6 +52,7 @@ h2{
     background-color: white;
     height:100%;
     border-radius: 12px;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 903px) {
