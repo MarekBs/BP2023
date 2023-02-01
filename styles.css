@@ -4,17 +4,17 @@
 
 
 .pad {
-    margin: 12px;
+    color: white;
     font-size: xx-large;
     font-family: 'Dosis', sans-serif;
     border-radius: 6px;
-    padding: 1rem;
+    padding: 0.5rem;
     /* background-color: rgba(255, 255,255,0.7); */
     
 }
 
 .pad:hover {
-    text-decoration: underline;
+    color: lightblue;
 }
 
 
@@ -28,35 +28,52 @@
     
 }
 #bordered {
-    border: 2px solid rgb(78, 161, 189);
+    border: 1px solid white ;
 }
 
 #bordered:hover {
-    background-color: rgb(78, 161, 189);
-    color: white;
+    background-color: white;
+    color:#1c2c34 ;
+    
 }
 
 .nav-link {
     margin: 1rem;
     border-radius: 8px;
     padding: 4px;
-    color: black;
+    color: white;
+    border: 1px solid transparent; 
 }
 
 .nav-link:hover {
-    background-color: rgb(146, 211, 233);  
-}
-
-#la {
-    background-color: rgb(78, 161, 189);
+    border: 1px solid white; 
     color: white;
-
 }
+
+
+.navbar-nav .nav-link.active {
+    color: white;
+    border-radius: 0px;
+    border-bottom: 1px solid white;
+}
+.navbar-nav .nav-link.active:hover {
+    border-color: transparent;
+}
+#la {
+    border: 1px solid transparent;
+    color: white;
+}
+#la:hover {
+    border: 1px solid white;
+}
+
 #logo{
     border-radius: 50%;
     padding-bottom: 4px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+
 
 mjx-container.MathJax {
     pointer-events: none;

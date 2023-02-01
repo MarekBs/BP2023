@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(250, 248, 248);
-    background-image: url("images/MAT1 (1).png"); 
+    background-color: #f3f4f6;
+    /* background-image: url("images/matt1.png");  */
     background-repeat: no-repeat;
     background-size: 100vw auto;
 
@@ -32,6 +32,7 @@ body {
     font-family: 'Dosis', sans-serif;
     border: 1px solid grey;
     background-color: white;
+    visibility: hidden;
 }
 
 h2{
@@ -40,9 +41,10 @@ h2{
 
 #box-container {
     display: flex;
-    height: 20rem;
+    height: 10rem;
     margin-top: 9rem;
     margin-bottom: 4.5rem;
+    visibility: hidden;
 }
 
 .box{
