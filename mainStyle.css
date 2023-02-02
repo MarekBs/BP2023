@@ -12,11 +12,7 @@ body {
 
 
 
-@media screen and (max-width: 1250px) {
-    body {
-        background-size: auto;
-    }
-  }
+
 
 
 #carousel-container {
@@ -73,6 +69,21 @@ h2{
     background-color: rgba(255, 69, 0, 0.1);
 }
 
+
+
+
+@media screen and (max-width: 1250px) {
+    body {
+        background-size: auto;
+    }
+    #header-container {
+        width: 60%;
+    }
+  }
+
+#example {
+    margin-top: 10rem;
+}
 @media screen and (max-width: 903px) {
     #info {
         margin: auto;
@@ -99,9 +110,9 @@ h2{
         font-size: large;
         padding: 4px;
       
-      }
-}
+    }
+    #header-container {
+        width: 85%;
+    }
 
-#example {
-    margin-top: 10rem;
 }
