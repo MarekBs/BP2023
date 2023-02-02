@@ -27,28 +27,19 @@
     font-size: 1.1rem;
     
 }
-#bordered {
-    border: 1px solid white ;
-}
-
-#bordered:hover {
-    background-color: white;
-    color:#1c2c34 ;
-    
-}
 
 .nav-link {
     margin: 1rem;
-    border-radius: 8px;
     padding: 4px;
     color: white;
     border: 1px solid transparent; 
 }
 
 .nav-link:hover {
-    border: 1px solid white; 
+    border-top: 1px solid orangered; 
     color: white;
 }
+
 
 
 .navbar-nav .nav-link.active {
@@ -59,19 +50,33 @@
 .navbar-nav .nav-link.active:hover {
     border-color: transparent;
 }
-#la {
-    border: 1px solid transparent;
-    color: white;
-}
-#la:hover {
-    border: 1px solid white;
-}
+
 
 #logo{
     border-radius: 50%;
     padding-bottom: 4px; 
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+#navbarDarkDropdownMenuLink {
+    color: white;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 69, 0, 0.2);
+}
+
+.nav-item.dropdown:hover #navbarDarkDropdownMenuLink {
+    border-top: 1px solid orangered;
+} 
+.nav-item.dropdown:hover  .dropdown-menu {
+    display: block;
+}
+
 
 
 
