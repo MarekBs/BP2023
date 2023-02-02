@@ -36,6 +36,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item mx-auto" id="NM">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white;">NIGHT MODE</label>
+                </div>
+              </li> -->
               <li class="nav-item mx-auto">
                 <a class="nav-link" aria-current="page" href="/graf_vsetko/index.html">Graf</a>
               </li>
@@ -85,13 +91,17 @@
     </main>
     <footer class="bg-light text-center text-lg-start ">
       <!-- Copyright -->
+      
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright:
-        <a class="text-dark" href="#">Marek Belis</a>
+        <div class="form-check form-switch" style="width: 9rem;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange="changeMode();">
+          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white;">NIGHT MODE</label>
+        </div><p>© 2023 Copyright: Marek Belis</p>
+        
       </div>
       <!-- Copyright -->
     </footer>
-    
+    <script src="main.js"></script>
   </body>
 </html>
 
