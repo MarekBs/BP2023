@@ -5,7 +5,7 @@
 
 .pad {
     color: white;
-    font-size: xx-large;
+    font-size: x-large;
     font-family: 'Dosis', sans-serif;
     border-radius: 6px;
     padding: 0.5rem;
@@ -19,9 +19,9 @@
 
 
 
-.navbar-nav {
-    margin-right: 5rem;
-}
+/* .navbar-nav {
+     margin-right: 5rem; 
+} */
 .nav-item {
     font-family: 'Dosis', sans-serif;
     font-size: 1.1rem;
