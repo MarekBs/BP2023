@@ -76,7 +76,7 @@ h2{
         background-size: auto;
     }
     #header-container {
-        width: 60%;
+        width: 40%;
     }
   }
 
@@ -100,8 +100,11 @@ h2{
     .navbar-nav {
         margin: auto;
     }
+    #header-container {
+        width: 60%;
+    }
 }
-@media screen and (max-width: 403px) {
+@media screen and (max-width: 413px) {
     #info{
         width: 70%;
     }

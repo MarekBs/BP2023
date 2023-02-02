@@ -14,7 +14,7 @@
 }
 
 .pad:hover {
-    color: lightblue;
+    color: orangered;
 }
 
 
@@ -67,8 +67,9 @@
 }
 
 .dropdown-item:hover {
-    background-color: rgba(255, 69, 0, 0.2);
+    background-color: rgba(255, 69, 0, 0.5);
 }
+
 
 .nav-item.dropdown:hover #navbarDarkDropdownMenuLink {
     border-top: 1px solid orangered;
@@ -76,7 +77,6 @@
 .nav-item.dropdown:hover  .dropdown-menu {
     display: block;
 }
-
 
 
 
