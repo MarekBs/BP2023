@@ -75,9 +75,20 @@ h2{
     align-items: center;
 }
 
+
 .form-check-input:checked {
     background-color: black;
+    border-color: transparent;
 }
+
+.form-check-input:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: transparent;
+}
+  
+  
+
 
 @media screen and (max-width: 1250px) {
     body {
