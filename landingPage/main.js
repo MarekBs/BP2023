@@ -7,7 +7,8 @@ function changeMode(){
     if(swch.checked){
         header.style.backgroundImage = "url('../images/nightBG1.svg')";
         document.body.style.backgroundColor = "grey";
-        headerContainer.style.backgroundColor = "rgba(255,255,255,0.6)";
+        headerContainer.style.backgroundColor = "rgba(0,0,0,0.6)";
+        headerContainer.style.color = "white";
         nav.style.backgroundColor = "#101722";
 ;
     }
@@ -15,6 +16,7 @@ function changeMode(){
         header.style.backgroundImage = "url('../images/mainBG.svg')";
         document.body.style.backgroundColor = "#f3f4f6";
         headerContainer.style.backgroundColor = "rgba(255, 69, 0, 0.1)";
+        headerContainer.style.color = "black";
         nav.style.backgroundColor = "#1c2c34";
     }
     
