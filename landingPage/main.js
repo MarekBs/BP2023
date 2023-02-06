@@ -3,6 +3,9 @@ let header = document.querySelector("header");
 let headerContainer = document.getElementById("header-container");
 let nav = document.querySelector(".navbar");
 let intro = document.getElementById("intro");
+let nadpis = document.getElementsByClassName("nadpis");
+let line = document.getElementById("line")
+
 
 function changeMode(){
     if(swch.checked){
@@ -12,6 +15,11 @@ function changeMode(){
         headerContainer.style.color = "white";
         nav.style.backgroundColor = "#101722";
         intro.style.color = "white";
+        for (let i= 0; i< nadpis.length ; i++){
+            nadpis[i].style.color = "white"
+        }
+        line.style.color = "white"
+        
 ;
     }
     else {
@@ -21,6 +29,10 @@ function changeMode(){
         headerContainer.style.color = "black";
         nav.style.backgroundColor = "#1c2c34";
         intro.style.color = "grey";
+        for (let i= 0; i< nadpis.length ; i++){
+            nadpis[i].style.color = "black"
+        }
+        line.style.color = "black"
     }
     
 }

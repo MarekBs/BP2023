@@ -38,7 +38,7 @@ h2 {
 
 #main-content {
   width: 80%;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
 
 #NM {
@@ -61,7 +61,7 @@ h2 {
 #card-holder {
   display: flex;
   justify-content: center;
-  margin: 4rem auto;
+  margin: 2rem auto;
 }
 
 .card {
