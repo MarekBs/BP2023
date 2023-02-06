@@ -15,7 +15,7 @@ function changeMode(){
     else {
         header.style.backgroundImage = "url('../images/mainBG.svg')";
         document.body.style.backgroundColor = "#f3f4f6";
-        headerContainer.style.backgroundColor = "rgba(255, 69, 0, 0.1)";
+        headerContainer.style.backgroundColor = "rgba(255, 69, 0, 0.2)";
         headerContainer.style.color = "black";
         nav.style.backgroundColor = "#1c2c34";
     }
