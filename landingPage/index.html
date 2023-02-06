@@ -99,6 +99,26 @@
               <li class="nav-item mx-auto">
                 <a class="nav-link" id="bordered" href="#">Kontakt</a>
               </li>
+              <li class="nav-item mx-auto">
+                <div class=" nav-link">
+                  <div class="form-check form-switch " style="width: 9rem; margin: 0">
+                    <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="flexSwitchCheckDefault"
+                    onchange="changeMode();"
+                  />
+                    <label
+                    class="form-check-label"
+                    for="flexSwitchCheckDefault"
+                    style="color: white"
+                    >Night mode</label
+                  >
+                  </div>
+                </div>
+              </li>
+              
             </ul>
           </div>
         </div>
@@ -212,26 +232,11 @@
         </div>
       </div>
     </main>
-    <footer class="text-center text-lg-start" style="background-color: #38515e">
+    <footer class="text-center text-lg-start" style="background-color: #38515e; height: 4rem;">
       <!-- Copyright -->
 
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        <div class="form-check form-switch" style="width: 9rem">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="flexSwitchCheckDefault"
-            onchange="changeMode();"
-          />
-          <label
-            class="form-check-label"
-            for="flexSwitchCheckDefault"
-            style="color: white"
-            >NIGHT MODE</label
-          >
-        </div>
-        <p style="color: white">© 2023 Copyright: Marek Belis</p>
+      
+        <p style="color: white; margin-bottom: 0; padding-top: 1rem; text-align: center;">© 2023 Copyright: Marek Belis</p>
       </div>
       <!-- Copyright -->
     </footer>
