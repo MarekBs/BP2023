@@ -31,6 +31,7 @@ main {
 .card:hover {
     background-color: rgb(219, 238, 245);
     transition: ease 0.4s;
+    cursor: pointer;
 }
 
 #exercise {
