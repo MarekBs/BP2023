@@ -1,3 +1,31 @@
 body {
     background-color: rgb(50, 72, 83);
+    background-image: url("../images/LAbg.svg");
 }
+
+main {
+    margin: 5rem auto;
+    width:80%; 
+    text-align: center;
+}
+
+#latitle {
+    margin-bottom: 3rem;
+}
+
+
+
+.card {
+    background-color: dodgerblue;
+    color: black;
+    padding: 4rem;
+    height: 6rem;
+  }
+  
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
