@@ -65,7 +65,6 @@ h2 {
   color: grey;
 }
 
-
 @media screen and (max-width: 1250px) {
   body {
     background-size: auto;
@@ -75,11 +74,6 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1060px) {
-  #header-container {
-    background-color: rgba(255,255,255,0.7);
-  }
-}
 
 #example {
   margin-top: 10rem;
