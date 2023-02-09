@@ -11,6 +11,7 @@ function changeMode(){
     
     if(swch.checked){
         changeColors("url('../images/mainBGN.svg')","#172130","white","#101722","white","white","white","white");
+        changeBG();
         
         
         
@@ -18,7 +19,7 @@ function changeMode(){
     }
     else {
         changeColors("url('../images/mainBGM.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
-        
+        changeBG();
     }
     
 }
@@ -37,12 +38,18 @@ function changeColors(image,bodyColor,headerTextColor,navBg,introColor,nadpisCol
 }
 
 window.addEventListener('resize', function() {
-    if (window.innerWidth < 1150) {
-      if (swch.checked) {
-        headerContainer.style.backgroundColor = "rgba(0,0,0,0.5)";
-        console.log("nejde")
-      }else {
-        headerContainer.style.backgroundColor = "rgba(255,255,255,0.6)";
-      }
-      }else {
-        headerContainer.style.backgroundColor = "transparent";}})
+    changeBG();});
+
+
+
+function changeBG() {
+  if (window.innerWidth < 1150) {
+    if (swch.checked) {
+      headerContainer.style.backgroundColor = "rgba(0,0,0,0.5)";
+      console.log("nejde")
+    }else {
+      headerContainer.style.backgroundColor = "rgba(255,255,255,0.6)";
+    }
+    }else {
+      headerContainer.style.backgroundColor = "transparent";}
+}
