@@ -10,19 +10,19 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
-        changeColors("url('../images/mainBGN.svg')","#172130","white","#101722","white","white","white");
+        changeColors("url('../images/mainBGN.svg')","#172130","white","#101722","white","white","white","white");
         
 ;
     }
     else {
-        changeColors("url('../images/mainBGM.svg')","#f3f4f6","black","#1c2c34","grey","black","black");
+        changeColors("url('../images/mainBGM.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
         
     }
     
 }
 
 
-function changeColors(image,bodyColor,headerTextColor,navBg,introColor,nadpisColor,lineColor){
+function changeColors(image,bodyColor,headerTextColor,navBg,introColor,nadpisColor,lineColor,introColor){
     header.style.backgroundImage = image;
         document.body.style.backgroundColor = bodyColor;
         headerContainer.style.color = headerTextColor;
