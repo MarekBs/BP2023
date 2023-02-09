@@ -10,12 +10,12 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
-        changeColors("url('../images/constrNG.svg')","#172130","white","#101722","white","white","white");
+        changeColors("url('../images/mainBGN.svg')","#172130","white","#101722","white","white","white");
         
 ;
     }
     else {
-        changeColors("url('../images/constrBG.svg')","#f3f4f6","black","#1c2c34","grey","black","black");
+        changeColors("url('../images/mainBGM.svg')","#f3f4f6","black","#1c2c34","grey","black","black");
         
     }
     
