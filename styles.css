@@ -73,8 +73,14 @@
     border-radius: 0;
 }
 
+.dropdown-item {
+    color: white;
+}
+
 .dropdown-item:hover {
-    background-color: rgba(255, 69, 0, 0.5);
+    color: orange;
+    background-color: transparent;
+
 }
 
 
