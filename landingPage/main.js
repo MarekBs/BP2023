@@ -10,22 +10,21 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
-        changeColors("url('../images/nightBG1.svg')","#172130","rgba(0,0,0,0.6)","white","#101722","white","white","white");
+        changeColors("url('../images/constrNG.svg')","#172130","white","#101722","white","white","white");
         
 ;
     }
     else {
-        changeColors("url('../images/mainBG.svg')","#f3f4f6","rgba(255, 69, 0, 0.2)","black","#1c2c34","grey","black","black");
+        changeColors("url('../images/constrBG.svg')","#f3f4f6","black","#1c2c34","grey","black","black");
         
     }
     
 }
 
 
-function changeColors(image,bodyColor,headerContainerColor,headerTextColor,navBg,introColor,nadpisColor,lineColor){
+function changeColors(image,bodyColor,headerTextColor,navBg,introColor,nadpisColor,lineColor){
     header.style.backgroundImage = image;
         document.body.style.backgroundColor = bodyColor;
-        headerContainer.style.backgroundColor = headerContainerColor;
         headerContainer.style.color = headerTextColor;
         nav.style.backgroundColor = navBg;
         intro.style.color = introColor;

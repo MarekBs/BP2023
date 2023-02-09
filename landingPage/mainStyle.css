@@ -6,19 +6,13 @@ body {
 }
 
 header {
-  background-image: url("../images/mainBG.svg");
+  background-image: url("../images/constrBG.svg");
 
   background-position: right;
   height: 400px;
+  box-shadow: 0px -5px 15px #000000;
 }
 
-#carousel-container {
-  width: 35rem;
-  margin: 11rem auto 6rem auto;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 5px 5px 5px grey;
-}
 
 h2 {
   text-align: center;
@@ -29,11 +23,10 @@ h2 {
   margin: auto;
   margin-top: 2%;
   text-align: center;
-  border: 2px solid #ff4500;
   padding: 1rem;
   border-radius: 6px;
-  /* background-image: linear-gradient(to bottom, rgba(255, 69, 0, 0.3), rgba(255, 255, 255, 0.6)); */
-  background-color: rgba(255, 69, 0, 0.2);
+  
+  
 }
 
 #main-content {
@@ -72,6 +65,7 @@ h2 {
 #intro {
   color: grey;
 }
+
 
 @media screen and (max-width: 1250px) {
   body {
