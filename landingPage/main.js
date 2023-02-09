@@ -55,3 +55,18 @@ function changeBG() {
     }else {
       headerContainer.style.backgroundColor = "transparent";}
 }
+
+
+const navToggler = document.querySelector('.navbar-toggler');
+
+function checkNavbarCollapsed() {
+  if (navToggler.getAttribute('aria-expanded') === 'true') {
+    headerContainer.style.visibility = "hidden";
+  } else {
+    headerContainer.style.visibility = "visible";
+  }
+}
+
+navToggler.addEventListener("click",function(){
+  checkNavbarCollapsed();
+})
