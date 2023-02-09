@@ -40,7 +40,9 @@ function changeColors(image,bodyColor,headerTextColor,navBg,introColor,nadpisCol
 window.addEventListener('resize', function() {
     changeBG();});
 
-
+window.addEventListener("load",function(){
+  changeBG();
+})
 
 function changeBG() {
   if (window.innerWidth < 1150) {
