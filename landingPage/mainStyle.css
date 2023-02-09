@@ -8,7 +8,7 @@ body {
 header {
   background-image: url("../images/mainBGM.svg");
 
-  background-position: right;
+  background-position: center;
   height: 400px;
   box-shadow: 0px -5px 15px #000000;
 }
