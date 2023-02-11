@@ -10,7 +10,7 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
-        changeColors("url('../images/mainBGN.svg')","#172130","white","#101722","white","white","white","white");
+        changeColors("url('../images/newGN.svg')","#172130","white","#101722","white","white","white","white");
         changeBG();
         
         
@@ -18,7 +18,7 @@ function changeMode(){
 ;
     }
     else {
-        changeColors("url('../images/mainBGM.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
+        changeColors("url('../images/newBG.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
         changeBG();
     }
     
