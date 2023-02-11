@@ -70,3 +70,40 @@ function checkNavbarCollapsed() {
 navToggler.addEventListener("click",function(){
   checkNavbarCollapsed();
 })
+
+
+
+$(document).ready(function() {
+  var isMouseOver = false;
+
+  $("#navbarDarkDropdownMenuLink").mouseenter(function() {
+    isMouseOver = true;
+    $(".dropdown-menu-white").slideDown(200);
+  });
+
+  $("#navbarDarkDropdownMenuLink").mouseleave(function() {
+    isMouseOver = false;
+    setTimeout(function() {
+      if (!isMouseOver) {
+        $(".dropdown-menu-white").slideUp(200);
+      }
+    }, 200);
+  });
+
+  $(".dropdown-menu-white").mouseenter(function() {
+    isMouseOver = true;
+  });
+
+  $(".dropdown-menu-white").mouseleave(function() {
+    isMouseOver = false;
+    setTimeout(function() {
+      if (!isMouseOver) {
+        $(".dropdown-menu-white").slideUp(200);
+      }
+    }, 200);
+  });
+
+  $(".dropdown-item").click(function(event) {
+    event.stopPropagation();
+  });
+});
