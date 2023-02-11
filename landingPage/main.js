@@ -10,7 +10,7 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
-        changeColors("url('../images/newGN.svg')","#172130","white","#101722","white","white","white","white");
+        changeColors("url('../images/newGM.svg')","#172130","white","#101722","white","white","white","white");
         changeBG();
         
         
