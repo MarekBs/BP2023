@@ -72,11 +72,12 @@ const matrixSizeInput = document.getElementById('matrix-size');
             for (var j = 1; j <= size; j++) {
                 var cell = document.createElement("td");
                 var input = document.createElement("input");
-                input.type = "text";
+                input.type = "number";
                 input.placeholder = "0";
                 input.style.width = '1.5rem';
                 input.style.textAlign = "center";
                 input.style.border = "none";
+                input.classList.add("inputNum");
                 cell.appendChild(input);
                 row.appendChild(cell);
             }

@@ -69,15 +69,6 @@ function calcDet(matrix){
 
 
 
-
-let button = document.getElementById("vypocitaj");
-
-button.addEventListener("click", function(){
-    loadMartix();
-    calcDet(matrix);
-    counter = 1;
-})
-
 const matrixSizeInput2 = document.getElementById('matrix-size');
 const matrixInputTable2 = document.getElementById('matrix-input').querySelector('tbody');
 
