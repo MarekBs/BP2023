@@ -59,3 +59,41 @@ const matrixSizeInput = document.getElementById('matrix-size');
     
       // update the matrix when the user changes the size input
       matrixSizeInput.addEventListener('change', createMatrix);
+
+
+
+
+      function changeMatrix() {
+        var size = document.getElementById("size").value;
+        var table = document.getElementById("matrix");
+        table.innerHTML = "";
+        for (var i = 1; i <= size; i++) {
+            var row = document.createElement("tr");
+            for (var j = 1; j <= size; j++) {
+                var cell = document.createElement("td");
+                var input = document.createElement("input");
+                input.type = "text";
+                input.placeholder = "0";
+                input.style.width = '1.5rem';
+                input.style.textAlign = "center";
+                input.style.border = "none";
+                cell.appendChild(input);
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+    }
+
+    function getMatrix() {
+        var size = document.getElementById("size").value;
+        var matrix = [];
+        for (var i = 1; i <= size; i++) {
+            var row = [];
+            for (var j = 1; j <= size; j++) {
+                var input = document.getElementById("matrix").rows[i-1].cells[j-1].getElementsByTagName("input")[0];
+                row.push(parseFloat(input.value));
+            }
+            matrix.push(row);
+        }
+        console.log(matrix);
+    }
