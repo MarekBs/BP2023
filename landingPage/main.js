@@ -10,6 +10,7 @@ let line = document.getElementById("line")
 function changeMode(){
     
     if(swch.checked){
+      header.style.backgroundColor = "black";
         changeColors("url('../images/newGM.svg')","#172130","white","#101722","white","white","white","white");
         changeBG();
         
@@ -18,6 +19,7 @@ function changeMode(){
 ;
     }
     else {
+      header.style.backgroundColor = "white";
         changeColors("url('../images/newBG.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
         changeBG();
     }
