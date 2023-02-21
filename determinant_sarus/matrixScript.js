@@ -18,6 +18,7 @@ const matrixSizeInput = document.getElementById('matrix-size');
             input.style.width = '1.5rem';
             input.style.textAlign = "center";
             input.style.border = "none";
+            input.classList.add("inputNum");
     
             // add event listeners for arrow keys
             input.addEventListener('keydown', (event) => {
