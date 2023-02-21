@@ -69,32 +69,3 @@ function calcDet(matrix){
 
 
 
-const matrixSizeInput2 = document.getElementById('matrix-size');
-const matrixInputTable2 = document.getElementById('matrix-input').querySelector('tbody');
-
-function createMatrix() {
-  const matrixSize = parseInt(matrixSizeInput2.value);
-  const matrix = [];
-  
-  for (let i = 0; i < matrixSize; i++) {
-    matrix[i] = [];
-    
-    for (let j = 0; j < matrixSize; j++) {
-      const input = matrixInputTable2.querySelector(`input[name="matrix[${i}][${j}]"]`);
-      matrix[i][j] = parseFloat(input.value);
-    }
-  }
-  
-  return matrix;
-}
-
-// example usage
-
-
-let button2 = document.getElementById("calcBTN");
-
-button2.addEventListener("click", function(){
-    const matrix2 = createMatrix();
-    console.log(math.det(matrix2));
-    document.getElementById("mxVysledok").textContent = "="+" "+math.det(matrix2)
-})
