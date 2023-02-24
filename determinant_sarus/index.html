@@ -4,27 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
     <script src="det_sarrus.js" defer></script>
     <link rel="stylesheet" href="style.css" />
@@ -32,7 +13,71 @@
     <title>Determinant rozvoj</title>
   </head>
   <body onload="changeMatrix()">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lineárna algebra</a>
+      </div>
+    </nav>
+  </header>
 
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 bg-light sidebar d-none d-md-block" style="margin-top: 3.5rem; height: calc(100vh - 3rem); position: fixed">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Customers</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+      <main class="col-md-9 col-lg-10 offset-md-3 offset-lg-2" style="margin-top: 3.5rem; height: calc(100vh - 3rem); border: 1px solid red;">
+        <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          Toggle sidebar
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" style="height: calc(100vh - 3rem);">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Sidebar</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Customers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facilis sed inventore placeat esse, a in, ullam expedita dignissimos fuga doloribus blanditiis sint rerum, eius maxime! Dolore consectetur a voluptatem?</p>
+      </main>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
 
     <div style="text-align: center; margin: 5rem auto;">
     <label for="size">Veľkosť matice</label>
