@@ -113,3 +113,7 @@ btn1.addEventListener("click",function(){
     let result = math.det(matrx);
     document.getElementById("mxVysledok").textContent = "="+" "+math.det(result)
 });
+
+
+
+

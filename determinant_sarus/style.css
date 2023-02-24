@@ -34,3 +34,14 @@ input[type=number] {
   outline: none;
 }
 
+.offcanvas-backdrop {
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  visibility: hidden;
+}
+
