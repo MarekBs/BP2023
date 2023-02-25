@@ -14,7 +14,23 @@
   margin: 0;
 }
 
+.nav-item {
+  margin: 6px 0 0 6px;
+}
 
+.nav-item a {
+  color: black;
+}
+
+
+.nav-item a:hover {
+  background-color: rgb(231, 231, 231);
+  color: black;
+}
+
+.flex-column {
+  margin-top: 2rem;
+}
 
 #matrix {
   margin: auto;
