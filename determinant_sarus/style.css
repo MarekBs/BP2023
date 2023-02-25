@@ -15,11 +15,12 @@
 }
 
 .nav-item {
-  margin: 6px 0 0 6px;
+  margin: 10px 0 0 6px;
 }
 
 .nav-item a {
-  color: black;
+  color: rgb(129, 126, 126);
+  border-radius: 4px;
 }
 
 
