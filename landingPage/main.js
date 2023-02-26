@@ -20,7 +20,7 @@ function changeMode(){
     }
     else {
       header.style.backgroundColor = "white";
-        changeColors("url('../images/newBG.svg')","#f3f4f6","black","#1c2c34","grey","black","black","grey");
+        changeColors("url('../images/newBG.svg')","#f3f4f6","black","#054363","grey","black","black","grey");
         changeBG();
     }
     
