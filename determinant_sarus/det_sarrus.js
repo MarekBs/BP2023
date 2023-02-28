@@ -78,7 +78,7 @@ function calcDet(matrix) {
 
         step += " = ";
         outputDiv.innerHTML += step;
-        console.log("cislo")
+        
     }
 
     let vysledok = 0;
@@ -86,10 +86,25 @@ function calcDet(matrix) {
     let step;
     for (let i = 0; i < 4; i++) {
         vysledok += nasobok[i] * det[i];
-        if(i<3){
-          step = Math.round(nasobok[i])  + "*" + Math.round(det[i])  + " + ";  
+        let nasob;
+        let deter;
+
+        if(nasobok[i]<0){
+            nasob = "("+Math.round(nasobok[i])+")";
         }else {
-            step = Math.round(nasobok[i])  + "*" +Math.round(det[i]) + " = " + vysledok; 
+            nasob = Math.round(nasobok[i]);
+        }
+
+        if(det[i]<0){
+            deter = "("+Math.round(det[i])+")";
+        }else {
+            deter = det[i];
+        }
+
+        if(i<3){
+          step = nasob  + " * " + deter  + " + "; 
+        }else {
+            step = nasob  + " * " +deter + " = " + vysledok; 
         }
         
         outputDiv.innerHTML += step;
