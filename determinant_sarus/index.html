@@ -183,19 +183,21 @@
                   </div>
                </div>
             </div>
-            <div style="text-align: center; margin: 5rem auto;">
+            <div style=" margin: 5rem auto;">
                <label for="size">Veľkosť matice</label>
                <select name="size" id="size" onchange="changeMatrix()">
                   <option value="4" selected>4x4</option>
                   <option value="5">5x5</option>
                </select>
-               <div style="display: flex; justify-content: center">
-                  <table id="matrix" style="outline: none; margin: 1rem;"></table>
-               </div>
+               <div id="mxVysledok1" style="display: flex; align-items: center;">
+                  <table id="matrix" style="outline: none; margin: 1rem; "></table>
+                  <p style="margin: 0;">=</p>
+                </div>
+                
                <button id="calcBTN1"  type="button" class="btn btn-outline-success">
                Vypočítaj
                </button>
-               <p style="width: 100%; display: flex; align-items: center;" id="mxVysledok1" style="margin: auto 0">= </p>
+               
             </div>
             <style>
                #matrix-input td {
