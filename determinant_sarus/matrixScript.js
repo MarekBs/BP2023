@@ -103,7 +103,8 @@ const matrixSizeInput = document.getElementById('matrix-size');
 let btn = document.getElementById("calcBTN1");
 
 btn.addEventListener("click",function(){
-    getMatrix("size","matrix");
+    let mat =getMatrix("size","matrix");
+    calcDet(mat);
 });
 
 let btn1 = document.getElementById("calcBTN");

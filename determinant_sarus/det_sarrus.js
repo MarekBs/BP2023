@@ -19,7 +19,7 @@ for(let i =0; i<4;i++){
 }
 
 
-function calcDet(matrix){
+ function calcDet(matrix){
     let det= [];
     let nasobok = [];
     
@@ -65,7 +65,6 @@ function calcDet(matrix){
     console.log("="+vysledok);
 
   
-}
-
+} 
 
 
