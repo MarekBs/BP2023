@@ -68,8 +68,8 @@ input[type=number] {
   
 }
 .nav-tabs .nav-link.active {
-  color: #0275d8;
+  color: #212529;
   border: none;
   background: none;
-  border-bottom: 3px solid #0275d8;
+  border-bottom: 3px solid #212529;
 }
