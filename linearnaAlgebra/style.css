@@ -17,6 +17,7 @@ main {
 
 #latitle {
   margin-bottom: 3rem;
+  font-size: xx-large;
 }
 
 .card {
@@ -24,6 +25,9 @@ main {
   padding: 4rem;
   height: 6rem;
   justify-content: center;
+  border: 1px solid white;
+  background-color: #f6f6f6;
+  transition: ease 0.3s;
 }
 
 .cards {
@@ -32,16 +36,20 @@ main {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 }
 
 .card:hover {
-    background-color: rgb(219, 238, 245);
-    transition: ease 0.4s;
+    border: 1px solid lightgray;
     cursor: pointer;
 }
 
 #exercise {
-    border: 1px dashed blue;
+    background-color: #e9e9e9;
+}
+
+#exercise:hover  {
+  border: 1px solid gray;
 }
 
 @media screen and (max-width: 380px) {
