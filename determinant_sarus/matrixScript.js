@@ -1,6 +1,6 @@
 const matrixSizeInput = document.getElementById('matrix-size');
       const matrixInputTable = document.getElementById('matrix-input').querySelector('tbody');
-    
+
       function createMatrix() {
         const matrixSize = parseInt(matrixSizeInput.value);
         matrixInputTable.innerHTML = '';
@@ -104,7 +104,8 @@ let btn = document.getElementById("calcBTN1");
 
 btn.addEventListener("click",function(){
     let mat =getMatrix("size","matrix");
-    calcDet(mat);
+    let index = document.getElementById("index").value;
+    calcDet(mat,index-1);
 });
 
 let btn1 = document.getElementById("calcBTN");

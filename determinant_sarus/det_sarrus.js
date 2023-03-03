@@ -20,14 +20,15 @@ function loadMartix() {
   }
 }
 
-function calcDet(matrix) {
+function calcDet(matrix, index) {
+    console.log(index);
     let det = [];
     let nasobok = [];
 
     for (let i = 0; i < matrix[0].length; i++) {
-        let a = matrix[i][0];
+        let a = matrix[i][index];
 
-        let aPoz = a * (-1) ** (1 + (i + 1));
+        let aPoz = a * (-1) ** (index+1 + (i + 1));
 
         let matr = [
             [4],
@@ -35,16 +36,17 @@ function calcDet(matrix) {
             [4],
             [4]
         ];
-
+        
         for (let f = 0; f < 4; f++) {
             for (let g = 0; g < 4; g++) {
                 matr[f][g] = matrix[f][g];
             }
         }
+        
         matr.splice(i, 1);
 
         for (let x = 0; x < matrix[0].length - 1; x++) {
-            matr[x].splice(0, 1);
+            matr[x].splice(index, 1);
         }
 
         console.log(aPoz + "*", matr, "+");
@@ -75,12 +77,15 @@ function calcDet(matrix) {
         if (cnt < matrix[0].length) {
             step += "  +  ";
         }
+        if(cnt== matrix[0].length){
+           step += " = " 
+        }
 
-        step += " = ";
+        
         outputDiv.innerHTML += step;
         
     }
-
+    
     let vysledok = 0;
     
     let step;
@@ -114,3 +119,4 @@ function calcDet(matrix) {
 
     console.log("=" + vysledok);
 }
+
