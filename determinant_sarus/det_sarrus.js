@@ -21,6 +21,7 @@ function loadMartix() {
 }
 
 function calcDet(matrix, index) {
+    outputDiv.innerHTML= " = ";
     console.log(index);
     let det = [];
     let nasobok = [];
@@ -118,5 +119,7 @@ function calcDet(matrix, index) {
     }
 
     console.log("=" + vysledok);
+    cnt=0;
 }
 
+calcDet(matrix,1)
