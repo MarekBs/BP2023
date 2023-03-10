@@ -53,11 +53,16 @@ main {
   border-radius: 6px;
   margin-right: 1rem;
   background-color: white;
+  padding: 2px;
 }
 
 .nav-link:hover {
   background-color: orange;
-  color: black;
+  color: white;
+}
+
+.nav-link1 {
+  text-decoration: none;
 }
 
 #exercise:hover  {
