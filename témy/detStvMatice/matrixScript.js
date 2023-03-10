@@ -64,7 +64,7 @@ createMatrix();
 matrixSizeInput.addEventListener("change", createMatrix);
 
 function changeMatrix() {
-  var size = document.getElementById("size").value;
+  var size = 4;
   var table = document.getElementById("matrix");
   table.innerHTML = "";
   for (var i = 1; i <= size; i++) {
@@ -84,6 +84,7 @@ function changeMatrix() {
     table.appendChild(row);
   }
 }
+changeMatrix();
 
 function getMatrix(size, mtx) {
   var size = document.getElementById(size).value;

@@ -13,7 +13,7 @@
       <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <title>Determinant rozvoj</title>
    </head>
-   <body onload="changeMatrix()">
+   <body >
       <header>
       </header>
       <div class="container-fluid">
@@ -22,7 +22,7 @@
             <div class="sidebar-sticky">
                <ul class="nav flex-column">
                   <li class="nav-item">
-                     <a class="nav-link active"  href="../landingPage/index.html">
+                     <a class="nav-link active"  href="../../landingPage/index.html">
                         <svg style="margin-bottom: 5px; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
                         </svg>
@@ -31,7 +31,7 @@
                   </li>
                   <hr>
                   <li class="nav-item">
-                     <a class="nav-link active" href="#">Úvod</a>
+                     <a class="nav-link " href="#">Úvod</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link " href="#">Riadkové operácie</a>
@@ -70,7 +70,7 @@
                </ul>
             </div>
          </nav>
-         <main class="col-md-12 col-lg-10 offset-md-0 offset-lg-2" style="margin-top: 3.5rem; height: calc(100vh - 3rem);">
+         <main  class="col-md-12 col-lg-10 offset-md-0 offset-lg-2" style="margin-top: 3.5rem; height: calc(100vh - 3rem);">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                <div class="container-fluid justify-content-start">
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
@@ -128,11 +128,6 @@
              </div>
              
             <div style=" margin: 5rem auto; margin-top: 50rem;">
-               <label for="size">Veľkosť matice</label>
-               <select name="size" id="size" onchange="changeMatrix()">
-                  <option value="4" selected>4x4</option>
-                  <option value="5">5x5</option>
-               </select>
                <label for="index">Zvol stĺpec</label>
                <input max="4" type="number" id="index">
                <div  style="display: flex; align-items: center;">
