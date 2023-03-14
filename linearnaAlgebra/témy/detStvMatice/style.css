@@ -81,3 +81,21 @@ input[type=number] {
   box-shadow: 8px 0 10px -4px rgba(0,0,0,0.2);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}

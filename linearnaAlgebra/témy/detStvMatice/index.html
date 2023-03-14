@@ -18,6 +18,8 @@
       $(document).ready(function() {
       	$('#sidebar12').load('../../../components/sidebar.html');
              $('#sidebar').load('../../../components/collapse_bar.html');
+             $('#myTab').load('../../../components/tab_links.html');
+
       });
    </script>
    <body >
@@ -38,17 +40,7 @@
             <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
             <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
             <div class="container my-5">
-               <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link active" id="theory-tab" data-bs-toggle="tab" data-bs-target="#theory" type="button" role="tab" aria-controls="theory" aria-selected="true">Teória</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link" id="sample-problems-tab" data-bs-toggle="tab" data-bs-target="#sample-problems" type="button" role="tab" aria-controls="sample-problems" aria-selected="false">Vypočítané príklady</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link" id="practice-problems-tab" data-bs-toggle="tab" data-bs-target="#practice-problems" type="button" role="tab" aria-controls="practice-problems" aria-selected="false">Príklady na precvičenie</button>
-                  </li>
-               </ul>
+               <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
                <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
                      <p>Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu m &#xd7 n je sústava mn čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s m riadkami a n stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ 1 &#xd7 3, m &#xd7 1  a 3 &#xd7 4:</p>
