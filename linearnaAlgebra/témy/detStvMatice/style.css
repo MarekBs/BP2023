@@ -14,21 +14,7 @@
   margin: 0;
 }
 
-.nav-item {
-  margin: 10px 0 0 6px;
-}
 
-.nav-item a {
-  color: rgb(129, 126, 126);
-  border-radius: 4px;
-}
-
-
-.nav-item a:hover {
-  background-color: orangered;
-  color: white;
-  
-}
 
 .flex-column {
   margin-top: 1rem;
