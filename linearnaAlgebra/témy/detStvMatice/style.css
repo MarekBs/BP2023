@@ -77,6 +77,11 @@ input[type=number] {
   border-bottom: 3px solid orangered;
 }
 
+.nav-link.active {
+  background-color: orangered;
+  color: white;
+}
+
 .sidebar {
   box-shadow: 8px 0 10px -4px rgba(0,0,0,0.2);
 }
