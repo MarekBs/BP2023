@@ -7,168 +7,70 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
       <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="det_sarrus.js" defer></script>
       <link rel="stylesheet" href="style.css" />
       <script src="matrixScript.js" defer></script>
       <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <title>Determinant rozvoj</title>
    </head>
+   <script>
+      $(document).ready(function() {
+      	$('#sidebar12').load('../../../components/sidebar.html');
+             $('#sidebar').load('../../../components/collapse_bar.html');
+      });
+   </script>
    <body >
-      <header>
-      </header>
       <div class="container-fluid">
       <div class="row">
-         <nav class="col-md-3 col-lg-2 bg-light sidebar d-none d-lg-block" style="margin-top: 3.5rem; height: calc(100vh - 3rem); position: fixed; min-width: 220px; overflow-y:auto;">
-            <div class="sidebar-sticky">
-               <ul class="nav flex-column">
-                  <li class="nav-item">
-                     <a class="nav-link active"  href="../../../landingPage/index.html">
-                        <svg style="margin-bottom: 5px; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                           <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-                        </svg>
-                        Domov
-                     </a>
-                  </li>
-                  <hr>
-                  <li class="nav-item">
-                     <a class="nav-link " href="#">Úvod</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link " href="#">Riadkové operácie</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Gaussov tvar matice</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Výpočet gaussovho tvaru matice</a>
-                  </li>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Algebraické operácie s maticami</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Štvorcové matice, pojem inverznej matice</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Výpočet inverznej matice</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Definícia determinantu štvorcovej matice</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Determinant a riadkové operácie</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Inverzná matica pomocou determinantov</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Dôležité vzťahy medzi uvedenými pojmami</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" style="margin-bottom: 2rem;" href="#">Cvičenia</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-         <main  class="col-md-12 col-lg-10 offset-md-0 offset-lg-2" style="margin-top: 3.5rem; height: calc(100vh - 3rem);">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" style="  position: fixed; height: calc(100vh - 3rem); margin-top: 56px; min-width: 220px; overflow-y:auto;"></nav>
+         <main  class="col-md-12 col-lg-10 offset-md-0 offset-lg-2" style="margin-top: 3.5rem; ">
+            <header><nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
                <div class="container-fluid justify-content-start">
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
                   <span class="navbar-toggler-icon"></span>
                   </button>
-                  <a class="navbar-brand" href="../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
+                  <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
                </div>
             </nav>
+         </header>
+            
             <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);">
-               <div class="offcanvas-header">
-                  <a class="nav-link active"  href="../../landingPage/index.html">
-                     <svg style="margin: 5px 0 0 5px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-                     </svg>
-                     Domov
-                  </a>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-               </div>
-               <div class="offcanvas-body d-flex flex-column p-0" style="height: 100%; overflow-y: auto;">
-                  <ul class="nav flex-column">
-                     <li class="nav-item">
-                        <a class="nav-link " href="#">Úvod</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link " href="#">Riadkové operácie</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gaussov tvar matice</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Výpočet gaussovho tvaru matice</a>
-                     </li>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Algebraické operácie s maticami</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Štvorcové matice, pojem inverznej matice</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Výpočet inverznej matice</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Definícia determinantu štvorcovej matice</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Determinant a riadkové operácie</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inverzná matica pomocou determinantov</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dôležité vzťahy medzi uvedenými pojmami</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" style="margin-bottom: 2rem;" href="#">Cvičenia</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
+            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
             <div class="container my-5">
                <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist">
-                 <li class="nav-item" role="presentation">
-                   <button class="nav-link active" id="theory-tab" data-bs-toggle="tab" data-bs-target="#theory" type="button" role="tab" aria-controls="theory" aria-selected="true">Teória</button>
-                 </li>
-                 <li class="nav-item" role="presentation">
-                   <button class="nav-link" id="sample-problems-tab" data-bs-toggle="tab" data-bs-target="#sample-problems" type="button" role="tab" aria-controls="sample-problems" aria-selected="false">Vypočítané príklady</button>
-                 </li>
-                 <li class="nav-item" role="presentation">
-                   <button class="nav-link" id="practice-problems-tab" data-bs-toggle="tab" data-bs-target="#practice-problems" type="button" role="tab" aria-controls="practice-problems" aria-selected="false">Príklady na precvičenie</button>
-                 </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link active" id="theory-tab" data-bs-toggle="tab" data-bs-target="#theory" type="button" role="tab" aria-controls="theory" aria-selected="true">Teória</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="sample-problems-tab" data-bs-toggle="tab" data-bs-target="#sample-problems" type="button" role="tab" aria-controls="sample-problems" aria-selected="false">Vypočítané príklady</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="practice-problems-tab" data-bs-toggle="tab" data-bs-target="#practice-problems" type="button" role="tab" aria-controls="practice-problems" aria-selected="false">Príklady na precvičenie</button>
+                  </li>
                </ul>
                <div class="tab-content" id="myTabContent">
-                 <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                   <p>Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu m &#xd7 n je sústava mn čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s m riadkami a n stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ 1 &#xd7 3, m &#xd7 1  a 3 &#xd7 4:</p>
-                 </div>
-                 <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                   <p>Tab 2 content</p>
-                 </div>
-                 <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                   <p>Tab 3 content</p>
-                 </div>
+                  <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+                     <p>Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu m &#xd7 n je sústava mn čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s m riadkami a n stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ 1 &#xd7 3, m &#xd7 1  a 3 &#xd7 4:</p>
+                  </div>
+                  <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
+                     <p>Tab 2 content</p>
+                  </div>
+                  <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
+                     <p>Tab 3 content</p>
+                  </div>
                </div>
-             </div>
-             
+            </div>
             <div style=" margin: 5rem auto; margin-top: 50rem;">
                <label for="index">Zvol stĺpec</label>
                <input max="4" type="number" id="index">
                <div  style="display: flex; align-items: center;">
                   <table id="matrix" style="outline: none; margin: 1rem; "></table>
                   <p  id="mxVysledok1" style="margin: 0; display: flex; align-items: center;">=</p>
-                </div>
-                
+               </div>
                <button id="calcBTN1"  type="button" class="btn btn-outline-success">
                Vypočítaj
                </button>
-               
             </div>
             <style>
                #matrix-input td {
