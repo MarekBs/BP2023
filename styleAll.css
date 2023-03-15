@@ -63,6 +63,9 @@
 .nav-item a:hover {
   color: orangered;
 }
+.nav-item.active a:hover {
+  color: white;
+}
 
 #sidebar12 {
   position: fixed;
