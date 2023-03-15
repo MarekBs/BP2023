@@ -87,7 +87,7 @@ function changeMatrix() {
 changeMatrix();
 
 function getMatrix(size, mtx) {
-  var size = document.getElementById(size).value;
+  var size = 4;
   var matrix = [];
   for (var i = 1; i <= size; i++) {
     var row = [];

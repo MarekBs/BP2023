@@ -1,67 +1,73 @@
 .offcanvas-backdrop {
-    position: fixed;
-    top: 56px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-  }
-  
-  .nav-tabs .nav-link {
-    color: #333;
-    border: none;
-    background: none;
-    
-  }
-  
-  .nav-tabs .nav-link.active {
-    color: orangered;
-    /* color: #212529 */
-    border: none;
-    background: none;
-    border-bottom: 3px solid orangered;
-  }
-  
-  .nav-link.active {
-    background-color: rgba(255, 68, 0, 0.678);
-    color: white;
-  }
-  
-  .sidebar {
-    box-shadow: 8px 0 10px -4px rgba(0,0,0,0.2);
-  }
-  
-  ::-webkit-scrollbar {
-    width: 6px;
-    
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: white;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 5px;
-  
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: white;
-  }
-  .nav-item {
-    margin: 10px 0 0 6px;
-  }
-  
-  .nav-item a {
-    color: rgb(129, 126, 126);
-    border-radius: 4px;
-  }
-  
-  
-  .nav-item a:hover {
-    
-    color: orangered;
-    
-  }
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.nav-tabs .nav-link {
+  color: #333;
+  border: none;
+  background: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: orangered;
+  /* color: #212529 */
+  border: none;
+  background: none;
+  border-bottom: 3px solid orangered;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 68, 0, 0.678);
+  color: white;
+}
+
+.sidebar {
+  box-shadow: 8px 0 10px -4px rgba(0, 0, 0, 0.2);
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
+}
+
+.container:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: white;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+.nav-item {
+  margin: 10px 0 0 6px;
+}
+
+.nav-item a {
+  color: rgb(129, 126, 126);
+  border-radius: 4px;
+}
+
+.nav-item a:hover {
+  color: orangered;
+}
+
+#sidebar12 {
+  position: fixed;
+  height: calc(100vh - 3rem);
+  margin-top: 56px;
+  min-width: 220px;
+  overflow-y: auto;
+}
