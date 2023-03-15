@@ -36,7 +36,7 @@
 }
 
 .container:hover::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
 }
 
 .container::-webkit-scrollbar-track {
@@ -73,4 +73,7 @@
   margin-top: 56px;
   min-width: 220px;
   overflow-y: auto;
+}
+mjx-container.MathJax {
+  pointer-events: none;
 }

@@ -21,7 +21,7 @@
       });
       });     
          $('#sidebar').load('../../../components/collapse_bar.html');
-         $('#myTab').load('../../../components/tab_links.html');
+         
       
       });
    </script>
@@ -43,19 +43,53 @@
                <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
                <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
                <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
-                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Úvod</p>
-                     </div>
-                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>Tab 2 content</p>
-                     </div>
-                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                        <p>Tab 3 content</p>
-                     </div>
+                <h3 style="text-align: center; color:orangered">Teória</h3>
+                <hr>
+                  <p class="mt-4 mb-0">Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu <strong>m</strong> &#xd7 <strong>n</strong> je sústava <strong>mn</strong> čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s <strong>m</strong> riadkami a <strong>n</strong> stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ <strong>1</strong> &#xd7 <strong>3</strong>, <strong>m</strong> &#xd7 <strong>1</strong>  a <strong>3</strong> &#xd7 <strong>4</strong>:</p>
+                  <br>
+                  <div style="display:flex; flex-wrap:wrap; align-items:center; width: 80%; margin: 2rem auto;">
+                     <span style="flex: 1; margin: 5px">
+                     $$\begin{pmatrix} 1 & b & \pi \end{pmatrix}$$
+                     </span>
+                     <span style="flex: 1; margin: 5px">
+                     $$\begin{pmatrix}
+                     a_1 \\ 
+                     \vdots \\
+                     a_{m-1} \\
+                     a_m
+                     \end{pmatrix}$$
+                     </span>
+                     <span style="flex: 2; margin: 5px">
+                     $$\begin{pmatrix}
+                     a_{11} & a_{12} & a_{13} & a_{14} \\ 
+                     a_{21} & a_{22} & a_{23} & a_{24} \\
+                     a_{31} & a_{32} & a_{33} & a_{34}
+                     \end{pmatrix}$$
+                     </span>
                   </div>
-               </div>
+                  <p>Matice je obvyklé pomenúvať tučne sádzanými vel'kými písmenami, a ich prvky sú potom označené zodpovedajúcim malým písmenom s dvoma indexami (riadkovým a stĺpcovým). Všeobecná matica typu <strong>m</strong>  &#xd7 <strong>n</strong> môže teda byt' označená a opísaná napr. nasledujúcim spôsobom:</p>
+                  <div class="table-responsive" style="margin: 4rem auto;">
+                    <p>$$
+                      \boldsymbol{C} = \begin{pmatrix}
+                        c_{11} & c_{12} & \dots & c_{1j} & \dots & c_{1n} \\
+                        c_{21} & c_{22} & \dots & c_{2j} & \dots & c_{2n} \\
+                        \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+                        c_{i1} & c_{i2} & \dots & c_{ij} & \dots & c_{in} \\
+                        \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+                        c_{m1} & c_{m2} & \dots & c_{mj} & \dots & c_{mn}
+                      \end{pmatrix}
+                    $$</p>
+                  </div>
+                  <p>prvok v <strong>i</strong>-tom riadku a <strong>j</strong>-tom stĺpci je označený symbolom 
+                    <span style="display:inline-block;">$$c_{ij}$$</span>.
+                    Pre úsporu miesta uvedenú maticu stručne zapisujeme v tvare 
+                    <span style="display:inline-block;">$$\boldsymbol{C} = [c_{ij}]_{m \times n}$$</span></p>
+                    
+
+
+                  
+                  
+                </div>
             </main>
          </div>
       </div>

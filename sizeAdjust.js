@@ -12,5 +12,6 @@ function updateMainMargin() {
   const availableWidth = document.body.clientWidth - sidebarWidth;
   main.style.width = `${availableWidth}px`;
 }
-updateMainMargin();
+
 window.addEventListener("resize", updateMainMargin);
+updateMainMargin();
