@@ -9,54 +9,54 @@
       <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="sizeAdjust.js" defer></script>
+      <script src="../../../sizeAdjust.js" defer></script>
       <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <title>Determinant rozvoj</title>
    </head>
    <script>
       $(document).ready(function() {
       	$(document).ready(function() {
-    $('#sidebar12').load('../../../components/sidebar.html', function() {
+      $('#sidebar12').load('../../../components/sidebar.html', function() {
         $('#sidebar12').find('li:contains("Determinant a riadkové operácie")').addClass('active').children('a').addClass('active');
-    });
-});     
+      });
+      });     
          $('#sidebar').load('../../../components/collapse_bar.html');
          $('#myTab').load('../../../components/tab_links.html');
-
+      
       });
    </script>
    <body >
       <div class="container-fluid">
-      <div class="row">
-         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-         <main style="margin-top: 3rem;">
-            <header><nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-               <div class="container-fluid justify-content-start">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
+         <div class="row">
+            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
+            <main style="margin-top: 3rem;">
+               <header>
+                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+                     <div class="container-fluid justify-content-start">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
+                     </div>
+                  </nav>
+               </header>
+               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
+               <div class="container my-5" >
+                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
+                  <div class="tab-content" id="myTabContent">
+                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+                        <p>Riadkove operacie determinant</p>
+                     </div>
+                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
+                        <p>Tab 2 content</p>
+                     </div>
+                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
+                        <p>Tab 3 content</p>
+                     </div>
+                  </div>
                </div>
-            </nav>
-         </header>
-            
-            <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-            <div class="container my-5" >
-               <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
-               <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                     <p>Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu m &#xd7 n je sústava mn čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s m riadkami a n stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ 1 &#xd7 3, m &#xd7 1  a 3 &#xd7 4:</p>
-                  </div>
-                  <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>Tab 2 content</p>
-                  </div>
-                  <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                     <p>Tab 3 content</p>
-                  </div>
-               </div>
-            </div>
-         </main>
+            </main>
          </div>
       </div>
    </body>

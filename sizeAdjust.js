@@ -1,3 +1,7 @@
+
+
+
+// get references to the sidebar and main elements
 const sidebar = document.querySelector(".sidebar");
 const main = document.querySelector("main");
 
@@ -7,7 +11,6 @@ function updateMainMargin() {
   main.style.marginLeft = `${sidebarWidth}px`;
   const availableWidth = document.body.clientWidth - sidebarWidth;
   main.style.width = `${availableWidth}px`;
-  
 }
 updateMainMargin();
 window.addEventListener("resize", updateMainMargin);
