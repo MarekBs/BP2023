@@ -22,7 +22,7 @@ function loadMartix() {
 
 function calcDet(matrix, index) {
   outputDiv.innerHTML = " = ";
-  console.log(index);
+  /* console.log(index); */
   let det = [];
   let nasobok = [];
 
@@ -45,7 +45,7 @@ function calcDet(matrix, index) {
       matr[x].splice(index, 1);
     }
 
-    console.log(aPoz + "*", matr, "+");
+    /* console.log(aPoz + "*", matr, "+"); */
 
     det[i] = math.det(matr);
     nasobok[i] = aPoz;
@@ -106,10 +106,10 @@ function calcDet(matrix, index) {
     }
 
     outputDiv.innerHTML += step;
-    console.log(nasobok[i] + "*" + det[i]);
+    /* console.log(nasobok[i] + "*" + det[i]); */
   }
 
-  console.log("=" + vysledok);
+  /* console.log("=" + vysledok); */
   cnt = 0;
 }
 

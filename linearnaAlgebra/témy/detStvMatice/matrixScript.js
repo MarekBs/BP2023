@@ -87,7 +87,7 @@ function changeMatrix() {
 changeMatrix();
 
 function getMatrix(size, mtx) {
-  var size = 4;
+  var size = document.getElementById(size).value;
   var matrix = [];
   for (var i = 1; i <= size; i++) {
     var row = [];
@@ -100,12 +100,13 @@ function getMatrix(size, mtx) {
     matrix.push(row);
   }
   return matrix;
+  
 }
 
 let btn = document.getElementById("calcBTN1");
 
 btn.addEventListener("click", function () {
-  let mat = getMatrix("size", "matrix");
+  let mat = getMatrix("matrixSize", "matrix");
   let index = document.getElementById("index").value;
   calcDet(mat, index - 1);
 });
@@ -116,7 +117,7 @@ btn1.addEventListener("click", function () {
   let matrx = getMatrix("matrix-size", "matrix-input");
   let result = math.det(matrx);
   document.getElementById("mxVysledok").textContent =
-    "=" + " " + math.det(result);
+    "=" + " " + math.det(Math.round(result));
 });
 
 // get references to the sidebar and main elements
