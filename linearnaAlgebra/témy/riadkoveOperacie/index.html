@@ -43,13 +43,61 @@
                <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
                <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
                <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
+                  <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
                   <div class="tab-content" id="myTabContent">
                      <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Riadkové operácie</p>
+                        <p>Pri riešení sústav lineárnych rovníc ste na strednej škole používali tri základné operácie: výmena dvoch rovníc, vynásobenie l'ubovol'nej rovnice nenulovou konštantou, a pripočítanie nejakého násobku jednej rovnice k inej rovnici. Ako uvidíme neskôr, metódy riešenia sústav lineárnych rovníc sa výhodne formulujú práve v reči matíc. Preto je užitočné zaviest' analógie uvedených operácií aj na maticiach. Pôjde o nasledovné tri tzv. riadkové operácie: <div style="text-align: center;">
+                           <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
+                             <li>O1: Vzájomná výmena niektorých dvoch riadkov matice.</li>
+                             <li>O2: Vynásobenie niektorého riadku nenulovou konštantou.</li>
+                             <li>O2: Pripočítanie násobku jedného riadku matice k inému riadku.</li>
+                           </ul>
+                         </div>
+                         </p>
+                         <p>Príklad 1. Nižšie uvedená matica <strong>B</strong> vznikla z matice <strong>A</strong>  postupnou aplikáciou nasledujúcich troch riadkových operácií: Vynásobením druhého riadku konštantou <strong>-1</strong>, pripočítaním trojnásobku tretieho riadku k prvému riadku, a napokon výmenou druhého a tretieho riadku.</p>
+                     <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin: 5rem auto;">
+                        <div>
+                          <div style="margin: auto;">
+                           \begin{align*}
+                           \mathbf{A} = \begin{pmatrix}
+                              -3 & a & -b & 0 \\
+                              1 & -2 & c & -d \\
+                              1 & x & y & z
+                           \end{pmatrix}
+                           \end{align*}
+
+                          </div>
+                        </div>
+                        <div>
+                          <div style="margin: auto;">
+                           \begin{align*}
+                           \mathbf{B} = \begin{pmatrix}
+                              0 & 3x + a & 3y - b & 3z \\
+                              1 & x & y & z \\
+                              -1 & 2 & -c & d
+                            \end{pmatrix}
+                            \end{align*}
+                          </div>
+                        </div>
+                      </div>                  
+                        <p>Dve matice nazveme ekvivalentné, ak jednu možno utvorit' z druhej pomocou konečnej postupnosti riadkových operácií O1, O2, O3. Pre ekvivalenciu matíc rezervujeme symbol $\cong$; pre matice z nášho príkladu teda platí ${\bf A}\cong {\bf B}$.</p>
                      </div>
+                     
                      <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>Tab 2 content</p>
+                        <p>$$
+                           \begin{pmatrix}
+                             a & b & c \\
+                             d & e & f \\
+                             g & h & i
+                           \end{pmatrix}
+                           \xrightarrow{R_2 \leftarrow 3R_2}
+                           \begin{pmatrix}
+                             a & b & c \\
+                             3d & 3e & 3f \\
+                             g & h & i
+                           \end{pmatrix}
+                           $$
+                           </p>
                      </div>
                      <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
                         <p>Tab 3 content</p>
