@@ -74,6 +74,8 @@
   min-width: 220px;
   overflow-y: auto;
 }
+
+
 mjx-container.MathJax {
   pointer-events: none;
 }

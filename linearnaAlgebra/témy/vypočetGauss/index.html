@@ -20,7 +20,9 @@
         $('#sidebar12').find('li:contains("Výpočet gaussovho tvaru matice")').addClass('active').children('a').addClass('active');
       });
       });     
-         $('#sidebar').load('../../../components/collapse_bar.html');
+         $('#sidebar').load('../../../components/collapse_bar.html',function(){
+            $('#sidebar').find('li:contains("Výpočet gaussovho tvaru matice")').addClass('active').children('a').addClass('active');
+         });
          $('#myTab').load('../../../components/tab_links.html');
       
       });
