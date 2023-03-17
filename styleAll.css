@@ -86,3 +86,9 @@ mjx-container.MathJax {
 .rules li {
   margin: 1rem 0;
 }
+
+.mth {
+  display: inline-block;
+  height: 0.7rem;
+}
+

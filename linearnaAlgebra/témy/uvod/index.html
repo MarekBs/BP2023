@@ -1,96 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="../../../sizeAdjust.js" defer></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <title>Úvod</title>
-   </head>
-   <script>
-      $(document).ready(function() {
-      	$(document).ready(function() {
-      $('#sidebar12').load('../../../components/sidebar.html', function() {
-        $('#sidebar12').find('li:contains("Úvod")').addClass('active').children('a').addClass('active');
-      });
-      });     
-         $('#sidebar').load('../../../components/collapse_bar.html', function() {
-            $('#sidebar').find('li:contains("Úvod")').addClass('active').children('a').addClass('active');
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+   <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="../../../styleAll.css">
+   <script src="../../../sizeAdjust.js" defer></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <title>Úvod</title>
+</head>
+<script>
+   $(document).ready(function () {
+      $(document).ready(function () {
+         $('#sidebar12').load('../../../components/sidebar.html', function () {
+            $('#sidebar12').find('li:contains("Úvod")').addClass('active').children('a').addClass('active');
          });
-         
-         
-      
       });
-   </script>
-   <body >
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-            <main style="margin-top: 3rem;">
-               <header>
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-                     <div class="container-fluid justify-content-start">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+      $('#sidebar').load('../../../components/collapse_bar.html', function () {
+         $('#sidebar').find('li:contains("Úvod")').addClass('active').children('a').addClass('active');
+      });
+
+
+
+   });
+</script>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12"></nav>
+         <main style="margin-top: 3rem;">
+            <header>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                  <div class="container-fluid justify-content-start">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                        aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation"
+                        data-bs-offset="56">
                         <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
-                     </div>
-                  </nav>
-               </header>
-               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-               <div class="container my-5" >
-                <h3 style="text-align: center; color:orangered">Teória</h3>
-                <hr>
-                  <p class="mb-0" style="margin-top: 3rem;">Matica je určitá množina čísel alebo iných matematických objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa týka každého prvku tvoriaceho maticu. Matica typu <strong>m</strong> &#xd7 <strong>n</strong> je sústava <strong>mn</strong> čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s <strong>m</strong> riadkami a <strong>n</strong> stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú postupne typ <strong>1</strong> &#xd7 <strong>3</strong>, <strong>m</strong> &#xd7 <strong>1</strong>  a <strong>3</strong> &#xd7 <strong>4</strong>:</p>
-                  <br>
-                  <div style="display:flex; flex-wrap:wrap; align-items:center; width: 80%; margin: 2rem auto;">
-                     <span style="flex: 1; margin: 5px">
+                     </button>
+                     <a class="navbar-brand" href="../../../landingPage/index.html"
+                        style="padding-left: 1rem;">Matice</a>
+                  </div>
+               </nav>
+            </header>
+            <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
+               style="top: 56px; height: calc(100% - 56px);"></div>
+            <div class="container my-5">
+               <h3 style="text-align: center; color:orangered">Teória</h3>
+               <hr>
+               <p class="mb-0" style="margin-top: 3rem;">Matica je určitá množina čísel alebo iných matematických
+                  objektov (tzv. prvkov matice) usporiadaných do pravidelných riadkov a stĺpcov (prípadne aj ich
+                  viacrozmerných ekvivalentov) a vyznačujúcich sa tým, že každý výpočtový úkon vykonávaný s maticou sa
+                  týka každého prvku tvoriaceho maticu. Matica typu <strong>m</strong> &#xd7 <strong>n</strong> je
+                  sústava <strong>mn</strong> čísiel usporiadaných v tvare obdĺžnikovej "tabuľky" s <strong>m</strong>
+                  riadkami a <strong>n</strong> stĺpcami. Ako príklad uvádzame nasledujúce tri matice, ktoré majú
+                  postupne typ <strong>1</strong> &#xd7 <strong>3</strong>, <strong>m</strong> &#xd7 <strong>1</strong>
+                  a <strong>3</strong> &#xd7 <strong>4</strong>:</p>
+               <br>
+               <div style="display:flex; flex-wrap:wrap; align-items:center; width: 80%; margin: 2rem auto;">
+                  <span style="flex: 1; margin: 5px">
                      $$\begin{pmatrix} 1 & b & \pi \end{pmatrix}$$
-                     </span>
-                     <span style="flex: 1; margin: 5px">
+                  </span>
+                  <span style="flex: 1; margin: 5px">
                      $$\begin{pmatrix}
-                     a_1 \\ 
+                     a_1 \\
                      \vdots \\
                      a_{m-1} \\
                      a_m
                      \end{pmatrix}$$
-                     </span>
-                     <span style="flex: 2; margin: 5px">
+                  </span>
+                  <span style="flex: 2; margin: 5px">
                      $$\begin{pmatrix}
-                     a_{11} & a_{12} & a_{13} & a_{14} \\ 
+                     a_{11} & a_{12} & a_{13} & a_{14} \\
                      a_{21} & a_{22} & a_{23} & a_{24} \\
                      a_{31} & a_{32} & a_{33} & a_{34}
                      \end{pmatrix}$$
-                     </span>
-                  </div>
-                  <p>Matice je obvyklé pomenúvať tučne sádzanými vel'kými písmenami, a ich prvky sú potom označené zodpovedajúcim malým písmenom s dvoma indexami (riadkovým a stĺpcovým). Všeobecná matica typu <strong>m</strong>  &#xd7 <strong>n</strong> môže teda byt' označená a opísaná napr. nasledujúcim spôsobom:</p>
-                  <div class="table-responsive" style="margin: 3rem auto 1rem auto;">
-                    <p>$$
-                      \boldsymbol{C} = \begin{pmatrix}
-                        c_{11} & c_{12} & \dots & c_{1j} & \dots & c_{1n} \\
-                        c_{21} & c_{22} & \dots & c_{2j} & \dots & c_{2n} \\
-                        \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
-                        c_{i1} & c_{i2} & \dots & c_{ij} & \dots & c_{in} \\
-                        \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
-                        c_{m1} & c_{m2} & \dots & c_{mj} & \dots & c_{mn}
-                      \end{pmatrix}
-                    $$</p>
-                  </div>
-                  <p>prvok v <strong>i</strong>-tom riadku a <strong>j</strong>-tom stĺpci je označený symbolom 
-                    <span style="display:inline-block;">$$c_{ij}$$</span>.
-                    Pre úsporu miesta uvedenú maticu stručne zapisujeme v tvare 
-                    <span style="display:inline-block;">$$\boldsymbol{C} = [c_{ij}]_{m \times n}$$</span></p>
-                    
-                </div>
-            </main>
-         </div>
+                  </span>
+               </div>
+               <p>Matice je obvyklé pomenúvať tučne sádzanými vel'kými písmenami, a ich prvky sú potom označené
+                  zodpovedajúcim malým písmenom s dvoma indexami (riadkovým a stĺpcovým). Všeobecná matica typu
+                  <strong>m</strong> &#xd7 <strong>n</strong> môže teda byt' označená a opísaná napr. nasledujúcim
+                  spôsobom:
+               </p>
+               <div class="table-responsive" style="margin: 3rem auto 1rem auto;">
+                  <p>$$
+                     \boldsymbol{C} = \begin{pmatrix}
+                     c_{11} & c_{12} & \dots & c_{1j} & \dots & c_{1n} \\
+                     c_{21} & c_{22} & \dots & c_{2j} & \dots & c_{2n} \\
+                     \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+                     c_{i1} & c_{i2} & \dots & c_{ij} & \dots & c_{in} \\
+                     \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+                     c_{m1} & c_{m2} & \dots & c_{mj} & \dots & c_{mn}
+                     \end{pmatrix}
+                     $$</p>
+               </div>
+               <p>prvok v <strong>i</strong>-tom riadku a <strong>j</strong>-tom stĺpci je označený symbolom
+                  <span class="mth">$$c_{ij}$$</span>.
+                  Pre úsporu miesta uvedenú maticu stručne zapisujeme v tvare
+                  <span class="mth">$$\boldsymbol{C} = [c_{ij}]_{m \times n}$$</span>
+               </p>
+
+            </div>
+         </main>
       </div>
-   </body>
+   </div>
+</body>
+
 </html>
