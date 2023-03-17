@@ -92,3 +92,8 @@ mjx-container.MathJax {
   height: 0.7rem;
 }
 
+@media screen and (max-width: 992px){
+  .container {
+    padding: 0 0.2rem;
+  }
+}
