@@ -75,6 +75,9 @@
   overflow-y: auto;
 }
 
+.container {
+  padding: 0 4rem;
+}
 
 mjx-container.MathJax {
   pointer-events: none;

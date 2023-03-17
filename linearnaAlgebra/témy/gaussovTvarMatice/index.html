@@ -1,65 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="../../../sizeAdjust.js" defer></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <title>Gaussov tvar matice</title>
-   </head>
-   <script>
-      $(document).ready(function() {
-      	$(document).ready(function() {
-      $('#sidebar12').load('../../../components/sidebar.html', function() {
-        $('#sidebar12').find('li:contains("Gaussov tvar matice")').addClass('active').children('a').addClass('active');
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../../styleAll.css" />
+  <script src="../../../sizeAdjust.js" defer></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Gaussov tvar matice</title>
+</head>
+<script>
+  $(document).ready(function () {
+    $(document).ready(function () {
+      $("#sidebar12").load("../../../components/sidebar.html", function () {
+        $("#sidebar12")
+          .find('li:contains("Gaussov tvar matice")')
+          .addClass("active")
+          .children("a")
+          .addClass("active");
       });
-      });     
-         $('#sidebar').load('../../../components/collapse_bar.html',function() {
-            $('#sidebar').find('li:contains("Gaussov tvar matice")').addClass('active').children('a').addClass('active');
-         });
-         $('#myTab').load('../../../components/tab_links.html');
-      
-      });
-   </script>
-   <body >
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-            <main style="margin-top: 3rem;">
-               <header>
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-                     <div class="container-fluid justify-content-start">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
-                     </div>
-                  </nav>
-               </header>
-               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-               <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
-                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Gaussov tvar matice</p>
-                     </div>
-                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>Tab 2 content</p>
-                     </div>
-                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                        <p>Tab 3 content</p>
-                     </div>
-                  </div>
-               </div>
-            </main>
-         </div>
-      </div>
-   </body>
+    });
+    $("#sidebar").load("../../../components/collapse_bar.html", function () {
+      $("#sidebar")
+        .find('li:contains("Gaussov tvar matice")')
+        .addClass("active")
+        .children("a")
+        .addClass("active");
+    });
+    $("#myTab").load("../../../components/tab_links.html");
+  });
+</script>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 sidebar d-none d-lg-block" id="sidebar12"></nav>
+      <main style="margin-top: 3rem">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid justify-content-start">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="../../../landingPage/index.html" style="padding-left: 1rem">Matice</a>
+            </div>
+          </nav>
+        </header>
+        <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+        <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
+          style="top: 56px; height: calc(100% - 56px)"></div>
+        <div class="container my-5">
+          <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+              <p>
+                Nasledujúci pojem má v teórii matíc (a následne v lineárnej
+                algebre) výsadné postavenie. Hovoríme, že matica je v
+                Gaussovom tvare, ak sú splnené nasledujúce štyri podmienky:
+              <div>
+                <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
+                  <li>G1. Prvý l'avý nenulový prvok v každom riadku je rovný 1.
+                    (Tomuto prvku hovoríme vedúca jednotka v riadku.)</li>
+                  <li>G2. Každý
+                    prvok v stĺpci pod vedúcou jednotkou je rovný 0.</li>
+                  <li>G3. Vedúca
+                    jednotka v každom riadku sa nachádza vpravo od vedúcich
+                    jednotiek vo všetkých vyššie položených riadkoch.</li>
+                  <li>G4. Prípadné
+                    riadky obsahujúce samé nuly nasledujú až za všetkými riadkami
+                    obsahujúcimi vedúce jednotky.</li>
+                </ul>
+              </div>
+              Naviac, hovoríme, že matica je v
+              redukovanom Gaussovom tvare, ak spolu s horeuvedenými štyrmi
+              podmienkami je splnená aj piata: G5. Každý prvok v stĺpci nad
+              vedúcou jednotkou je rovný 0. Dá sa pomerne l'ahko ukázat', že
+              každá matica je ekvivalentná s nejakou maticou v Gaussovom
+              tvare. Inak povedané, pre každú maticu existuje postupnost'
+              riadkových operácií, pomocou ktorej je možné danú maticu
+              upravit' tak, aby spĺňala podmienky G1-G4.
+              </p>
+            </div>
+            <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
+              <p>Tab 2 content</p>
+            </div>
+            <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
+              <p>Tab 3 content</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
 </html>

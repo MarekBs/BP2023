@@ -1,114 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="../../../sizeAdjust.js" defer></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <title>Riadkové operácie</title>
-   </head>
-   <script>
-      $(document).ready(function() {
-      	$(document).ready(function() {
-      $('#sidebar12').load('../../../components/sidebar.html', function() {
-        $('#sidebar12').find('li:contains("Riadkové operácie")').addClass('active').children('a').addClass('active');
-      });
-      });     
-         $('#sidebar').load('../../../components/collapse_bar.html',function(){
-            $('#sidebar').find('li:contains("Riadkové operácie")').addClass('active').children('a').addClass('active');
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+   <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="../../../styleAll.css">
+   <script src="../../../sizeAdjust.js" defer></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <title>Riadkové operácie</title>
+</head>
+<script>
+   $(document).ready(function () {
+      $(document).ready(function () {
+         $('#sidebar12').load('../../../components/sidebar.html', function () {
+            $('#sidebar12').find('li:contains("Riadkové operácie")').addClass('active').children('a').addClass('active');
          });
-         $('#myTab').load('../../../components/tab_links.html');
-      
       });
-   </script>
-   <body >
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-            <main style="margin-top: 3rem;">
-               <header>
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-                     <div class="container-fluid justify-content-start">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+      $('#sidebar').load('../../../components/collapse_bar.html', function () {
+         $('#sidebar').find('li:contains("Riadkové operácie")').addClass('active').children('a').addClass('active');
+      });
+      $('#myTab').load('../../../components/tab_links.html');
+
+   });
+</script>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12"></nav>
+         <main style="margin-top: 3rem;">
+            <header>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                  <div class="container-fluid justify-content-start">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                        aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation"
+                        data-bs-offset="56">
                         <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
+                     </button>
+                     <a class="navbar-brand" href="../../../landingPage/index.html"
+                        style="padding-left: 1rem;">Matice</a>
+                  </div>
+               </nav>
+            </header>
+            <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
+               style="top: 56px; height: calc(100% - 56px);"></div>
+            <div class="container my-5">
+               <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
+               <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+                     <p>Pri riešení sústav lineárnych rovníc ste na strednej škole používali tri základné operácie:
+                        výmena dvoch rovníc, vynásobenie l'ubovol'nej rovnice nenulovou konštantou, a pripočítanie
+                        nejakého násobku jednej rovnice k inej rovnici. Ako uvidíme neskôr, metódy riešenia sústav
+                        lineárnych rovníc sa výhodne formulujú práve v reči matíc. Preto je užitočné zaviest' analógie
+                        uvedených operácií aj na maticiach. Pôjde o nasledovné tri tzv. riadkové operácie:
+                     <div style="text-align: center;">
+                        <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
+                           <li>O1: Vzájomná výmena niektorých dvoch riadkov matice.</li>
+                           <li>O2: Vynásobenie niektorého riadku nenulovou konštantou.</li>
+                           <li>O2: Pripočítanie násobku jedného riadku matice k inému riadku.</li>
+                        </ul>
                      </div>
-                  </nav>
-               </header>
-               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-               <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
-                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Pri riešení sústav lineárnych rovníc ste na strednej škole používali tri základné operácie: výmena dvoch rovníc, vynásobenie l'ubovol'nej rovnice nenulovou konštantou, a pripočítanie nejakého násobku jednej rovnice k inej rovnici. Ako uvidíme neskôr, metódy riešenia sústav lineárnych rovníc sa výhodne formulujú práve v reči matíc. Preto je užitočné zaviest' analógie uvedených operácií aj na maticiach. Pôjde o nasledovné tri tzv. riadkové operácie: <div style="text-align: center;">
-                           <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
-                             <li>O1: Vzájomná výmena niektorých dvoch riadkov matice.</li>
-                             <li>O2: Vynásobenie niektorého riadku nenulovou konštantou.</li>
-                             <li>O2: Pripočítanie násobku jedného riadku matice k inému riadku.</li>
-                           </ul>
-                         </div>
-                         </p>
-                         <p>Príklad 1. Nižšie uvedená matica <strong>B</strong> vznikla z matice <strong>A</strong>  postupnou aplikáciou nasledujúcich troch riadkových operácií: Vynásobením druhého riadku konštantou <strong>-1</strong>, pripočítaním trojnásobku tretieho riadku k prvému riadku, a napokon výmenou druhého a tretieho riadku.</p>
-                     <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin: 5rem auto;">
+                     </p>
+                     <p>Príklad 1. Nižšie uvedená matica <strong>B</strong> vznikla z matice <strong>A</strong>
+                        postupnou aplikáciou nasledujúcich troch riadkových operácií: Vynásobením druhého riadku
+                        konštantou <strong>-1</strong>, pripočítaním trojnásobku tretieho riadku k prvému riadku, a
+                        napokon výmenou druhého a tretieho riadku.</p>
+                     <div
+                        style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin: 5rem auto;">
                         <div>
-                          <div style="margin: auto;">
-                           \begin{align*}
-                           \mathbf{A} = \begin{pmatrix}
+                           <div style="margin: auto;">
+                              \begin{align*}
+                              \mathbf{A} = \begin{pmatrix}
                               -3 & a & -b & 0 \\
                               1 & -2 & c & -d \\
                               1 & x & y & z
-                           \end{pmatrix}
-                           \end{align*}
+                              \end{pmatrix}
+                              \end{align*}
 
-                          </div>
+                           </div>
                         </div>
                         <div>
-                          <div style="margin: auto;">
-                           \begin{align*}
-                           \mathbf{B} = \begin{pmatrix}
+                           <div style="margin: auto;">
+                              \begin{align*}
+                              \mathbf{B} = \begin{pmatrix}
                               0 & 3x + a & 3y - b & 3z \\
                               1 & x & y & z \\
                               -1 & 2 & -c & d
-                            \end{pmatrix}
-                            \end{align*}
-                          </div>
+                              \end{pmatrix}
+                              \end{align*}
+                           </div>
                         </div>
-                      </div>                  
-                        <p>Dve matice nazveme ekvivalentné, ak jednu možno utvorit' z druhej pomocou konečnej postupnosti riadkových operácií O1, O2, O3. Pre ekvivalenciu matíc rezervujeme symbol \(\cong\)
-                           ; pre matice z nášho príkladu teda platí \({\bf A}\cong {\bf B}\).</p>
                      </div>
-                     
-                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>$$
-                           \begin{pmatrix}
-                             a & b & c \\
-                             d & e & f \\
-                             g & h & i
-                           \end{pmatrix}
-                           \xrightarrow{R_2 \leftarrow 3R_2}
-                           \begin{pmatrix}
-                             a & b & c \\
-                             3d & 3e & 3f \\
-                             g & h & i
-                           \end{pmatrix}
-                           $$
-                           </p>
-                     </div>
-                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                        <p>Tab 3 content</p>
-                     </div>
+                     <p>Dve matice nazveme ekvivalentné, ak jednu možno utvorit' z druhej pomocou konečnej postupnosti
+                        riadkových operácií O1, O2, O3. Pre ekvivalenciu matíc rezervujeme symbol \(\cong\)
+                        ; pre matice z nášho príkladu teda platí \({\bf A}\cong {\bf B}\).</p>
+                  </div>
+
+                  <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
+                     <p>$$
+                        \begin{pmatrix}
+                        a & b & c \\
+                        d & e & f \\
+                        g & h & i
+                        \end{pmatrix}
+                        \xrightarrow{R_2 \leftarrow 3R_2}
+                        \begin{pmatrix}
+                        a & b & c \\
+                        3d & 3e & 3f \\
+                        g & h & i
+                        \end{pmatrix}
+                        $$
+                     </p>
+                  </div>
+                  <div class="tab-pane fade" id="practice-problems" role="tabpanel"
+                     aria-labelledby="practice-problems-tab">
+                     <p>Tab 3 content</p>
                   </div>
                </div>
-            </main>
-         </div>
+            </div>
+         </main>
       </div>
-   </body>
+   </div>
+</body>
+
 </html>
