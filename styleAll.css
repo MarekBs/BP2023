@@ -92,6 +92,12 @@ mjx-container.MathJax {
   height: 0.7rem;
 }
 
+.highlight {
+  background-color: rgb(245, 245, 245);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
 @media screen and (max-width: 992px){
   .container {
     padding: 0 0.2rem;
