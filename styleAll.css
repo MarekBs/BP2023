@@ -82,3 +82,7 @@
 mjx-container.MathJax {
   pointer-events: none;
 }
+
+.rules li {
+  margin: 1rem 0;
+}
