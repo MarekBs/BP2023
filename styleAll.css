@@ -87,16 +87,18 @@ mjx-container.MathJax {
   margin: 1rem 0;
 }
 
-.mth {
-  display: inline-block;
-  height: 0.7rem;
-}
-
 .highlight {
   background-color: rgb(245, 245, 245);
   padding: 1rem;
   border-radius: 6px;
 }
+.MathJax {
+  display: inline !important;
+  border: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 
 @media screen and (max-width: 992px){
   .container {

@@ -54,10 +54,33 @@
             <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
                style="top: 56px; height: calc(100% - 56px);"></div>
             <div class="container my-5">
-               <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
+               <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
                <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                     <p>Výpočet inverznej matice</p>
+                     <p>Na výpočet inverznej matice (prípadne na vylúčenie jej existencie) možno použit' nasledujúci
+                        jednoduchý postup:</p>
+                     <div style="text-align: center;">
+                        <ul style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
+                           <li>Nech $${\bf A}$$ je štvorcová matica typu $$n\times n$$ .</li>
+                           <li>Utvoríme maticu $${\bf C}$$ typu $$n\times
+                              2n$$ tak, že prvých $$n$$ stĺpcov bude
+                              tvorených
+                              maticou $$\bf A$$ , a zvyšných $$n$$
+                              stĺpcov bude tvorených jednotkovou maticou $${\bf
+                              I}_n$$ ;
+                              symbolicky, $${\bf C}=[{\bf A}\vert{\bf I}_n]$$ .</li>
+                           <li>Maticu $$\bf C$$ upravíme na redukovaný Gaussov tvar, ktorý
+                              označíme $${\bf C}'$$ . Ak prvých
+                              $$n$$ stĺpcov tejto novej matice $${\bf
+                              C}'$$ nevytvára jednotkovú maticu, tak ku pôvodnej
+                              matici $$\bf A$$ neexistuje inverzná matica. V opačnom prípade platí: $${\bf C}'=[{\bf
+                              I}_n\vert{\bf A}^{-1}]$$, t.j. zvyšných $$n$$ stĺpcov novej matice $${\bf C}'$$ nám
+                              automaticky
+                              poskytne inverznú maticu.
+                           </li>
+                        </ul>
+                     </div>
+
                   </div>
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
                      <p>Tab 2 content</p>
