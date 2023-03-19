@@ -104,9 +104,17 @@ mjx-container.MathJax {
   margin: 0px !important;
 }
 
+#sarus2 {
+  width: 50%;
+  margin: 5rem auto;
+}
 
 @media screen and (max-width: 992px){
   .container {
     padding: 0 0.2rem;
   }
+  #sarus2 {
+    width: 90%;
+  }
+
 }
