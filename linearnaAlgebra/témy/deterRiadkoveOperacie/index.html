@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="../../../sizeAdjust.js" defer></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <title>Riadkové operácie determinant</title>
-   </head>
-   <script>
-      $(document).ready(function() {
-      	$(document).ready(function() {
-      $('#sidebar12').load('../../../components/sidebar.html', function() {
-        $('#sidebar12').find('li:contains("Determinant a riadkové operácie")').addClass('active').children('a').addClass('active');
-      });
-      });     
-         $('#sidebar').load('../../../components/collapse_bar.html',function() {
-            $('#sidebar').find('li:contains("Determinant a riadkové operácie")').addClass('active').children('a').addClass('active');
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+   <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="../../../styleAll.css">
+   <script src="../../../sizeAdjust.js" defer></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <title>Riadkové operácie determinant</title>
+</head>
+<script>
+   $(document).ready(function () {
+      $(document).ready(function () {
+         $('#sidebar12').load('../../../components/sidebar.html', function () {
+            $('#sidebar12').find('li:contains("Determinant a riadkové operácie")').addClass('active').children('a').addClass('active');
          });
-         $('#myTab').load('../../../components/tab_links.html');
-      
       });
-   </script>
-   <body >
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-            <main style="margin-top: 3rem;">
-               <header>
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-                     <div class="container-fluid justify-content-start">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+      $('#sidebar').load('../../../components/collapse_bar.html', function () {
+         $('#sidebar').find('li:contains("Determinant a riadkové operácie")').addClass('active').children('a').addClass('active');
+      });
+      $('#myTab').load('../../../components/tab_links.html');
+
+   });
+</script>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12"></nav>
+         <main style="margin-top: 3rem;">
+            <header>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                  <div class="container-fluid justify-content-start">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                        aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation"
+                        data-bs-offset="56">
                         <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
+                     </button>
+                     <a class="navbar-brand" href="../../../landingPage/index.html"
+                        style="padding-left: 1rem;">Matice</a>
+                  </div>
+               </nav>
+            </header>
+            <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
+               style="top: 56px; height: calc(100% - 56px);"></div>
+            <div class="container my-5">
+               <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
+               <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+                     <p>Z mnohých vlastností determinantu uvedieme nasledujúcich pät', ktoré zároveň umožňujú jeho
+                        rýchly výpočet (v kombinácii s metódou v predchádzajúcej časti):</p>
+                     <div style="text-align: center;">
+                        <ul style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
+                           <li>D1: Ak $$\bf B$$ je matica, ktorá vznikne z $$\bf A$$ aplikáciou jednej riadkovej
+                              operácie O1, tak $$\vert{\bf B}\vert=-\vert{\bf A}\vert$$.</li>
+                           <li>D2: Nech matica $$\bf B$$ vznikne z $$\bf A$$ pomocou riadkovej operácie O2, t.j. tak, že
+                              niektorý riadok matice $$\bf A$$ sa vynásobí konštantou $$c$$. Potom $$\vert{\bf
+                              B}\vert=c.\vert{\bf A}\vert$$.</li>
+                           <li>D3: Aplikáciou riadkovej operácie O3 sa determinant nemení.</li>
+                           <li>D4: Ak v matici $$\bf A$$ je niektorý riadok násobkom iného riadku, tak $$\vert{\bf
+                              A}\vert=0$$.</li>
+                           <li>D5: Ak $${\bf A}=[a_{ij}]_{n\times n}$$ je trojuholníková matica, tak jej determinant je
+                              súčinom jej diagonálnych prvkov, čiže $$\vert{\bf A}\vert=a_{11}a_{22}\ldots a_{nn}$$.
+                           </li>
+                        </ul>
                      </div>
-                  </nav>
-               </header>
-               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-               <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
-                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Riadkove operacie determinant</p>
-                     </div>
-                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>Tab 2 content</p>
-                     </div>
-                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                        <p>Tab 3 content</p>
-                     </div>
+                     <br>
+                     <p>Z uvedeného vyplýva, že determinant štvorcovej matice $$\bf A$$ typu $$n\times n$$ možno
+                        počítať napr. nasledovne: Použitím krokov A1-A3 upravíme maticu $$\bf A$$ do Gaussovho tvaru --
+                        to
+                        bude automaticky trojuholníková matica, ktorej determinant je (podl'a D5) súčinom jej
+                        diagonálnych prvkov. Pri výpočte nezabúdame zmenit' znamienko determinantu pri kažej výmene
+                        dvoch riadkov (pravidlo D1) a vynásobit' determinant konštantou pri každom použití riadkovej
+                        operácie O2 (pravidlo D2).</p>
+                  </div>
+                  <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
+                     <p>Tab 2 content</p>
+                  </div>
+                  <div class="tab-pane fade" id="practice-problems" role="tabpanel"
+                     aria-labelledby="practice-problems-tab">
+                     <p>Tab 3 content</p>
                   </div>
                </div>
-            </main>
-         </div>
+            </div>
+         </main>
       </div>
-   </body>
+   </div>
+</body>
+
 </html>
