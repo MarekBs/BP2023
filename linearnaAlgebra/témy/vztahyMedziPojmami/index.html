@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="../../../styleAll.css">
-      <script src="../../../sizeAdjust.js" defer></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <title>Dôležité vzťahy medzi uvedenými pojmami</title>
-   </head>
-   <script>
-      $(document).ready(function() {
-      	$(document).ready(function() {
-      $('#sidebar12').load('../../../components/sidebar.html', function() {
-        $('#sidebar12').find('li:contains("Dôležité vzťahy medzi uvedenými pojmami")').addClass('active').children('a').addClass('active');
-      });
-      });     
-         $('#sidebar').load('../../../components/collapse_bar.html', function() {
-            $('#sidebar').find('li:contains("Dôležité vzťahy medzi uvedenými pojmami")').addClass('active').children('a').addClass('active');
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+   <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="../../../styleAll.css">
+   <script src="../../../sizeAdjust.js" defer></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <title>Dôležité vzťahy medzi uvedenými pojmami</title>
+</head>
+<script>
+   $(document).ready(function () {
+      $(document).ready(function () {
+         $('#sidebar12').load('../../../components/sidebar.html', function () {
+            $('#sidebar12').find('li:contains("Dôležité vzťahy medzi uvedenými pojmami")').addClass('active').children('a').addClass('active');
          });
-         $('#myTab').load('../../../components/tab_links.html');
-      
       });
-   </script>
-   <body >
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12" ></nav>
-            <main style="margin-top: 3rem;">
-               <header>
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-                     <div class="container-fluid justify-content-start">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-offset="56">
+      $('#sidebar').load('../../../components/collapse_bar.html', function () {
+         $('#sidebar').find('li:contains("Dôležité vzťahy medzi uvedenými pojmami")').addClass('active').children('a').addClass('active');
+      });
+      $('#myTab').load('../../../components/tab_links.html');
+
+   });
+</script>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <nav class="col-md-3 col-lg-2  sidebar d-none d-lg-block" id="sidebar12"></nav>
+         <main style="margin-top: 3rem;">
+            <header>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                  <div class="container-fluid justify-content-start">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                        aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation"
+                        data-bs-offset="56">
                         <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="../../../landingPage/index.html"style="padding-left: 1rem;">Matice</a>
-                     </div>
-                  </nav>
-               </header>
-               <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
-               <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar" style="top: 56px; height: calc(100% - 56px);"></div>
-               <div class="container my-5" >
-                  <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist"></ul>
-                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                        <p>Dôležité vzťahy medzi uvedenými pojmami</p>
-                     </div>
-                     <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                        <p>Tab 2 content</p>
-                     </div>
-                     <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-                        <p>Tab 3 content</p>
-                     </div>
+                     </button>
+                     <a class="navbar-brand" href="../../../landingPage/index.html"
+                        style="padding-left: 1rem;">Matice</a>
                   </div>
+               </nav>
+            </header>
+            <div class="offcanvas-backdrop offcanvas backdrop" id="backdr" data-bs-dismiss="offcanvas"></div>
+            <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
+               style="top: 56px; height: calc(100% - 56px);"></div>
+            <div class="container my-5">
+               <h3 style="text-align: center; color:orangered">Dôležité vzťahy medzi uvedenými pojmami</h3>
+               <hr>
+               <p style="margin-top: 3rem;">Súvislosti maticových operácií s determinantom a inverznou maticou:</p>
+               <div class="highlight">Nech $$\bf A$$, $$\bf B$$ sú štvorcové matice
+                  rovnakého typu.
+                  Potom $$\vert{\bf AB}\vert=\vert{\bf
+                  A}\vert\vert{\bf B}\vert$$, čiže determinant súčinu matíc je rovný súčinu príslušných determinantov.
+                  (Pozor -- analogické pravidlo neplatí pre súčet matíc!) Ďalej, $$\vert{\bf A}^T\vert=\vert{\bf
+                  A}\vert$$, t.j. transponovaním matice sa determinant nemení. Napokon, ak $$\vert{\bf A}\vert\ne 0$$,
+                  tak
+                  $$\vert{\bf A}^{-1}\vert=1/\vert{\bf A}\vert$$.</div>
+               <br><br>
+               <p>Tvrdenie, ktoré zhrňuje vlastnosti ekvivalentné regulárnosti matíc. Nech $$\bf A$$ je štvorcová matica
+                  typu $$n\times n$$. Nasledujúce vlastnosti sú ekvivalentné:</p>
+               <div style="text-align: center;">
+                  <ol style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
+                     <li>Matica $$\bf A$$ je regulárna.</li>
+                     <li>Matica $$\bf A$$ je ekvivalentná s jednotkovou maticou $${\bf
+                        I}_n$$.</li>
+                     <li>Matica $$\bf A$$ má hodnost' rovnú $$n$$.</li>
+                     <li>Determinant matice $$\bf A$$ je rôzny od nuly:
+                        $$\vert{\bf
+                        A}\vert\ne 0$$.</li>
+                     <li>K matici $$\bf A$$ existuje inverzná matica.</li>
+                     <li>Pre každú $$n\times 1$$ maticu $$\bf
+                        b$$ má
+                        sústava rovníc $${\bf A}{\bf x}={\bf b}$$ jediné riešenie.</li>
+                  </ol>
                </div>
-            </main>
-         </div>
+
+
+            </div>
+
+         </main>
       </div>
-   </body>
+   </div>
+</body>
+
 </html>
