@@ -120,3 +120,10 @@ btn1.addEventListener("click", function () {
     "=" + " " + math.det(Math.round(result));
 });
 
+$( "#clearBTN" ).click(function() {
+  $( "#mxVysledok1")[0].innerHTML=" = ";
+});
+
+$( "#clearBTN2" ).click(function() {
+  $( "#mxVysledok")[0].innerHTML=" = ";
+});
