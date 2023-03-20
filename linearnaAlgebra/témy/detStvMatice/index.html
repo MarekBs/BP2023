@@ -129,65 +129,70 @@
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">
-                     <p>Tab 3 content</p>
+                     <p>Výpočet determinantu - rozvoj
+                        podla stĺpca.</p>
+                     <div style="text-align: center; margin-bottom: 3rem;">
+                        <label for="index">Zvol stĺpec</label>
+                        <input max="4" value="1" type="number" id="index"
+                           style="border: none; border-bottom: 1px solid green; text-align: center; width: 4rem;">
+                        <input type="hidden" value="4" id="matrixSize">
+                        <div style="display: flex; align-items: center; justify-content: center;">
+                           <table id="matrix" style="outline: none; margin: 1rem; "></table>
+                           <p id="mxVysledok1" style="margin: 0; display: flex; align-items: center;">=</p>
+                        </div>
+                        <button id="calcBTN1" type="button" class="btn btn-outline-success">
+                           Vypočítaj
+                        </button>
+                     </div>
+                     <style>
+                        #matrix-input td {
+                           padding: 0.2rem;
+                        }
+
+                        #matrix-input td:focus-within input {
+                           outline: none;
+                           background-color: greenyellow;
+                        }
+
+                        #matrix-input {
+                           margin: auto;
+                           border-right: 1px solid black;
+                           border-left: 1px solid black;
+                        }
+                     </style>
+                     <p>Výpočet determinantu.</p>
+                     <div style="text-align: center;padding-bottom: 5rem;">
+
+                        <label for="matrix-size">Veľkosť matice:</label>
+                        <input style="border: none; border-bottom: 1px solid green; text-align: center" type="number"
+                           id="matrix-size" name="matrix-size" value="3" min="1" max="10" />
+                        <div style="display: flex; justify-content: center;">
+                           <table style="margin: 1rem" id="matrix-input">
+                              <tbody>
+                                 <!-- use a loop to create rows and columns based on user input -->
+                                 <?php for ($i = 0; $i < 3; $i++) : ?>
+                                 <tr>
+                                    <?php for ($j = 0; $j < 3; $j++) : ?>
+                                    <td>
+                                       <input type="number" name="matrix[<?= $i ?>][<?= $j ?>]" value="0"
+                                          style="width: 1.5rem" />
+                                    </td>
+                                    <?php endfor; ?>
+                                 </tr>
+                                 <?php endfor; ?>
+                              </tbody>
+                           </table>
+                           <p id="mxVysledok" style="margin: auto 0">=</p>
+                        </div>
+                        <button id="calcBTN" type="button" class="btn btn-outline-success">
+                           Vypočítaj
+                        </button>
+                     </div>
                   </div>
                </div>
-            </div>
 
 
-            <div style=" margin: 5rem auto; margin-top: 50rem;">
-               <label for="index">Zvol stĺpec</label>
-               <input max="4" value="1" type="number" id="index">
-               <input type="hidden" value="4" id="matrixSize">
-               <div style="display: flex; align-items: center;">
-                  <table id="matrix" style="outline: none; margin: 1rem; "></table>
-                  <p id="mxVysledok1" style="margin: 0; display: flex; align-items: center;">=</p>
-               </div>
-               <button id="calcBTN1" type="button" class="btn btn-outline-success">
-                  Vypočítaj
-               </button>
-            </div>
-            <style>
-               #matrix-input td {
-                  padding: 0.2rem;
-               }
 
-               #matrix-input td:focus-within input {
-                  outline: none;
-                  background-color: greenyellow;
-               }
-
-               #matrix-input {
-                  margin: auto;
-                  border-right: 1px solid black;
-                  border-left: 1px solid black;
-               }
-            </style>
-            <div style="text-align: center;padding-bottom: 5rem;">
-               <label for="matrix-size">Veľkosť matice:</label>
-               <input style="border: none; border-bottom: 1px solid green; text-align: center" type="number"
-                  id="matrix-size" name="matrix-size" value="3" min="1" max="10" />
-               <div style="display: flex; justify-content: center;">
-                  <table style="margin: 1rem" id="matrix-input">
-                     <tbody>
-                        <!-- use a loop to create rows and columns based on user input -->
-                        <?php for ($i = 0; $i < 3; $i++) : ?>
-                        <tr>
-                           <?php for ($j = 0; $j < 3; $j++) : ?>
-                           <td>
-                              <input type="number" name="matrix[<?= $i ?>][<?= $j ?>]" value="0"
-                                 style="width: 1.5rem" />
-                           </td>
-                           <?php endfor; ?>
-                        </tr>
-                        <?php endfor; ?>
-                     </tbody>
-                  </table>
-                  <p id="mxVysledok" style="margin: auto 0">=</p>
-               </div>
-               <button id="calcBTN" type="button" class="btn btn-outline-success">
-                  Vypočítaj
-               </button>
          </main>
       </div>
    </div>
