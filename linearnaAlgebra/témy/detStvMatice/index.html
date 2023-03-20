@@ -129,18 +129,21 @@
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">
-                     <p>Výpočet determinantu - rozvoj
+                     <p style="text-align: center;">Výpočet determinantu - rozvoj
                         podla stĺpca.</p>
-                     <div style="text-align: center; margin-bottom: 3rem;">
+                     <div style="margin-bottom: 3rem;">
                         <label for="index">Zvol stĺpec</label>
                         <input max="4" value="1" type="number" id="index"
                            style="border: none; border-bottom: 1px solid green; text-align: center; width: 4rem;">
                         <input type="hidden" value="4" id="matrixSize">
-                        <div style="display: flex; align-items: center; justify-content: center;">
+                        <div style="display: flex;white-space: nowrap;
+                        overflow-x: auto;
+                        text-overflow: clip;">
                            <table id="matrix" style="outline: none; margin: 1rem; "></table>
                            <p id="mxVysledok1" style="margin: 0; display: flex; align-items: center;">=</p>
                         </div>
-                        <button id="calcBTN1" type="button" class="btn btn-outline-success">
+                        <button id="calcBTN1" type="button" class="btn btn-outline-success"
+                           style="margin-left: 1.2rem;">
                            Vypočítaj
                         </button>
                      </div>
@@ -160,13 +163,15 @@
                            border-left: 1px solid black;
                         }
                      </style>
-                     <p>Výpočet determinantu.</p>
-                     <div style="text-align: center;padding-bottom: 5rem;">
+                     <br>
+                     <hr>
+                     <p style="text-align: center;">Výpočet determinantu.</p>
+                     <div style="padding-bottom: 5rem;">
 
                         <label for="matrix-size">Veľkosť matice:</label>
                         <input style="border: none; border-bottom: 1px solid green; text-align: center" type="number"
                            id="matrix-size" name="matrix-size" value="3" min="1" max="10" />
-                        <div style="display: flex; justify-content: center;">
+                        <div style="display: flex;">
                            <table style="margin: 1rem" id="matrix-input">
                               <tbody>
                                  <!-- use a loop to create rows and columns based on user input -->
@@ -184,7 +189,7 @@
                            </table>
                            <p id="mxVysledok" style="margin: auto 0">=</p>
                         </div>
-                        <button id="calcBTN" type="button" class="btn btn-outline-success">
+                        <button id="calcBTN" type="button" class="btn btn-outline-success" style="margin-left: 1.2rem;">
                            Vypočítaj
                         </button>
                      </div>
