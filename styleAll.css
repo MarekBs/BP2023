@@ -116,6 +116,13 @@ mjx-container.MathJax {
   margin: 5rem auto;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem auto;
+}
+
 @media screen and (max-width: 992px){
   .container {
     padding: 0 0.2rem;
@@ -125,3 +132,4 @@ mjx-container.MathJax {
   }
 
 }
+
