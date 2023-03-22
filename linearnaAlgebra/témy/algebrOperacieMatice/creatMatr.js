@@ -73,3 +73,7 @@ $("#calcBTN5").on("click",function(){
     console.log(matrixSecond);
     multiple(matrixFirst,matrixSecond);
 })
+
+$("#clearBTN5").on("click",function(){
+  $( "#matrix-output")[0].innerHTML="";
+})

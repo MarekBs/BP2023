@@ -58,7 +58,7 @@ input[type=number] {
   border-left: 1px solid rgb(123, 222, 255);
 }
 #matrix-output td {
-  padding: 0.3rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
 }
 
 #matrix-output table {
