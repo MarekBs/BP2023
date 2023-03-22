@@ -68,7 +68,7 @@ p {
 }
 
 .nav-item a:hover {
-  color: orangered;
+  color: black;
 }
 .nav-item.active a:hover {
   color: white;
