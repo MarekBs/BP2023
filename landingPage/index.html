@@ -1,242 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="mainStyle.css" />
-    <title>Matematika 1</title>
-    <link rel="icon" type="image/png" href="../images/logo.png" />
-  </head>
-  <body>
-    <header>
-      
-      <nav
-        class="navbar navbar-dark navbar-expand-lg"
-        style="background-color: #054363;"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand pad" href="#">
-            <img width="40px" id="logo" src="../images/logo.png" alt="M1" />
-            MATEMATIKA 1</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-auto">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="../graf_vsetko/index.html"
-                  >Graf</a
-                >
-              </li>
-              <li class="nav-item dropdown mx-auto">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDarkDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Témy
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-white"
-                  aria-labelledby="navbarDarkDropdownMenuLink"
-                  style="background-color: #83a0b1;"
-                >
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="../linearnaAlgebra/index.html"
-                      >Lineárna algebra</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">Funkcie</a></li>
-                  <li><a class="dropdown-item" href="#">Kalkulačky</a></li>
-                </ul>
-              </li>
-              <li class="nav-item mx-auto">
-                <a class="nav-link" id="la" href="#">Kalkulačky</a>
-              </li>
-              <li class="nav-item mx-auto">
-                <a class="nav-link" id="bordered" href="#">Kontakt</a>
-              </li>
-              <li class="nav-item nav-night mx-auto">
-                <div class=" nav-link" id="nightMode">
-                  <div class="form-check form-switch " style="width: 9rem; margin: 0">
-                    <input
-                    class="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheckDefault"
-                    onchange="changeMode();"
-                  />
-                    <label
-                    class="form-check-label"
-                    for="flexSwitchCheckDefault"
-                    style="color: white"
-                    >Night mode</label
-                  >
-                  </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="mainStyle.css" />
+  <title>Matematika 1</title>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #054363;">
+      <div class="container-fluid">
+        <a class="navbar-brand pad" href="#">
+          <img width="40px" id="logo" src="../images/logo.png" alt="M1" />
+          MATEMATIKA 1</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-auto">
+              <a class="nav-link" aria-current="page" href="../graf_vsetko/index.html">Graf</a>
+            </li>
+            <li class="nav-item dropdown mx-auto">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Témy
+              </a>
+              <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="navbarDarkDropdownMenuLink"
+                style="background-color: #83a0b1;">
+                <li>
+                  <a class="dropdown-item" href="../linearnaAlgebra/index.html">Lineárna algebra</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Funkcie</a></li>
+                <li><a class="dropdown-item" href="#">Kalkulačky</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-auto">
+              <a class="nav-link" id="la" href="#">Kalkulačky</a>
+            </li>
+            <li class="nav-item mx-auto">
+              <a class="nav-link" id="bordered" href="#">Kontakt</a>
+            </li>
+            <li class="nav-item nav-night mx-auto">
+              <div class=" nav-link" id="nightMode">
+                <div class="form-check form-switch " style="width: 9rem; margin: 0">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                    onchange="changeMode();" />
+                  <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white">Night mode</label>
                 </div>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
+              </div>
+            </li>
 
-      <div id="header-container">
-        <a href="https://www.svf.stuba.sk/"
-          ><img
-            src="../images/svf_stu.png"
-            alt="SvF logo"
-            style="
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="header-container">
+      <a href="https://www.svf.stuba.sk/"><img src="../images/svf_stu.png" alt="SvF logo" style="
               object-fit: cover;
               width: 7rem;
               border-radius: 5px;
               margin-bottom: 1rem;
               
-            "
-        /></a>
+            " /></a>
 
-        <p style="font-size: 2rem; font-weight: bold">MATEMATIKA 1</p>
-        <hr />
-        <p>určená pre študentov Stavebnej fakulty STU.</p>
-      </div>
-    </header>
-    <main>
-      <div id="main-content">
-        <h3 class="nadpis" style="text-align: center; margin-top: 2rem">
-          Témy, ktoré tu nájdeš:
-        </h3>
-        <div id="card-holder">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="../images/LAcard.svg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Lineárna algebra</h5>
-              <p class="card-text">
-                Základné operácie s maticami, determinant, sústavy rovníc.
-              </p>
-              <a href="#" class="btn btn-primary">Vybrať</a>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="../images/FNcard.svg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Funkcie</h5>
-              <p class="card-text">
-                Funkcie jednej reálnej premennej.
-              </p>
-              <a href="#" class="btn btn-primary">Vybrať</a>
-            </div>
+      <p style="font-size: 2rem; font-weight: bold">MATEMATIKA 1</p>
+      <hr />
+      <p>určená pre študentov Stavebnej fakulty STU.</p>
+    </div>
+  </header>
+  <main>
+    <div id="main-content">
+      <h3 class="nadpis" style="text-align: center; margin-top: 2rem">
+        Témy, ktoré tu nájdeš:
+      </h3>
+      <div id="card-holder">
+        <div class="card">
+          <img class="card-img-top" src="../images/LAcard.svg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Lineárna algebra</h5>
+            <p class="card-text">
+              Základné operácie s maticami, determinant, sústavy rovníc.
+            </p>
+            <a href="../linearnaAlgebra/index.html" class="btn btn-primary">Vybrať</a>
           </div>
         </div>
-
-        <h3 class="nadpis" style="text-align: center">Kalkulačky:</h3>
-        <div id="card-holder">
-          <div class="card" style="width: 10rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 10rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 10rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 10rem">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
+        <div class="card">
+          <img class="card-img-top" src="../images/FNcard.svg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Funkcie</h5>
+            <p class="card-text">
+              Funkcie jednej reálnej premennej.
+            </p>
+            <a href="#" class="btn btn-primary">Vybrať</a>
           </div>
         </div>
-        <hr id="line"/>
-        <img src="../images/info.svg" alt="info" style="float: left" />
-        <p id="intro">
-          Na tejto stráke nájdeš študijne materiály, riešené príklady a príklady
-          na počítanie z vybraných tém lineárnej algebry a funkcií jednej
-          reálnej premennej. K niektorým témam sú k dispozícií taktiež
-          kalkulačky, ktoré ti pomôžu či už pri kontrole výsledku, alebo pre
-          správne navedenie k riešeniu. Pre tému funkcií je k dispozícií
-          vizualizačný nástroj, pomocou ktorého si môžete vykresliť akúkoľvek
-          funkciu.
-        </p>
       </div>
-      
-    </main>
-    <img src="../images/house.svg" alt="house" style="width: 100px; display: block; margin: auto">
-    <footer class="text-center text-lg-start" style="background-color: #38515e; height: 4rem;">
-      <!-- Copyright -->
 
-      
-        <p style="color: white; margin-bottom: 0; padding-top: 1rem; text-align: center;">© 2023 Copyright: Marek Belis</p>
+      <h3 class="nadpis" style="text-align: center">Kalkulačky:</h3>
+      <div id="card-holder">
+        <div class="card" style="width: 10rem">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 10rem">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 10rem">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 10rem">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- Copyright -->
-    </footer>
-    <script src="main.js"></script>
-  </body>
+      <hr id="line" />
+      <img src="../images/info.svg" alt="info" style="float: left" />
+      <p id="intro">
+        Na tejto stráke nájdeš študijne materiály, riešené príklady a príklady
+        na počítanie z vybraných tém lineárnej algebry a funkcií jednej
+        reálnej premennej. K niektorým témam sú k dispozícií taktiež
+        kalkulačky, ktoré ti pomôžu či už pri kontrole výsledku, alebo pre
+        správne navedenie k riešeniu. Pre tému funkcií je k dispozícií
+        vizualizačný nástroj, pomocou ktorého si môžete vykresliť akúkoľvek
+        funkciu.
+      </p>
+    </div>
+
+  </main>
+  <img src="../images/house.svg" alt="house" style="width: 100px; display: block; margin: auto">
+  <footer class="text-center text-lg-start" style="background-color: #38515e; height: 4rem;">
+    <!-- Copyright -->
+
+
+    <p style="color: white; margin-bottom: 0; padding-top: 1rem; text-align: center;">© 2023 Copyright: Marek Belis</p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="main.js"></script>
+</body>
+
 </html>
