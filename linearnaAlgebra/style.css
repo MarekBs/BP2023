@@ -49,16 +49,20 @@ main {
 }
 
 .nav-link {
-  color: orange;
-  border-radius: 6px;
-  margin-right: 1rem;
-  background-color: white;
-  padding: 2px;
+  font-weight: bold;
+  color: white;
+  margin: auto 0.5rem;
 }
 
 .nav-link:hover {
-  background-color: orange;
+  text-decoration: underline;
   color: white;
+}
+
+.nav-link.active:hover  {
+  text-decoration: none;
+  color: white;
+
 }
 
 .nav-link1 {

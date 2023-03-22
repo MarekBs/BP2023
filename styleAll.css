@@ -30,7 +30,7 @@ p {
 }
 
 .nav-link.active {
-  background-color: rgba(255, 68, 0, 0.678);
+  background-color: lightblue;
   color: white;
 }
 
@@ -95,7 +95,7 @@ mjx-container.MathJax {
 }
 
 .rules {
-    border: 1px dotted orangered;
+    border: 1px dotted gray;
     padding: 2rem;
 }
 
@@ -121,6 +121,10 @@ mjx-container.MathJax {
   flex-direction: row;
   align-items: center;
   margin: 1rem auto;
+}
+
+.navbar-dark {
+  background-color: #f5c05d;
 }
 
 @media screen and (max-width: 992px){
