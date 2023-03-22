@@ -1,5 +1,5 @@
-m1 = [[1,2,3],[4,5,6]];  
-m2 = [[7,8],[9,10],[11,12]];
+
+function multiple(m1,m2){
 
 fil_m1 = m1.length;  
 col_m1 = m1[0].length;    
@@ -20,5 +20,5 @@ for (x=0; x < multiplication.length; x++) {
                    }      
         }  
     }
-
-console.log(multiplication);
+    console.log(multiplication);
+}

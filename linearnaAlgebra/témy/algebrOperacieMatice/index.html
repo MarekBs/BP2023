@@ -13,6 +13,7 @@
    <script src="	https://unpkg.com/mathjs@9.5.2/lib/browser/math.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <link rel="stylesheet" href="../../../styleAll.css">
+   <link rel="stylesheet" href="../detStvMatice/style.css">
    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
    <title>Algebraické operácie s maticami</title>
 </head>
@@ -160,11 +161,59 @@
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">
-                     <p>Tab 3 content</p>
+                     <br>
+                     <div style="text-align: center">
+                        <h4 style="text-align: center;">Násobenie matíc</h4>
+                        <br>
+                        <label for="matrix-rows">Počet riadkov matice 1:</label>
+                        <input style="border: none; border-bottom: 1px solid green; text-align: center" type="number"
+                           id="matrix-rows" name="matrix-rows" value="3" min="1" max="10" />
+
+                        <label for="matrix-cols">Počet stĺpcov matice 1:</label>
+                        <input style="border: none; border-bottom: 1px solid green; text-align: center" type="number"
+                           id="matrix-cols" name="matrix-cols" value="3" min="1" max="10" /><br><br>
+                        <label for="matrix-rows">Počet riadkov matice 2:</label>
+                        <input style="border: none; border-bottom: 1px solid red; text-align: center" type="number"
+                           id="matrix-rows1" name="matrix-rows" value="3" min="1" max="10" />
+                        <label for="matrix-cols">Počet stĺpcov matice 2:</label>
+                        <input style="border: none; border-bottom: 1px solid red; text-align: center" type="number"
+                           id="matrix-cols1" name="matrix-cols" value="3" min="1" max="10" />
+
+                        <div
+                           style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 2rem;">
+                           <div style="margin: 1rem;">
+                              <table id="matrix-input">
+                                 <tbody>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div style="margin: 1rem;">
+                              <table id="matrix-input1">
+                                 <tbody>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                        <button id="calcBTN5" type="button" class="btn btn-outline-success"
+                           style="margin-left: 1.2rem;">
+                           Vypočítaj
+                        </button>
+                        <button id="clearBTN5" type="button" class="btn btn-outline-danger"
+                           style="margin-left: 1.2rem;">
+                           Vymaž
+                        </button>
+
+
+
+
+                     </div>
+
                   </div>
                </div>
             </div>
          </main>
+         <script src="creatMatr.js"></script>
+         <script src="multipl_matrix.js"></script>
          <script src="../../../sizeAdjust.js"></script>
       </div>
    </div>

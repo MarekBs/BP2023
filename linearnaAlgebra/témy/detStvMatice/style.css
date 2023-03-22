@@ -37,6 +37,10 @@ input[type=number] {
   padding: 0.2rem;
 }
 
+#matrix-input1 td {
+  padding: 0.2rem;
+}
+
 #matrix-input td:focus-within input {
   outline: none;
   background-color: greenyellow;
@@ -46,4 +50,10 @@ input[type=number] {
   margin: auto;
   border-right: 1px solid black;
   border-left: 1px solid black;
+}
+
+#matrix-input1 {
+  margin: auto;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
 }

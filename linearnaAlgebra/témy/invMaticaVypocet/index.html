@@ -100,17 +100,6 @@
                         text-overflow: clip;">
                            <table style="margin: 1rem" id="matrix-input">
                               <tbody>
-                                 <!-- use a loop to create rows and columns based on user input -->
-                                 <?php for ($i = 0; $i < 3; $i++) : ?>
-                                 <tr>
-                                    <?php for ($j = 0; $j < 3; $j++) : ?>
-                                    <td>
-                                       <input type="number" name="matrix[<?= $i ?>][<?= $j ?>]" value="0"
-                                          style="width: 1.5rem" />
-                                    </td>
-                                    <?php endfor; ?>
-                                 </tr>
-                                 <?php endfor; ?>
                               </tbody>
                            </table>
                            <p style=" align-items: center; margin: auto 1rem auto 0;">=</p>
