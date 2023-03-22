@@ -22,11 +22,11 @@ p {
 }
 
 .nav-tabs .nav-link.active {
-  color: orangered;
+  color: rgb(27, 27, 112);
   /* color: #212529 */
   border: none;
   background: none;
-  border-bottom: 3px solid orangered;
+  border-bottom: 3px solid lightblue;
 }
 
 .nav-link.active {
