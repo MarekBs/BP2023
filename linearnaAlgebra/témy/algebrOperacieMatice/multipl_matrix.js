@@ -21,4 +21,25 @@ for (x=0; x < multiplication.length; x++) {
         }  
     }
     console.log(multiplication);
+    printMatrix(multiplication);
 }
+
+
+function printMatrix(matrix) {
+    const numRows = matrix.length;
+    const numCols = matrix[0].length;
+    const matrixOutputTable = $("<table></table>");
+  
+    for (let i = 0; i < numRows; i++) {
+      const row = $("<tr></tr>");
+      for (let j = 0; j < numCols; j++) {
+        const cell = $("<td></td>");
+        cell.text(matrix[i][j]);
+        row.append(cell);
+      }
+      matrixOutputTable.append(row);
+    }
+  
+    $("#matrix-output").html("");
+    $("#matrix-output").append(matrixOutputTable);
+  }

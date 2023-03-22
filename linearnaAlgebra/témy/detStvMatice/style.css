@@ -54,6 +54,14 @@ input[type=number] {
 
 #matrix-input1 {
   margin: auto;
-  border-right: 1px solid red;
-  border-left: 1px solid red;
+  border-right: 1px solid rgb(123, 222, 255);
+  border-left: 1px solid rgb(123, 222, 255);
+}
+#matrix-output td {
+  padding: 0.3rem;
+}
+
+#matrix-output table {
+  border-right: 2px solid #f5c05d;
+  border-left: 2px solid #f5c05d;
 }
