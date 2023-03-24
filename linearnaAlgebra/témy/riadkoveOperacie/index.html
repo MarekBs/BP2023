@@ -26,7 +26,7 @@
       $('#sidebar').load('../../../components/collapse_bar.html', function () {
          $('#sidebar').find('li:contains("Riadkové operácie")').addClass('active').children('a').addClass('active');
       });
-      $('#myTab').load('../../../components/tab_links.html');
+      $('#myTab').load('../../../components/tab_links2.html');
 
    });
 </script>
@@ -74,31 +74,28 @@
                         konštantou <strong>-1</strong>, pripočítaním trojnásobku tretieho riadku k prvému riadku, a
                         napokon výmenou druhého a tretieho riadku.</p>
                      <br><br>
-                     <div style="display:flex;  align-items:center; justify-content: space-evenly; margin: auto;">
-                        <div>
-                           <div style="margin: auto;">
-                              \begin{align*}
-                              \mathbf{A} = \begin{pmatrix}
-                              -3 & a & -b & 0 \\
-                              1 & -2 & c & -d \\
-                              1 & x & y & z
-                              \end{pmatrix}
-                              \end{align*}
-
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-6 col-md-12 mb-5">
+                              <div style="margin: auto;">
+                                 <div style="text-align: center; font-size: 14px;">
+                                    <span>\( \mathbf{A} = \begin{pmatrix} -3 &amp; a &amp; -b &amp; 0 \\ 1 &amp; -2
+                                       &amp; c &amp; -d \\ 1 &amp; x &amp; y &amp; z \end{pmatrix} \)</span>
+                                 </div>
+                              </div>
                            </div>
-                        </div>
-                        <div>
-                           <div style="margin: auto;">
-                              \begin{align*}
-                              \mathbf{B} = \begin{pmatrix}
-                              0 & 3x + a & 3y - b & 3z \\
-                              1 & x & y & z \\
-                              -1 & 2 & -c & d
-                              \end{pmatrix}
-                              \end{align*}
+                           <div class="col-lg-6 col-md-12">
+                              <div style="margin: auto;">
+                                 <div style="text-align: center; font-size: 14px;">
+                                    <span>\( \mathbf{B} = \begin{pmatrix} 0 &amp; 3x + a &amp; 3y - b &amp; 3z \\ 1
+                                       &amp; x &amp; y &amp; z \\ -1 &amp; 2 &amp; -c &amp; d \end{pmatrix} \)</span>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
+
+
                      <br><br>
                      <p>Dve matice nazveme ekvivalentné, ak jednu možno utvorit' z druhej pomocou konečnej postupnosti
                         riadkových operácií O1, O2, O3. Pre ekvivalenciu matíc rezervujeme symbol \(\cong\)
@@ -106,20 +103,64 @@
                   </div>
 
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>$$
-                        \begin{pmatrix}
-                        a & b & c \\
-                        d & e & f \\
-                        g & h & i
-                        \end{pmatrix}
-                        \xrightarrow{R_2 \leftarrow 3R_2}
-                        \begin{pmatrix}
-                        a & b & c \\
-                        3d & 3e & 3f \\
-                        g & h & i
-                        \end{pmatrix}
-                        $$
-                     </p>
+                     <div class="text-center">
+                        <p>Výmena prvého riadku s tretím</p>
+                        <div style="overflow-x: auto; overflow-y: hidden;">
+                           <p>$$
+                              \begin{pmatrix}
+                              a & b & c \\
+                              d & e & f \\
+                              g & h & i
+                              \end{pmatrix}
+                              \xrightarrow{R_1 \leftrightarrow R_3}
+                              \begin{pmatrix}
+                              g & h & i \\
+                              d & e & f \\
+                              a & b & c
+                              \end{pmatrix}
+                              $$
+                           </p>
+                        </div>
+                     </div>
+                     <div class="text-center mt-5">
+                        <p>Vynásobenie druhého riadku konštantou 3</p>
+                        <div style="overflow-x: auto; overflow-y: hidden;">
+                           <p>$$
+                              \begin{pmatrix}
+                              a & b & c \\
+                              d & e & f \\
+                              g & h & i
+                              \end{pmatrix}
+                              \xrightarrow{R_2 \leftarrow 3R_2}
+                              \begin{pmatrix}
+                              a & b & c \\
+                              3d & 3e & 3f \\
+                              g & h & i
+                              \end{pmatrix}
+                              $$
+                           </p>
+                        </div>
+                     </div>
+                     <div class="text-center mt-5">
+                        <p>Pripočítanie 2 - násobku druhého riadku k prvému</p>
+                        <div style="overflow-x: auto; overflow-y: hidden;">
+                           <p>$$
+                              \begin{pmatrix}
+                              a & b & c \\
+                              d & e & f \\
+                              g & h & i
+                              \end{pmatrix}
+                              \xrightarrow{E1_{12}(2)}
+                              \begin{pmatrix}
+                              a + 2d & b + 2e & c + 2f \\
+                              d & e & f \\
+                              g & h & i
+                              \end{pmatrix}
+                              $$
+                           </p>
+                        </div>
+
+                     </div>
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">

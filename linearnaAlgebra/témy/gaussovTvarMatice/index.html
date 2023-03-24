@@ -34,7 +34,6 @@
         .children("a")
         .addClass("active");
     });
-    $("#myTab").load("../../../components/tab_links.html");
   });
 </script>
 
@@ -58,120 +57,110 @@
         <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
           style="top: 56px; height: calc(100% - 56px)"></div>
         <div class="container my-5">
-          <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-              <p>
-                Nasledujúci pojem má v teórii matíc (a následne v lineárnej
-                algebre) výsadné postavenie. Hovoríme, že matica je v <strong>Gaussovom (stupňovitom) tvare</strong>
-                , ak sú splnené nasledujúce štyri podmienky:
-              <div style="text-align: center;">
-                <ul style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
-                  <li>G1. Prvý l'avý nenulový prvok v každom riadku je rovný 1.
-                    (tomuto prvku hovoríme vedúca jednotka v riadku / pivot).</li>
-                  <li>G2. Každý
-                    prvok v stĺpci pod vedúcou jednotkou je rovný 0.</li>
-                  <li>G3. Vedúca
-                    jednotka v každom riadku sa nachádza vpravo od vedúcich
-                    jednotiek vo všetkých vyššie položených riadkoch.</li>
-                  <li>G4. Prípadné
-                    riadky obsahujúce samé nuly nasledujú až za všetkými riadkami
-                    obsahujúcimi vedúce jednotky.</li>
-                </ul>
-              </div>
-              Naviac, hovoríme, že matica je v <strong>redukovanom Gaussovom (stupňovitom) tvare</strong>
-              , ak spolu s horeuvedenými štyrmi
-              podmienkami je splnená aj piata:
-              <div style="text-align: center;">
-                <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
-                  <li>G5. Každý prvok v stĺpci nad
-                    vedúcou jednotkou je rovný 0.</li>
-                </ul>
-              </div>
-              Dá sa pomerne l'ahko ukázat', že
-              každá matica je ekvivalentná s nejakou maticou v Gaussovom
-              tvare. Inak povedané, pre každú maticu existuje postupnost'
-              riadkových operácií, pomocou ktorej je možné danú maticu
-              upravit' tak, aby spĺňala podmienky G1-G4.
-              </p>
-              <br>
-              <p><strong>Príklad: </strong> nasledujúcich štyroch matíc prvé dve nie sú v Gaussovom tvare (prečo?).
-                Tretia je v Gaussovom tvare
-                (ale nie v redukovanom), zatial' čo posledná je v redukovanom Gaussovom tvare.</p>
-              <div
-                style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin: 4rem auto;">
-                <div>
-                  <div style="margin: auto;">
-                    \begin{align*}
-                    \begin{pmatrix}
-                    2 & 1 & 8 & j \\
-                    0 & 1 & 9 & 6 \\
-                    0 & 0 & 6 & 6
-                    \end{pmatrix}
-                    \end{align*}
+          <h3 style="text-align: center; color:rgb(27, 27, 112)">Gaussov tvar matice</h3>
+          <hr>
+          <p style="margin-top: 3rem;">
+            Nasledujúci pojem má v teórii matíc (a následne v lineárnej
+            algebre) výsadné postavenie. Hovoríme, že matica je v <strong>Gaussovom (stupňovitom) tvare</strong>
+            , ak sú splnené nasledujúce štyri podmienky:
+          <div style="text-align: center;">
+            <ul style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
+              <li>G1. Prvý l'avý nenulový prvok v každom riadku je rovný 1.
+                (tomuto prvku hovoríme vedúca jednotka v riadku / pivot).</li>
+              <li>G2. Každý
+                prvok v stĺpci pod vedúcou jednotkou je rovný 0.</li>
+              <li>G3. Vedúca
+                jednotka v každom riadku sa nachádza vpravo od vedúcich
+                jednotiek vo všetkých vyššie položených riadkoch.</li>
+              <li>G4. Prípadné
+                riadky obsahujúce samé nuly nasledujú až za všetkými riadkami
+                obsahujúcimi vedúce jednotky.</li>
+            </ul>
+          </div>
+          Naviac, hovoríme, že matica je v <strong>redukovanom Gaussovom (stupňovitom) tvare</strong>
+          , ak spolu s horeuvedenými štyrmi
+          podmienkami je splnená aj piata:
+          <div style="text-align: center;">
+            <ul style="display: inline-block; text-align: left; margin: 4rem auto;">
+              <li>G5. Každý prvok v stĺpci nad
+                vedúcou jednotkou je rovný 0.</li>
+            </ul>
+          </div>
+          Dá sa pomerne l'ahko ukázat', že
+          každá matica je ekvivalentná s nejakou maticou v Gaussovom
+          tvare. Inak povedané, pre každú maticu existuje postupnost'
+          riadkových operácií, pomocou ktorej je možné danú maticu
+          upravit' tak, aby spĺňala podmienky G1-G4.
+          </p>
+          <br>
+          <p><strong>Príklad: </strong> nasledujúcich štyroch matíc prvé dve nie sú v Gaussovom tvare (prečo?).
+            Tretia je v Gaussovom tvare
+            (ale nie v redukovanom), zatial' čo posledná je v redukovanom Gaussovom tvare.</p>
+          <div
+            style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin: 4rem auto;">
+            <div>
+              <div style="margin: auto;">
+                \begin{align*}
+                \begin{pmatrix}
+                2 & 1 & 8 & j \\
+                0 & 1 & 9 & 6 \\
+                0 & 0 & 6 & 6
+                \end{pmatrix}
+                \end{align*}
 
-                  </div>
-                </div>
-                <div>
-                  <div style="margin: auto;">
-                    \begin{align*}
-                    \begin{pmatrix}
-                    0 & 1 & 9 & 6 \\
-                    1 & 0 & a & b \\
-                    0 & 0 & 1 & c
-                    \end{pmatrix}
-                    \end{align*}
-                  </div>
-                </div>
               </div>
-              <div
-                style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin-bottom: 2rem;">
-                <div>
-                  <div style="margin: auto;">
-                    \begin{align*}
-                    \begin{pmatrix}
-                    1 & x & 3 & 4 \\
-                    0 & 0 & 1 & y \\
-                    0 & 0 & 0 & 1 \\
-                    0 & 0 & 0 & 0
-                    \end{pmatrix}
-                    \end{align*}
-
-                  </div>
-                </div>
-                <div>
-                  <div style="margin: auto;">
-                    \begin{align*}
-                    \begin{pmatrix}
-                    1 & 0 & z & 0 \\
-                    0 & 1 & 3 & 0 \\
-                    0 & 0 & 0 & 1 \\
-                    0 & 0 & 0 & 0
-                    \end{pmatrix}
-                    \end{align*}
-                  </div>
-                </div>
-              </div>
-              Je dôležité uvedomit' si, že Gaussov tvar matice nie je určený <i>jednoznačne</i> . To znamená, že začnúc
-              s
-              rovnakou
-              maticou, dve nezávislé osoby môžu aplikovaním dvoch rôznych postupností riadkových operácií dospiet' k
-              dvom
-              rôznym Gaussovým tvarom, a oba výsledky môžu byt' správne.
             </div>
-
-
-            <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-              <p>Tab 2 content</p>
-            </div>
-            <div class="tab-pane fade" id="practice-problems" role="tabpanel" aria-labelledby="practice-problems-tab">
-              <p>Tab 3 content</p>
+            <div>
+              <div style="margin: auto;">
+                \begin{align*}
+                \begin{pmatrix}
+                0 & 1 & 9 & 6 \\
+                1 & 0 & a & b \\
+                0 & 0 & 1 & c
+                \end{pmatrix}
+                \end{align*}
+              </div>
             </div>
           </div>
+          <div
+            style="display:flex; flex-wrap:wrap; align-items:center; justify-content: space-evenly; margin-bottom: 2rem;">
+            <div>
+              <div style="margin: auto;">
+                \begin{align*}
+                \begin{pmatrix}
+                1 & x & 3 & 4 \\
+                0 & 0 & 1 & y \\
+                0 & 0 & 0 & 1 \\
+                0 & 0 & 0 & 0
+                \end{pmatrix}
+                \end{align*}
+
+              </div>
+            </div>
+            <div>
+              <div style="margin: auto;">
+                \begin{align*}
+                \begin{pmatrix}
+                1 & 0 & z & 0 \\
+                0 & 1 & 3 & 0 \\
+                0 & 0 & 0 & 1 \\
+                0 & 0 & 0 & 0
+                \end{pmatrix}
+                \end{align*}
+              </div>
+            </div>
+          </div>
+          Je dôležité uvedomit' si, že Gaussov tvar matice nie je určený <i>jednoznačne</i> . To znamená, že začnúc
+          s
+          rovnakou
+          maticou, dve nezávislé osoby môžu aplikovaním dvoch rôznych postupností riadkových operácií dospiet' k
+          dvom
+          rôznym Gaussovým tvarom, a oba výsledky môžu byt' správne.
         </div>
     </div>
-    </main>
-    <script src="../../../sizeAdjust.js"></script>
+  </div>
+  </main>
+  <script src="../../../sizeAdjust.js"></script>
   </div>
   </div>
 </body>

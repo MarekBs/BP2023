@@ -26,7 +26,6 @@
       $('#sidebar').load('../../../components/collapse_bar.html', function () {
          $('#sidebar').find('li:contains("Štvorcové matice, pojem inverznej matice")').addClass('active').children('a').addClass('active');
       });
-      $('#myTab').load('../../../components/tab_links.html');
 
    });
 </script>
@@ -53,74 +52,65 @@
             <div class="offcanvas offcanvas-start fixed-top" tabindex="-1" id="sidebar"
                style="top: 56px; height: calc(100% - 56px);"></div>
             <div class="container my-5">
-               <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
-               <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                     <p>Matica $${\bf A}=[a_{ij}]_{m\times n}$$ sa nazýva štvorcová, ak
-                        $$m=n$$, t.j. ak má rovnaký
-                        počet
-                        riadkov a stĺpcov. Medzi štvorcovými maticami významnú úlohu hrá matica, pre ktorú je
-                        $$a_{ii}=1$$
-                        pre $$1\le i\le n$$, a $$a_{ij}=0$$ ak $$i\ne j$$; táto matica sa nazýva jednotková a označujeme
-                        ju
-                        $${\bf I}_n$$. Jednotková matica má pri násobení matíc postavenie
-                        analogické číslu 1 pri
-                        násobení
-                        reálnych čísiel: $${\bf A}{\bf I}_n={\bf I}_n{\bf A}={\bf A}$$.
-                     </p>
-                     <div style="margin: 2rem auto; text-align: center;">
+               <h3 style="text-align: center; color:rgb(27, 27, 112)">Štvorcové matice, pojem inverznej matice</h3>
+               <hr>
+               <p style="margin-top: 3rem;">Matica $${\bf A}=[a_{ij}]_{m\times n}$$ sa nazýva štvorcová, ak
+                  $$m=n$$, t.j. ak má rovnaký
+                  počet
+                  riadkov a stĺpcov. Medzi štvorcovými maticami významnú úlohu hrá matica, pre ktorú je
+                  $$a_{ii}=1$$
+                  pre $$1\le i\le n$$, a $$a_{ij}=0$$ ak $$i\ne j$$; táto matica sa nazýva jednotková a označujeme
+                  ju
+                  $${\bf I}_n$$. Jednotková matica má pri násobení matíc postavenie
+                  analogické číslu 1 pri
+                  násobení
+                  reálnych čísiel: $${\bf A}{\bf I}_n={\bf I}_n{\bf A}={\bf A}$$.
+               </p>
+               <div style="margin: 2rem auto; text-align: center;">
 
-                        \begin{align*}
-                        \begin{pmatrix}
-                        1& 0 & 0 \\
-                        0 & 1 & 0 \\
-                        0 & 0 & 1
-                        \end{pmatrix}
-                        \end{align*}
-                        <p>jednotková matica</p>
+                  \begin{align*}
+                  \begin{pmatrix}
+                  1& 0 & 0 \\
+                  0 & 1 & 0 \\
+                  0 & 0 & 1
+                  \end{pmatrix}
+                  \end{align*}
+                  <p>jednotková matica</p>
 
-                     </div>
-                     <br>
-                     <div class="highlight">
-                        <p>Hovoríme, že štvorcová matica $${\bf A}=[a_{ij}]_{n\times n}$$ je
-                           <span style="color: red">regulárna</span> , ak jej hodnost' je
-                           rovná $$n$$ . V opačnom prípade (ak hodnost' je menšia ako
-                           $$n$$ ) sa matica $${\bf A}$$ nazýva
-                           singulárna. Vzt'ah medzi regulárnymi maticami, riadkovými operáciami a jednotkovou maticou je
-                           obsiahnutý v nasledujúcom užitočnom tvrdení: <br> Štvorcová matica typu $$n\times
-                           n$$ je regulárna
-                           práve vtedy, keď jej redukovaný Gaussov tvar je $${\bf I}_n$$ .
-                        </p>
-                     </div>
-                     <br>
-                     <br>
-                     <p>Štvorcová matica $${\bf A}=[a_{ij}]_{n\times n}$$ sa nazýva
-                        trojuholníková, ak bud' $$a_{ij}=0$$
-                        pre
-                        všetky $$i>j$$ (v takom prípade hovoríme o hornej trojuholníkovej
-                        matici), alebo $$a_{ij}=0$$
-                        pre
-                        všetky $$ i &lt j $$ (dolná trojuholníková matica).
-                     </p>
-                     <br>
-                     <br>
-                     <p>Pre štvorcové matice sa zavádza mimoriadne dôležitý pojem tzv. inverznej matice. Nech $$\bf
-                        A,B$$
-                        sú štvorcové matice typu $$n\times n$$ . Hovoríme, že $$\bf B$$
-                        je <span style="color: orangered">inverzná matica</span> k
-                        matici $$\bf A$$ ,
-                        ak $${\bf AB}={\bf I}_n$$ . Pre inverznú maticu používame označenie
-                        $${\bf B}={\bf A}^{-1}$$.
-                     </p>
-                  </div>
-                  <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>Tab 2 content</p>
-                  </div>
-                  <div class="tab-pane fade" id="practice-problems" role="tabpanel"
-                     aria-labelledby="practice-problems-tab">
-                     <p>Tab 3 content</p>
-                  </div>
                </div>
+               <br>
+               <div class="highlight">
+                  <p>Hovoríme, že štvorcová matica $${\bf A}=[a_{ij}]_{n\times n}$$ je
+                     <span style="color: red">regulárna</span> , ak jej hodnost' je
+                     rovná $$n$$ . V opačnom prípade (ak hodnost' je menšia ako
+                     $$n$$ ) sa matica $${\bf A}$$ nazýva
+                     singulárna. Vzt'ah medzi regulárnymi maticami, riadkovými operáciami a jednotkovou maticou je
+                     obsiahnutý v nasledujúcom užitočnom tvrdení: <br> Štvorcová matica typu $$n\times
+                     n$$ je regulárna
+                     práve vtedy, keď jej redukovaný Gaussov tvar je $${\bf I}_n$$ .
+                  </p>
+               </div>
+               <br>
+               <br>
+               <p>Štvorcová matica $${\bf A}=[a_{ij}]_{n\times n}$$ sa nazýva
+                  trojuholníková, ak bud' $$a_{ij}=0$$
+                  pre
+                  všetky $$i>j$$ (v takom prípade hovoríme o hornej trojuholníkovej
+                  matici), alebo $$a_{ij}=0$$
+                  pre
+                  všetky $$ i &lt j $$ (dolná trojuholníková matica).
+               </p>
+               <br>
+               <br>
+               <p>Pre štvorcové matice sa zavádza mimoriadne dôležitý pojem tzv. inverznej matice. Nech $$\bf
+                  A,B$$
+                  sú štvorcové matice typu $$n\times n$$ . Hovoríme, že $$\bf B$$
+                  je <span style="color: orangered">inverzná matica</span> k
+                  matici $$\bf A$$ ,
+                  ak $${\bf AB}={\bf I}_n$$ . Pre inverznú maticu používame označenie
+                  $${\bf B}={\bf A}^{-1}$$.
+               </p>
+
             </div>
          </main>
          <script src="../../../sizeAdjust.js"></script>
