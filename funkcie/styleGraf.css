@@ -16,7 +16,8 @@ section {
 }
 
 #plotSettings {
-  border: 1px dashed rgb(52, 52, 243);
+  border-left: 1px solid #0d6efd;
+  border-right: 1px solid #0d6efd;
   width: 360px;
   height: 450px;
   background-color: white;
@@ -94,7 +95,7 @@ input:focus {
 
 .nav-link.active {
   
-  background-color: rgb(52, 52, 243);
+  background-color: #0d6efd;
   
 }
 #homeBtn {
@@ -114,10 +115,10 @@ input:focus {
     align-items: center;
   }
   #scrollspyHeading1 {
-    width: 95%;
+    width: 90%;
   }
   .box {
-    width: 95%;
+    width: 90%;
   }
   #homeBtn {
     margin-right: 0;
