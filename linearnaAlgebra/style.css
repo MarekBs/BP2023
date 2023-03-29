@@ -48,13 +48,13 @@ main {
 }
 
 .nav-link {
-  color: darkblue;
+  color: rgb(87, 87, 87);
   margin: auto 0.5rem;
   
 }
 
 .nav-link:hover {
-  color: blue;
+  color: black;
 }
 
 
