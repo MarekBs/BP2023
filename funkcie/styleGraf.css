@@ -47,7 +47,7 @@ section {
 
 input {
   border: none;
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid rgb(52, 52, 243);
   text-align: center;
 }
 
@@ -89,8 +89,9 @@ input:focus {
 }
 
 .nav-link.active {
-  background-color: rgb(52, 52, 243);
   border-radius: 8px;
+  background-color: rgb(52, 52, 243);
+  
 }
 
 .navbar-light .navbar-nav .nav-link.active{
