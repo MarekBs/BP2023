@@ -16,3 +16,13 @@ function calcNormal(f, point) {
   
   
 }
+document.addEventListener('click', function(event) {
+   var isClickInsideNavbar = event.target.closest('#navbar-example2');
+   if (!isClickInsideNavbar) {
+     var navbarCollapse = document.querySelector('#navbar-example2 .navbar-collapse');
+     if (navbarCollapse.classList.contains('show')) {
+       navbarCollapse.classList.remove('show');
+     }
+   }
+ });
+ 
