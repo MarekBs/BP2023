@@ -97,7 +97,10 @@ input:focus {
   background-color: rgb(52, 52, 243);
   
 }
-
+#homeBtn {
+  text-decoration: none;
+   margin-right: 1rem;
+}
 .navbar-light .navbar-nav .nav-link.active{
   color: white;
 }
@@ -115,6 +118,9 @@ input:focus {
   }
   .box {
     width: 95%;
+  }
+  #homeBtn {
+    margin-right: 0;
   }
 }
 
