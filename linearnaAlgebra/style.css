@@ -1,6 +1,5 @@
 body {
-  background-color: rgb(50, 72, 83);
-  background-image: url("../images/LAbg.svg");
+   background-color: white; 
 }
 
 main {
@@ -15,7 +14,7 @@ main {
   border-radius: 6px;
 }
 
-#latitle {
+.latitle {
   margin-bottom: 3rem;
   font-size: xx-large;
 }
@@ -49,21 +48,15 @@ main {
 }
 
 .nav-link {
-  font-weight: bold;
-  color: white;
+  color: darkblue;
   margin: auto 0.5rem;
+  
 }
 
 .nav-link:hover {
-  text-decoration: underline;
-  color: white;
+  color: blue;
 }
 
-.nav-link.active:hover  {
-  text-decoration: none;
-  color: white;
-
-}
 
 .nav-link1 {
   text-decoration: none;
@@ -78,9 +71,7 @@ main {
 
 @media screen and (max-width: 992px) {
   .nav-link {
-    color: black;
     text-align: center;
-    background-color: #f5c05d;
   }
 }
 

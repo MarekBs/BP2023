@@ -26,13 +26,15 @@ p {
   /* color: #212529 */
   border: none;
   background: none;
-  border-bottom: 3px solid lightblue;
+  border-bottom: 3px solid grey;
 }
 
 .nav-link.active {
-  background-color: lightblue;
+  background-color: grey;
   color: white;
 }
+
+
 
 .sidebar {
   box-shadow: 8px 0 10px -4px rgba(0, 0, 0, 0.2);
@@ -123,8 +125,8 @@ mjx-container.MathJax {
   margin: 1rem auto;
 }
 
-.navbar-dark {
-  background-color: #f5c05d;
+.navbar-light {
+  background-color: rgb(235, 235, 94);;
 }
 
 @media screen and (max-width: 992px){
