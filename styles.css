@@ -13,7 +13,7 @@
 }
 
 .pad:hover {
-    color: orangered;
+    color: lightblue;
 }
 
 
@@ -25,11 +25,6 @@
 .navbar {
     padding: 0;
 }
-.nav-item {
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.1rem;
-    
-}
 
 .nav-link {
     margin: 1rem;
@@ -39,8 +34,7 @@
 }
 
 .nav-link:hover {
-    border-top: 1px solid orangered; 
-    color: white;
+    color: lightblue;
 }
 
 #nightMode:hover {
