@@ -56,7 +56,10 @@ main {
 .nav-link:hover {
   color: black;
 }
-
+.nav-link.active {
+  background-color: transparent;
+  color: black;
+}
 
 .nav-link1 {
   text-decoration: none;
