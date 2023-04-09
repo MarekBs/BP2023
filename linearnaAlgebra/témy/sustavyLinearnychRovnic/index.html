@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../../../styleAll.css">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../detStvMatice/style.css">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -126,10 +127,27 @@
                 </div>
                 <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                     aria-labelledby="practice-problems-tab">
-                    <p>Tab 3 content</p>
+                    <h5>Výpočet sústavy lineárnych rovníc pomocou rozšírenej matice sústavy</h5>
+                    <br><br>
+                    <label for="matrix-rows">Počet riadkov matice:</label>
+                    <input style="border: none; border-bottom: 1px solid grey; text-align: center" type="number"
+                        id="matrix-rows" name="matrix-rows" value="3" min="1" max="10" />
+
+                    <label for="matrix-cols">Počet stĺpcov matice:</label>
+                    <input style="border: none; border-bottom: 1px solid grey; text-align: center" type="number"
+                        id="matrix-cols" name="matrix-cols" value="4" min="1" max="10" />
+                    <p>
+                    <div style="margin: 3rem auto  auto auto;">
+                        <table id="matrix-input">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    </p>
                 </div>
             </div>
         </div>
+        <script src="../algebrOperacieMatice/creatMatr.js"></script>
     </main>
 
 </body>

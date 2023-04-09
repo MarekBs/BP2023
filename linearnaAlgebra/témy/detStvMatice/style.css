@@ -23,7 +23,7 @@
 
 #matrix td:focus-within input {
   outline: none;
-  background-color: greenyellow;
+  background-color: rgb(235, 235, 94);
 }
 
 /* Firefox */
@@ -43,19 +43,22 @@ input[type=number] {
 
 #matrix-input td:focus-within input {
   outline: none;
-  background-color: greenyellow;
+  background-color:rgb(235, 235, 94);
 }
 
 #matrix-input {
   margin: auto;
+  border-radius: 8px;
   border-right: 1px solid black;
   border-left: 1px solid black;
+  border-collapse: collapse;
 }
+
 
 #matrix-input1 {
   margin: auto;
-  border-right: 1px solid rgb(123, 222, 255);
-  border-left: 1px solid rgb(123, 222, 255);
+  border-right: 1px solid rgb(199, 199, 51);
+  border-left: 1px solid rgb(199, 199, 51);
 }
 #matrix-output td {
   padding: 0.3rem 0.7rem 0.3rem 0.7rem;
