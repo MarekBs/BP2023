@@ -14,7 +14,7 @@ function gaussianElimination(a, b) {
  
         // Check if the pivot element is zero
         if (maxEl == 0) {
-            console.log("Matrix is singular or no unique solution");
+            console.log("Matica je singularna");
             return;
         }
  

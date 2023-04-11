@@ -28,6 +28,12 @@ const matriX = $("#matrix-input");
 $( "#calcBTN6" ).click(function() {
     let m = getMatrix(matriX);
     let {allButLastCol, lastCol} = splitMatrix(m);
-    console.log(allButLastCol);
-    console.log(lastCol);
+    let x = gaussianElimination(allButLastCol, lastCol);
+    console.log(x);
+    let resultsStr = "";
+    for (let i = 0; i < x.length; i++) {
+      resultsStr += `x${i + 1} = ${x[i]}<br>`;
+    }
+    document.getElementById("result").innerHTML = resultsStr;
+    
   });
