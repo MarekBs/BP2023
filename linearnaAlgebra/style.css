@@ -70,6 +70,15 @@ main {
     text-align: center;
   }
 }
+@media screen and (max-width: 991px) {
+  .nav-item {
+    width: 10rem;
+    margin: auto;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+}
 
 @media screen and (max-width: 380px) {
   .bi-calculator {
