@@ -1,4 +1,3 @@
-const math = require('mathjs');
 
 function gaussianElimination(a, b) {
     var n = b.length;
@@ -56,11 +55,11 @@ function gaussianElimination(a, b) {
     return x;
 }
 
-var a = [
+/* var a = [
     [2, 1, -1],
     [-3, -1, 2],
     [-2, 1, 2]
   ];
 var b = [8,-11,-3];
 var x = gaussianElimination(a, b);
-console.log(x);
+console.log(x); */
