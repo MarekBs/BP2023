@@ -1,6 +1,4 @@
-body {
-    background-color: aliceblue;
-}
+
 
 .nav-link:hover {
     transform: translateY(-2px);
@@ -9,7 +7,7 @@ body {
   .home:hover {
     transform: none;
   }
-  .nav-link.active {
+  .navbar .nav-link.active {
     color: #504e4e !important;
     text-decoration: underline;
   }

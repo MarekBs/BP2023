@@ -42,9 +42,14 @@ p {
 }
 
 .nav-item a:hover {
-  color: black;
+  color: rgb(207, 207, 56);
 }
-.nav-item.active a:hover {
+
+.sidebar-sticky .nav-link {
+  margin: 0.5rem 0;
+}
+.sidebar-sticky .nav-link.active {
+  background-color: #504e4e;
   color: white;
 }
 
