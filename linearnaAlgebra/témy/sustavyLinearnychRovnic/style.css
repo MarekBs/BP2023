@@ -1,10 +1,10 @@
 
 
-.nav-link:hover {
+.navbar .nav-link:hover {
     transform: translateY(-2px);
     color: black;
   }
-.home:hover {
+.navbar .home:hover {
     transform: none;
 }
 .navbar .nav-link.active {
