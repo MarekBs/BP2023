@@ -31,6 +31,7 @@ p {
 }
 .sidebar {
   box-shadow: 8px 0 10px -4px rgba(0, 0, 0, 0.2);
+
 }
 
 .home:hover {
@@ -41,9 +42,7 @@ p {
   border-radius: 4px;
 }
 
-.nav-item a:hover {
-  color: rgb(207, 207, 56);
-}
+
 
 .sidebar-sticky .nav-link {
   margin: 0.5rem 0;

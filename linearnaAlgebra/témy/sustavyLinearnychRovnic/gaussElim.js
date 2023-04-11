@@ -15,7 +15,7 @@ function gaussianElimination(a, b) {
         // Check if the pivot element is zero
         if (maxEl == 0) {
             console.log("Matica je singularna");
-            return;
+            return "Matica je singularna";
         }
  
         // Swap maximum row with current row

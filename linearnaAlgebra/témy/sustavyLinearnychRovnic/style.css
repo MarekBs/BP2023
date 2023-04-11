@@ -4,14 +4,14 @@
     transform: translateY(-2px);
     color: black;
   }
-  .home:hover {
+.home:hover {
     transform: none;
-  }
-  .navbar .nav-link.active {
+}
+.navbar .nav-link.active {
     color: #504e4e !important;
     text-decoration: underline;
-  }
+}
   
-  .home:hover {
+.home:hover {
     background-color: #464343 !important;
-  }
+}
