@@ -47,11 +47,14 @@ p {
 .sidebar-sticky .nav-link {
   margin: 0.5rem 0;
 }
+
+.sidebar-sticky .nav-link:hover {
+  color: rgb(218, 218, 89);
+}
 .sidebar-sticky .nav-link.active {
   background-color: #504e4e;
   color: white;
 }
-
 #sidebar12 {
   position: fixed;
   height: calc(100vh - 3rem);
