@@ -52,21 +52,7 @@ main {
   margin: auto 0.5rem;
   
 }
-.nav-link:hover {
-  transform: translateY(-2px);
-  color: black;
-}
-.home:hover {
-  transform: none;
-}
-.nav-link.active {
-  color: #504e4e !important;
-  text-decoration: underline;
-}
 
-.home:hover {
-  background-color: #464343 !important;
-}
 
 .nav-link1 {
   text-decoration: none;
