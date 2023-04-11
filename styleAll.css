@@ -51,9 +51,21 @@ p {
 .sidebar-sticky .nav-link:hover {
   color: rgb(218, 218, 89);
 }
+
+.offcanvas-body .nav-link {
+  margin: 5px 9px;
+}
+
 .sidebar-sticky .nav-link.active {
   background-color: #504e4e;
   color: white;
+}
+
+
+.offcanvas-body .nav-link.active {
+  background-color: #504e4e;
+  color: white;
+  
 }
 #sidebar12 {
   position: fixed;
