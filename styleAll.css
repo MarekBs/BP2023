@@ -29,23 +29,15 @@ p {
   background: none;
   border-bottom: 3px solid grey;
 }
-
-.nav-link.active {
-  background-color: grey;
-  color: white;
-}
-
-
-
 .sidebar {
   box-shadow: 8px 0 10px -4px rgba(0, 0, 0, 0.2);
 }
-.nav-item {
-  margin: 13px 9px 0 6px;
-}
 
+.home:hover {
+  background-color:  #646262 !important;
+}
 .nav-item a {
-  color: rgb(129, 126, 126);
+  color: #504e4e;
   border-radius: 4px;
 }
 

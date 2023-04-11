@@ -48,17 +48,24 @@ main {
 }
 
 .nav-link {
-  color: rgb(87, 87, 87);
+  color: #504e4e;
   margin: auto 0.5rem;
   
 }
-
 .nav-link:hover {
+  transform: translateY(-2px);
   color: black;
 }
+.home:hover {
+  transform: none;
+}
 .nav-link.active {
-  background-color: transparent;
-  color: black;
+  color: #504e4e !important;
+  text-decoration: underline;
+}
+
+.home:hover {
+  background-color: #464343 !important;
 }
 
 .nav-link1 {
