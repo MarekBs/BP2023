@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body {
+  overflow: overlay;
+}
 p {
   font-family: 'Roboto', sans-serif;
   line-height: 1.8rem;
@@ -41,7 +44,18 @@ p {
   color: #504e4e;
   border-radius: 4px;
 }
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(136, 136, 136, 0.7);
+}
 
 
 .sidebar-sticky .nav-link {
