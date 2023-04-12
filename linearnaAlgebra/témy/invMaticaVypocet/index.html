@@ -84,7 +84,95 @@
 
                   </div>
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>Tab 2 content</p>
+                     <p>Ukážka výpočtu inverznej matice k matici $$A$$.</p>
+                     <div class="mathjax_matrix">$$
+                        {\bf A}=\left( \begin{array}{rrr}
+                        2 & -4 & 6 \\
+                        3 & -5 & 8 \\
+                        -2 & 6 & -10 \end{array}\right)\
+                        $$</div>
+                     <p>Vytvoríme najprv maticu $${\bf C}=[{\bf A}\vert{\bf I}_n]$$ pridaním jednotkovej matice $${\bf
+                        I}_3$$
+                        k matici $$\bf A$$. Túto novú maticu $$\bf C$$ typu $$3\times 6$$ potom upravujeme na
+                        redukovaný Gaussov tvar</p>
+                     <div class="table-responsive mathjax_matrix">
+                        $$
+                        {\bf C}=\left( \begin{array}{rrr}
+                        2 & -4 & 6 \\
+                        3 & -5 & 8 \\
+                        -2 & 6 & -10
+                        \end{array}
+                        \right| \left.
+                        \begin{array}{rrr}
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                        \end{array}
+                        \right)
+                        \begin{array}{l} R'_1=\frac12 R_1 \\R'_2=R_2+(-3)R'_1 \\R'_3=R_3+2R'_1 \end{array}
+                        $$
+                     </div>
+                     <div class="table-responsive mathjax_matrix">
+                        $$
+                        \cong \left( \begin{array}{rrr}
+                        1 & -2 & 3 \\
+                        0 & 1 & -1 \\
+                        0 & 2 & -4
+                        \end{array}
+                        \right|
+                        \left.
+                        \begin{array}{rrr}
+                        1/2 & 0 & 0 \\
+                        -3/2 & 1 & 0 \\
+                        1 & 0 & 1
+                        \end{array}
+                        \right)
+                        \begin{array}{l} R'_3=R_3+(-2)R_2 \\R'_1=R_1+2R_2 \end{array}
+                        $$
+                     </div>
+                     <div class="table-responsive mathjax_matrix">
+                        $$
+                        \cong \left( \begin{array}{rrr}
+                        1 & 0 & 1 \\
+                        0 & 1 & -1 \\
+                        0 & 0 & -2
+                        \end{array}
+                        \right|
+                        \left.
+                        \begin{array}{rrr}
+                        -5/2 & 2 & 0 \\
+                        -3/2 & 1 & 0 \\
+                        4 & -2 & 1
+                        \end{array}\right)
+                        \begin{array}{l} R'_3=-\frac12 R_3 \\R'_2=R_2+R'_3 \\R'_1=R_1+(-1)R'_3 \end{array}
+                        $$
+                     </div>
+                     <div class="table-responsive mathjax_matrix">$$
+                        \cong \left( \begin{array}{rrr}
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                        \end{array}
+                        \right|
+                        \left.
+                        \begin{array}{rrr}
+                        -1/2 & 1 & 1/2 \\
+                        -7/2 & 2 & -1/2 \\
+                        -2 & 1 & -1/2
+                        \end{array}\right) = {\bf C}'\ .
+                        $$
+                     </div>
+                     <br>
+                     <p>Podl'a algoritmu platí: Ak v Gaussovom tvare $${\bf C}'$$ v l'avej polovici vznikne jednotková
+                        matica, tak potom pravá polovica matice $${\bf C}'$$ predstavuje inverznú maticu k pôvodnej
+                        matici
+                        $$\bf A$$. Teda $${\bf A}^{-1}$$ existuje, a</p>
+                     <div class="mathjax_matrix">$$
+                        {\bf A}^{-1}=\left( \begin{array}{rrr}
+                        -1/2 & 1 & 1/2 \\
+                        -7/2 & 2 & -1/2 \\
+                        -2 & 1 & -1/2 \end{array}\right)\ .
+                        $$</div>
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">

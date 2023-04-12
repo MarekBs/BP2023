@@ -46,6 +46,7 @@ p {
 }
 ::-webkit-scrollbar {
   width: 12px;
+  height: 3px;
   background-color: transparent;
 }
 
@@ -54,8 +55,9 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(136, 136, 136, 0.7);
+  background-color: rgba(148, 146, 146, 0.397);
 }
+
 
 
 .sidebar-sticky .nav-link {

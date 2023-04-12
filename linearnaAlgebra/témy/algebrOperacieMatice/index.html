@@ -77,11 +77,11 @@
                         <h6 style="color: darkblue">Súčet matíc:</h6>
 
                         <p>Súčet matíc je definovaný len pre matice rovnakého typu: Ak $${\bf
-                           A}=[a_{ij}]{m\times n}$$ a $${\bf B}=[b{ij}]{m\times
+                           A}=[a_{ij}]{m\times n}$$ a $${\bf B}=[b_{ij}]{m\times
                            n}$$ sú dve matice typu $$m\times n$$, ich súčet je matica
-                           $${\bf C}={\bf A}+{\bf B}$$, $${\bf C}=[c{ij}]{m
+                           $${\bf C}={\bf A}+{\bf B}$$, $${\bf C}=[c_{ij}]{m
                            \times
-                           n}$$, pričom $$c{ij}=a_{ij}+b_{ij}$$. (Jednoducho
+                           n}$$, pričom $$c_{ij}=a_{ij}+b_{ij}$$. (Jednoducho
                            povedané,
                            pri
                            súčte matíc sa sčítajú prvky na rovnakých miestach).
@@ -158,7 +158,136 @@
                      </section>
                   </div>
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>Tab 2 content</p>
+                     <p>1. Vynásob maticu konštantou.</p>
+                     <br>
+                     <div style=" display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap:
+                     2rem; justify-items: center; align-items: center;">
+                        <div>
+                           $$
+                           \begin{pmatrix}
+                           2 & 2 & 3 \\
+                           1 & 4 & 2 \\
+                           0 & 0 & 2
+                           \end{pmatrix}
+                           \times 2
+                           =
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           \begin{pmatrix}
+                           1 & 12 & 3 & 3 \\
+                           1 & 8 & 1 & 3\\
+                           12 & 3 & 2 & 3
+                           \end{pmatrix}
+                           \times 1.5
+                           =
+                           $$
+                        </div>
+                     </div>
+                     <br><br>
+                     <section style="background-color: rgb(245, 245, 245); padding: 2rem; border-radius: 6px;">
+                        <p>2. Sčítaj matice.</p>
+                        <div
+                           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
+                           <div>$$\begin{pmatrix}
+                              1 & 2 & 3 \\
+                              4 & 5 & 6 \\
+                              7 & 8 & 9 \\
+                              \end{pmatrix}
+                              +
+                              \begin{pmatrix}
+                              9 & 8 & 7 \\
+                              6 & 5 & 4 \\
+                              3 & 2 & 1 \\
+                              \end{pmatrix}
+                              =$$</div>
+                           <div>
+                              $$\begin{pmatrix}
+                              2 & 1 & 0 & 3 \\
+                              4 & 2 & 5 & 0 \\
+                              1 & 0 & 3 & 2 \\
+                              2 & 4 & 1 & 0 \\
+                              \end{pmatrix}
+                              +
+                              \begin{pmatrix}
+                              5 & 2 & 3 & 1 \\
+                              2 & 3 & 1 & 4 \\
+                              1 & 0 & 2 & 3 \\
+                              3 & 5 & 2 & 1 \\
+                              \end{pmatrix}
+                              =$$
+                           </div>
+
+                        </div>
+                     </section>
+                     <br><br>
+                     <p>Vynásob matice.</p>
+                     <br>
+                     <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
+                        <div>$$\begin{pmatrix}
+                           1 & 2 & 3 \\
+                           4 & 5 & 6 \\
+                           7 & 8 & 9 \\
+                           \end{pmatrix}
+                           \times
+                           \begin{pmatrix}
+                           9 & 8 & 7 \\
+                           6 & 5 & 4 \\
+                           3 & 2 & 1 \\
+                           \end{pmatrix}
+                           =$$</div>
+                        <div>
+                           $$\begin{pmatrix}
+                           1 & 2 & 3 \\
+                           4 & 5 & 6 \\
+                           \end{pmatrix}
+                           \times
+                           \begin{pmatrix}
+                           2 & 1 \\
+                           3 & 4 \\
+                           5 & 6 \\
+                           \end{pmatrix}
+                           =$$
+                        </div>
+                        <div>
+                           $$\begin{pmatrix}
+                           2 & 3 & 1 \\
+                           4 & 2 & 5 \\
+                           3 & 0 & 1 \\
+                           6 & 7 & 2 \\
+                           \end{pmatrix}
+                           \times
+                           \begin{pmatrix}
+                           1 & 2 & 3 & 4 & 5 \\
+                           6 & 7 & 8 & 9 & 10 \\
+                           11 & 12 & 13 & 14 & 15 \\
+                           \end{pmatrix}
+                           =$$
+                        </div>
+                     </div>
+                     <br><br>
+                     <p>Transponuj matice.</p>
+                     <br>
+                     <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
+                        <div>$$\begin{pmatrix}
+                           1 & 2 \\
+                           3 & 4 \\
+                           5 & 6 \\
+                           \end{pmatrix}^\intercal
+                           =$$</div>
+                        <div>$$\begin{pmatrix}
+                           2 & 6 & 3 & 8 \\
+                           1 & 9 & 4 & 5 \\
+                           7 & 8 & 2 & 4 \\
+                           5 & 1 & 7 & 3 \\
+                           0 & 6 & 9 & 2 \\
+                           \end{pmatrix}^\intercal
+                           =$$</div>
+                     </div>
+
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">
