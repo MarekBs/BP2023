@@ -115,6 +115,12 @@ mjx-container.MathJax {
   margin: 1rem auto;
 }
 
+.mathjax_matrix {
+  margin: 3rem auto;
+  text-align: center;
+  overflow-y: hidden;
+}
+
 .navbar-light {
   background-color: rgb(235, 235, 94);;
 }
