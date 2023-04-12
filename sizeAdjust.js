@@ -16,3 +16,4 @@ function updateMainMargin() {
 
 window.addEventListener("resize", updateMainMargin);
 updateMainMargin();
+
