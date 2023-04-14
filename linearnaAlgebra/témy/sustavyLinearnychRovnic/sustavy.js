@@ -27,13 +27,14 @@ const matriX = $("#matrix-input");
 
 $( "#calcBTN6" ).click(function() {
     let m = getMatrix(matriX);
-    let {allButLastCol, lastCol} = splitMatrix(m);
-    let x = gaussianElimination(allButLastCol, lastCol);
-    console.log(x);
-    let resultsStr = "";
+    /* let {allButLastCol, lastCol} = splitMatrix(m);
+    let x = gaussianElimination(allButLastCol, lastCol); */
+     let x = gaussian_elimination(m); 
+    
+     let resultsStr = "";
     for (let i = 0; i < x.length; i++) {
       resultsStr += `x${i + 1} = ${x[i]}<br>`;
     }
-    document.getElementById("result").innerHTML = resultsStr;
+    document.getElementById("result").innerHTML = resultsStr; 
     
   });
