@@ -124,7 +124,133 @@
 
                   </div>
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>Tab 2 content</p>
+                     <h5>Ukážkový príklad:</h5>
+                     <br>
+                     <p>Pomocou definície vypočítajme determinant matice</p>
+                     <div class="mathjax_matrix">$$
+                        {\bf A}=\left( \begin{array}{rrrr}
+                        1 & -2 & 5 & 3 \\
+                        -4 & 2 & -3 & -1 \\
+                        2 & -3 & -4 & 5 \\
+                        -3 & 0 & 2 & 0 \end{array}\right)\
+                        $$</div>
+                     <p>Použijeme rozvoj podl'a štvrtého riadku (pretože obsahuje najviac núl)</p>
+                     <div class="mathjax_matrix">$$
+                        |{\bf A}|=(-1)^{4+1}.(-3).|{\bf A}_{41}| +
+                        (-1)^{4+2}.0.|{\bf A}_{42}| +
+                        (-1)^{4+3}.2.|{\bf A}_{43}| +
+                        (-1)^{4+4}.0.|{\bf A}_{44}| \ .
+                        $$</div>
+                     <p>Teraz vypočítame determinanty matíc $${\bf A}_{41}$$ a $${\bf A}_{43}$$.</p>
+                     <div class="mathjax_matrix">$$
+                        {\bf A}_{41}=\left( \begin{array}{rrr}
+                        -2 & 5 & 3 \\
+                        2 & -3 & -1 \\
+                        -3 & -4 & 5 \end{array}\right) \ ,
+                        $$</div>
+                     <p>podl'a pravidla počítania determinantu $$3\times 3$$</p>
+                     <div class="mathjax_matrix">$$
+                        |{\bf A}_{41}|= (-2).(-3).5 + 5.(-1).(-3) + 3.2.(-4) -
+                        3.(-3).(-3) - (-2).(-1).(-4) - 5.2.5
+                        $$</div>
+                     <p>a teda $$\vert{\bf A}_{41}\vert= -48$$. Podobne, keďže</p>
+                     <div class="mathjax_matrix">$$
+                        {\bf A}_{43}=\left( \begin{array}{rrr}
+                        1 & -2 & 3 \\
+                        -4 & 2 & -1 \\
+                        2 & -3 & 5 \end{array}\right) \ ,
+                        $$</div>
+                     <p>analogicky dostaneme</p>
+                     <div class="mathjax_matrix">$$
+                        |{\bf A}_{43}|= 1.2.5 + (-2).(-1).2 + 3.(-4).(-3) -
+                        3.2.2 - 1.(-1).(-3) - (-2).(-4).5 = -5\ .
+                        $$</div>
+                     <p>Napokon, vynechaním nulových sčítancov dostávame:</p>
+                     <div class="mathjax_matrix">$$
+                        |{\bf A}|=(-1)^{4+1}.(-3).|{\bf A}_{41}| +
+                        (-1)^{4+3}.2.|{\bf A}_{43}| = 3.(-48) -2.(-5)= -134\ .
+                        $$</div>
+                     <br><br>
+                     <h6>Vypočítaj determinant matice</h6>
+                     <hr>
+                     <br>
+                     <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
+                        <div>
+                           $$
+                           {\bf A}_{1}=\left( \begin{array}{rrr}
+                           1 & -2 \\
+                           2 & 2 \\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{2}=\left( \begin{array}{rrr}
+                           -1 & 1 \\
+                           4 & 0 \\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{3}=\left( \begin{array}{rrr}
+                           1 & -2 & 1 \\
+                           2 & 2 & 1\\
+                           2 & 2 & 1\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{4}=\left( \begin{array}{rrr}
+                           5 & -2 & 2 \\
+                           6 & 3 & 0\\
+                           1 & 2 & 0\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{5}=\left( \begin{array}{rrr}
+                           3 & 1 & 7 \\
+                           1 & 1 & 4\\
+                           2 & 0 & 2\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{6}=\left( \begin{array}{rrr}
+                           0 & 1 & 7 & 1 \\
+                           1 & 2 & 3 & 3\\
+                           4 & 1 & 2 & 2\\
+                           0 & 5 & 2 & 1\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{7}=\left( \begin{array}{rrr}
+                           1 & 2 & 3 & 0 \\
+                           3 & 3 & 1 & 6\\
+                           0 & 2 & 0 & 2\\
+                           1 & 3 & 2 & 2\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                        <div>
+                           $$
+                           {\bf A}_{8}=\left( \begin{array}{rrr}
+                           0 & 2 & 5 & 1 & 1 \\
+                           1 & 1 & 1 & 2 & 0\\
+                           0 & 2 & 0 & 2 & 1\\
+                           6 & 1 & 1 & 1 & 0\\
+                           2 & 0 & 2 & 2 & 3\\
+                           \end{array}\right) \
+                           $$
+                        </div>
+                     </div>
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"
                      aria-labelledby="practice-problems-tab">
