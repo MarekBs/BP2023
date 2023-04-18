@@ -6,8 +6,13 @@ col_m1 = m1[0].length;
 fil_m2 = m2.length;  
 col_m2 = m2[0].length;
 
-if (col_m1 != fil_m2)    
-throw "Matrices cannot be multiplied";
+if (col_m1 != fil_m2){
+  let p = `<span style="color: red;">Matice sa nedajú vynásobiť !</span>`;
+  $("#matrix-output").html("");
+  $("#matrix-output").append(p);
+  return;
+}    
+
 
 let multiplication = new Array(fil_m1);  
 for (x=0; x<multiplication.length;x++)      
@@ -20,7 +25,6 @@ for (x=0; x < multiplication.length; x++) {
                    }      
         }  
     }
-    console.log(multiplication);
     printMatrix(multiplication);
 }
 

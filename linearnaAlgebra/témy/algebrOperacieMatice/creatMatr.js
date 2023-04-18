@@ -44,24 +44,35 @@ function createMatrix(rows,cols,input) {
   
 
   function getMatrix(input) {
+    let a =0;
     const matrix = [];
     const rows = $(input).find("tr");
-    
+  
     rows.each(function(rowIndex) {
       const cells = $(this).find("td input");
       matrix.push([]);
-      
+  
       cells.each(function(cellIndex) {
-        matrix[rowIndex].push(parseInt($(this).val()));
+        const value = parseInt($(this).val());
+        if (!value && value !== 0) {
+          a++;
+        }
+        matrix[rowIndex].push(value);
       });
     });
+    if (a==0){
+      return matrix;
+    }else {
+      return 1;
+    }
     
-    return matrix;
   }
+  
   
   let matrixFirst;
   let matrixSecond;
 
+  
   
 
 $("#calcBTN5").on("click",function(){
@@ -69,11 +80,17 @@ $("#calcBTN5").on("click",function(){
     const matrix2 = $("#matrix-input1"); 
     matrixFirst = getMatrix(matrix1);
     matrixSecond = getMatrix(matrix2);
-    console.log(matrixFirst);
-    console.log(matrixSecond);
-    multiple(matrixFirst,matrixSecond);
-})
+    if(matrixFirst == 1 || matrixSecond == 1){
+      $( "#matrix-output")[0].innerHTML=`<span style="color: red;">zadaj všetky vstupy !</span>`;
+    }else {
+      multiple(matrixFirst,matrixSecond);
+    }
+    
+    
+});
 
 $("#clearBTN5").on("click",function(){
   $( "#matrix-output")[0].innerHTML="";
+  createMatrix("#matrix-rows","#matrix-cols","#matrix-input");
+    createMatrix("#matrix-rows1","#matrix-cols1","#matrix-input1");
 })

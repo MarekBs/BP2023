@@ -9,7 +9,6 @@ const main = document.querySelector("main");
 function updateMainMargin() {
   const sidebarWidth = sidebar.offsetWidth;
   main.style.marginLeft = `${sidebarWidth}px`;
-  console.log(sidebarWidth);
   const availableWidth = document.body.clientWidth - sidebarWidth;
   main.style.width = `${availableWidth}px`;
 }
