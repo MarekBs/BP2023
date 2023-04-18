@@ -1,4 +1,4 @@
-function elimination(mat) {
+/* function elimination(mat) {
      
     for (let i = 1,len = mat.length; i < len; i++) {
       
@@ -120,6 +120,6 @@ function elimination(mat) {
 
 
   
-  gaussian_elimination(arr4);
+  gaussian_elimination(arr4); */
   
  

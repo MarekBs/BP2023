@@ -80,6 +80,8 @@ $("#calcBTN5").on("click",function(){
     const matrix2 = $("#matrix-input1"); 
     matrixFirst = getMatrix(matrix1);
     matrixSecond = getMatrix(matrix2);
+    console.log(matrixFirst);
+    console.log(matrixSecond)
     if(matrixFirst == 1 || matrixSecond == 1){
       $( "#matrix-output")[0].innerHTML=`<span style="color: red;">zadaj všetky vstupy !</span>`;
     }else {

@@ -58,7 +58,6 @@ function createMatrix() {
       matrixInputTable.appendChild(row);
     }
   }
-  
   // create the initial matrix
   createMatrix();
 
