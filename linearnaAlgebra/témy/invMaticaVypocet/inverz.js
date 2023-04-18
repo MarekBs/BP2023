@@ -1,14 +1,18 @@
 $( "#clearBTN3" ).click(function() {
     $( "#mxVysledok3")[0].innerHTML="";
+    createMatrix();
   });
 
   $( "#calcBTN" ).click(function() {
     $( "#mxVysledok3")[0].innerHTML="";
     let matrix = getMatrix("matrix-size", "matrix-input");
+    if (matrix == 1){
+      $( "#mxVysledok3")[0].innerHTML=`<span style="color: red;">zadaj všetky vstupy !</span>`;
+        return;
+    }
     let final = invMath(matrix);
-    console.log(final);
     if(final =="nemá inverznú maticu !"){
-        $( "#mxVysledok3")[0].innerHTML="nemá inverznú maticu !";
+        $( "#mxVysledok3")[0].innerHTML=`<span style="color: red;">nemá inverznú maticu !</span>`;
         return;
     }
     

@@ -63,6 +63,7 @@ function createMatrix() {
   createMatrix();
 
   function getMatrix(size, mtx) {
+    let empty = 0;
     var size = document.getElementById(size).value;
     var matrix = [];
     for (var i = 1; i <= size; i++) {
@@ -71,13 +72,21 @@ function createMatrix() {
         var input = document
           .getElementById(mtx)
           .rows[i - 1].cells[j - 1].getElementsByTagName("input")[0];
+        if (input.value === "") {
+          empty++;
+        }
         row.push(parseFloat(input.value));
       }
       matrix.push(row);
     }
-    return matrix;
+    if(empty == 0){
+      return matrix;
+    } else {
+      return 1;
+    }
     
   }
+  
 
   matrixSizeInput.addEventListener("change", createMatrix);
 
