@@ -1,20 +1,32 @@
 function elimination(mat) {
-     
-  for (let i = 1,len = mat.length; i < len; i++) {
-    
-    for (let j = 0; j < i; j++) {
-    
-      // check: prvky na diagonale nemozu byt nulove
-      const coe = mat[i][j] / mat[j][j] //  koeficient
-  
-      mat[i].forEach((val, idx) => {
-    
-        mat[i][idx] -= mat[j][idx] * coe
-      })
+  for (let i = 0; i < mat.length - 1; i++) {
+    // check for zero on diagonal
+    if (mat[i][i] === 0) {
+      // swap rows with a row below that has a non-zero value in that column
+      let found = false;
+      for (let j = i + 1; j < mat.length; j++) {
+        if (mat[j][i] !== 0) {
+          [mat[i], mat[j]] = [mat[j], mat[i]];
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        throw new Error('Matrix is singular');
+      }
+    }
+    // eliminate elements below diagonal
+    for (let j = i + 1; j < mat.length; j++) {
+      const factor = mat[j][i] / mat[i][i];
+      for (let k = i; k < mat.length + 1; k++) {
+        mat[j][k] -= factor * mat[i][k];
+      }
     }
   }
-
 }
+
+
+
 
 // zisťovanie a vrátenie súčastného stavu riešenia matice-> nemá riešenie, má jedno, nemá žiadne
 function getSolutionStatus(mat) {
@@ -31,7 +43,7 @@ function getSolutionStatus(mat) {
 }
 // Spätná substitúcia
 function back_substitution(mat) {
-    
+    console.log(mat)
   const rowLen = mat.length
   const columnLen = mat[0].length
   const result = Array(rowLen).fill()
@@ -104,20 +116,20 @@ function gaussian_elimination(mat) {
   ] // output: [ 83.79166666667061,-837.9166666667011,2932.7083333334544,-4187.5833333335095,2010.0000000000857 ]
   
   const arr3 = [
-    [2, 3, 2, 2,1],
-    [2, 1, 2, 1,2],
-    [1, 2, 1, 2, 2],
-    [4, 2, 3, 2, 3]
+    [1, 2, 3, 4,0],
+    [7, 14, 20, 27,0],
+    [5, 10, 16, 19, -2],
+    [3, 5, 6, 13, 5]
   ] // output: [ 0.9999999999999997, 2.0000000000000004, -1.0000000000000002 ]
   
   const arr4 = [
-    [1, 2, 3, 1,5],
-    [1, 2, 1, 2,6],
+    [1, 2, 2, 1,5],
+    [3, 2, 1, 2,0],
     [2, 1, 2, 1,2],
-    [2, 2, 2, 1,2]
+    [1, 3, 2, 1,2]
   ] 
 
- console.log(gaussian_elimination(arr4)); 
+ console.log(gaussian_elimination(arr3)); 
 
   
   /* gaussian_elimination(arr4); */
