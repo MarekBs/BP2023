@@ -16,6 +16,8 @@ function calcNormal(f, point) {
   
   
 }
+
+
 document.addEventListener('click', function(event) {
    var isClickInsideNavbar = event.target.closest('#navbar-example2');
    if (!isClickInsideNavbar) {
