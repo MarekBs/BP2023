@@ -60,7 +60,7 @@
                             <a class="nav-link" href="#scrollspyHeading2">Elementárne funkcie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#scrollspyHeading3">Vlastnosti funkcií</a>
+                            <a class="nav-link" href="#scrollspyHeading3">********</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#scrollspyHeading4">Graf funkcie</a>
@@ -103,13 +103,13 @@
                     <p>je funkcia definovaná v $${\bf R}$$ rovnicou $$y = c $$ , Jej graf je priamka rovnobežná s osou
                         $$x$$.</p>
                     <br>
-                    <img src="/images/constantPlot.gif" alt="graf konštantnej funkcie">
+                    <img src="/images/constantPlot.gif" alt="graf konštantnej funkcie" class="graph">
                 </div>
                 <div style="margin-bottom: 4rem;">
                     <h5>Lineárna funkcia</h5>
                     <br>
                     <p>je funkcia definovaná v $${\bf R}$$ rovnicou
-                        $$y=kx+q,\ \ \ k \neq 0\ \ \mathrm{sa\ volá}\ smernica.$$</p>
+                        $$y=kx+q,$$ $$ k \neq 0$$ sa volá smernica.</p>
                     <p>Jej graf je priamka rôznobežná s osou $$x$$. Lineárna funkcia je:</p>
                     <div>
                         <ul style="display: inline-block; text-align: left;">
@@ -118,12 +118,13 @@
                         </ul>
                         <p>a pretína os $$y$$ v bode $$[0,q]$$.</p>
                         <br>
-                        <img src="/images/linearna_funkcia.png" alt="graf lineárnej funkcie" width="30%">
+                        <img src="/images/linearna_funkcia.png" alt="graf lineárnej funkcie" class="graph">
 
                     </div>
 
                 </div>
-                <div>
+                <div
+                    style="margin-bottom: 4rem; background-color: rgb(243, 243, 243); padding: 2rem; border-radius: 6px;">
                     <h5>Kvadratická funkcia</h5>
                     <br>
                     <p>je funkcia definovaná v $${\bf R}$$ rovnicou
@@ -132,11 +133,85 @@
                         $$a
                         <0$$. Jej vrchol je v bode $$[-\frac{b}{2a},\frac{4ac-b^2}{4a}]$$.</p>
                             <br>
-                            <img src="/images/kvadraticka_funkcie.png" alt="graf kvadratickej funkcie" width="30%">
+                            <img src="/images/kvadraticka_funkcie.png" alt="graf kvadratickej funkcie" class="graph">
+                </div>
+                <div style="margin-bottom: 4rem;">
+                    <h5>Mocninová funkcia</h5>
+                    <br>
+                    <p>je funkcia definovaná rovnicou $$
+                        f(x)=x^a,$$ $$ kde $$a$$ je reálne číslo.
+                        $$</p>
+                    <p>Jej vlastnosti a graf závisia od exponentu $$a$$, napr.:</p>
+                    <ul class="list1">
+                        <li>Ak $$a$$ je párne prirodzené číslo, tak $$D(f)={\bf R}$$, funkcia je párna, klesajúca v
+                            $$(-\infty,0)$$, rastúca v $$(0,\infty)$$.</li>
+                        <li>Ak $$a$$ je nepárne prirodzené číslo, tak $$D(f)={\bf R}$$, funkcia je nepárna, rastúca.
+                        </li>
+                        <li>Ak $$a=0$$, tak $$f(x)=1$$ pre všetky $$x \in {\bf R}-\{0\}$$ je konštantná funkcia.</li>
+                        <li>Ak $$a=-n$$, kde $$n$$ je prirodzené číslo, tak $$D(f)={\bf R}-\{0\}$$ a $$f$$ je klesajúca
+                            v
+                            $$(0,\infty)$$ a v intervale $$(-\infty,0)$$ je rastúca pre párne $$n$$ a klesajúca pre
+                            nepárne
+                            $$n$$.</li>
+                        <li>Ak $$a=\frac{1}{n}$$, kde $$n$$ je prirodzené číslo, tak $$f$$ je rastúca funkcia a
+                            $$D(f)=\langle
+                            0,\infty)$$ pre párne $$n$$, $$D(f)={\bf R}$$ pre nepárne $$n$$.</li>
+                    </ul>
+                    <img src="/images/grafyMocn.png" alt="grafy mocninovej funkcie" class="graph">
+                </div>
+
+                <div style="margin-bottom: 4rem;">
+                    <h5>Logaritmická funkcia</h5>
+                    <br>
+                    <p>Pretože exponenciálna funkcia je monotónna, má inverznú funkciu. Táto sa volá logaritmická
+                        funkcia a označuje sa</p>
+                    <p>$$
+                        y = \log_a x$$ kde $$a > 0$$ a $$\neq 1$$ je
+                        reálna konštanta
+                    </p>
+                    <p>nazývaná základ logaritmickej funkcie. Logaritmická funkcia so základom $$10$$ sa zapisuje $$\log
+                        x$$
+                        namiesto $$\log_{10} x$$. Definičný obor logaritmickej funkcie je $$(0,\infty)$$, obor hodnôt je
+                        $${\bf R}$$ a je rastúca alebo klesajúca v závislosti od svojho základu rovnakým spôsobom ako
+                        exponenciálna funkcia.
+                        Medzi logaritmickými funkciami má dôležité postavenie funkcia $$\ln x = \log_e x$$, ktorá je
+                        inverzná k funkcii $$y=e^x$$, volá sa prirodzený logaritmus.</p>
+
+                    <img src="/images/logFn.gif" alt="graf logaritmickej funkcie" class="graph">
+                </div>
+
+                <div style="margin-bottom: 4rem;">
+                    <h5>Goniometrické funkcie</h5>
+                    <br>
+                    <p>sú to funkcie :</p>
+                    <p>
+                        $$
+                        y=\sin x,$$ $$ \quad y=\cos x,$$ $$\quad y=\mbox{tg}\,x,$$ $$ \quad y=\mbox{cotg}\,x,$$ $$\quad
+                        y=\sec
+                        x,$$$$\quad
+                        y=\mbox{cosec}\,x.
+                        $$</p>
+                    <p>Funkcie <span style="color:blue">sínus a kosínus</span> majú definičný obor $${\bf R}$$ a sú
+                        periodické s periódou $$2\pi$$.
+                        Funkcia
+                        sínus je nepárna, funkcia kosínus je párna.</p>
+
+                    <img src="/images/graf_sin_gg.png" alt="graf funkcie sin(x)" class="graph">
+                    <p>graf $$y=\sin x$$</p>
+                    <br>
+                    <img src="/images/graf_cos_gg.png" alt="graf funkcie cos(x)" class="graph">
+                    <p>graf $$y=\cos x $$</p>
+
+                    <p>Funkcie <span style="color:blue">tangens a kotangens</span> sú nepárne, periodické funkcie s
+                        periódou $$\pi$$. Pre ich definičné
+                        obory platí $$D(\mbox{tg}\,)={\bf R}-\{(2n+1)\frac{\pi}{2}\}$$, $$n \in {\bf Z}$$ a
+                        $$D(\mbox{cotg}\,)={\bf R}-\{n\pi\}$$, $$n \in {\bf Z}$$.</p>
+                    <br>
+                    <img src="/images/tanC.png" alt="graf funkcie tan(x) a cotg(x)" class="graph">
                 </div>
 
 
-                <p></p>
+
             </div>
             <div class="box" id="scrollspyHeading4" style="padding-top: 4rem;">
                 <h3 class="title">Graf funkcie</h3>
