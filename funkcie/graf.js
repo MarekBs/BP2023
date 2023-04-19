@@ -64,23 +64,7 @@ var parameters = {
    
 
     functionPlot(parameters);
-    var xMin = 0;
-    var xMax = 2*Math.PI;
-
-var min = Infinity;
-var max = -Infinity;
-for (var x = xMin; x <= xMax; x += 0.01) {
-    var y = math.evaluate(f, { x: x });
-    if (y > max) {
-        max = y;
-    }
-    if (y < min) {
-        min = y;
-    }
-}
-console.log("min:", min, "max:", max);
-
-
+  
     
   }
 
@@ -97,4 +81,31 @@ function changeSize(){
     
     
   }
+
+// Define the function to plot
+function ln(x) {
+  return Math.log(x);
+}
+function lnx(){
+  // Set up the options for the plot
+var options = {
+  // Set the range for the x-axis
+  xAxis: {
+    domain: [0, 10]
+  },
+  // Set the range for the y-axis
+  yAxis: {
+    domain: [-5, 5]
+  },
+  // Set the function to plot
+  data: [{
+    fn: ln,
+    sampler: 'builtIn',  // Use the built-in sampler
+    graphType: 'polyline'  // Use a polyline to connect the samples
+  }]
+};
+
+// Call the function-plot library with the options to create the plot
+functionPlot(options);
+}
 
