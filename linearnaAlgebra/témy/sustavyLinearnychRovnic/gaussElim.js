@@ -12,7 +12,8 @@ function elimination(mat) {
         }
       }
       if (!found) {
-        throw new Error('Matrix is singular');
+        console.log("sústava nemá riešenie!")
+        return -5;
       }
     }
     // eliminate elements below diagonal
@@ -81,7 +82,8 @@ function gaussian_elimination(mat) {
   }
 
   //  Eliminácia
-  elimination(mat)
+  let ret = elimination(mat);
+  
 
   //  Získanie výsledku
   const solutionStatus = getSolutionStatus(mat) //   unsolvable , More solutions , Unique solution 
@@ -94,7 +96,7 @@ function gaussian_elimination(mat) {
     
   } else {
     
-    
+    if (ret === -5) {return -5}
     return back_substitution(mat);
   }
 }
@@ -104,7 +106,7 @@ function gaussian_elimination(mat) {
   const arr = [
     [2, 1, -1, 8],
     [-3, -1, 2, -11],
-    [-2, 1, 2, -3]
+    [2, 1, -1, -3]
   ] // output: [2, 3, -1]
   
   const arr2 = [
@@ -123,13 +125,13 @@ function gaussian_elimination(mat) {
   ] // output: [ 0.9999999999999997, 2.0000000000000004, -1.0000000000000002 ]
   
   const arr4 = [
-    [1, 2, 2, 1,5],
-    [3, 2, 1, 2,0],
-    [2, 1, 2, 1,2],
-    [1, 3, 2, 1,2]
+    [2, 1, -1, 1,1],
+    [3, -2, 2, -3,2],
+    [2, -1, 1, -3,4],
+    [5, 1, -1, 2,-1]
   ] 
 
- console.log(gaussian_elimination(arr3)); 
+ console.log(gaussian_elimination(arr4)); 
 
   
   /* gaussian_elimination(arr4); */
