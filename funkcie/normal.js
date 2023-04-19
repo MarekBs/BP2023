@@ -11,10 +11,7 @@ function calcNormal(f, point) {
     let result = normal.replace(/x/gi, point);
     return result.replace(/z/gi, "x");
   
-  
 
-  
-  
 }
 
 
