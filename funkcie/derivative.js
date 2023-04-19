@@ -11,10 +11,8 @@ function calcDerivate(f) {
       // Replace logb(x) with ln(x) / ln(base)
       f = f.replace(re, 'log($3) / log(' + base + ')');
     }
-    console.log(f)
     // Take the derivative using mathjs
     der = math.derivative(f, variable);
-  
     return der.toString();
   }
   

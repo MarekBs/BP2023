@@ -81,9 +81,21 @@ function changeSize(){
     
     
   }
-
+  var input = document.querySelector("#functionInput");
+  var res = document.querySelector("#resultDerivate");
   $("#derivateBtn").click(function(){
-    let f = document.querySelector("#functionInput").value;
+    let f = input.value;
+    if(f.includes("ln")){
+        f =f.replace("ln", "log");
+        
+    }
     let der = calcDerivate(f);
-    $("#resultDerivate").innerHTML = der;
+    res.innerHTML = " Derivácia =  "+der;
+    
   });   
+
+$("#clrBtn").click(function(){
+  res.innerHTML = "Derivácia =";
+  input.value = "";
+
+});
