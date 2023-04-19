@@ -126,10 +126,88 @@
 
                 </div>
 
-                <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                    <p>Tab 2 content</p>
+                <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab"
+                    style="text-align: left">
+                    <p>Gaussovou eliminačnou metódou riešte sústavu:</p>
+                    <div class="text-center table-responsive overflow-y-hidden mathjax_matrix">$$
+                        \begin{array}{rrrrrrrr}
+                        2x_1 & + &4x_2 & - &2x_3 & = & 6 & \\
+                        x_1 & - &x_2& + & 5x_3 & = & 0 & \\
+                        4x_1 &+ &x_2 & - &2x_3 & = & 2 & . \\
+                        \end{array}
+                        $$
+                    </div>
+                    <p>Riešenie: Pretože $$\vert{\bf A}\vert \neq 0$$, má sústava práve jedno riešenie.
+                        Pomocou ekvivalentných úprav chceme dospieť ku sústave Cx = d , pričom matica C bude mať
+                        štruktúru:</p>
+                    <br>
+                    <div class="text-center mathjax_matrix">$$
+                        \left(
+                        \begin{array}{rrr}
+                        \clubsuit & \clubsuit & \clubsuit \\
+                        0 & \clubsuit & \clubsuit \\
+                        0 & 0 & \clubsuit \\
+                        \end{array}
+                        \right)
+                        $$
+                    </div>
+                    <p>a na diagonále nenulové prvky. Vynásobme prvú rovnicu sústavy číslom $$(-1/2)$$ a pripočítajme ju
+                        ku druhej rovnici. Dostaneme sústavu</p>
+                    <div class="text-center mathjax_matrix">$$
+                        \begin{array}{rrrrrrrr}
+                        2x_1 & + &4x_2 & - &2x_3 & = & 6 & \\
+                        & - &3x_2& + & 6x_3 & = & -3 & \\
+                        &- &7x_2 & + &2x_3 & = & -10 & . \\
+                        \end{array}
+                        $$
+                    </div>
+                    <p>Teraz už platí, že prvky prvého stĺpca odpovedajúcej matice sústavy, až na prvok v pozícii
+                        $$(1,1)$$, sú nulové.
+                        Vynásobením druhej rovnice číslom $$7/(-3)$$ a pripočítaním ku tretej rovnici dostaneme
+                    </p>
+                    <div class="text-center mathjax_matrix">$$
+                        \begin{array}{rrrrrrrr}
+                        2x_1 & + &4x_2 & - &2x_3 & = & 6 & \\
+                        & - &3x_2& + & 6x_3 & = & -3 & \\
+                        & & & - &12x_3 & = & -3 & . \\
+                        \end{array}
+                        $$
+                    </div>
+                    <p>To je ale sústava s takou maticou, akou sme si želali. Následne spetnou substitúciou dostaneme:
+                        $$\quad x1 = 1/4$$, $$ \quad x2 = 3/2$$, $$ \quad x3 = 1/4$$.</p>
+                    <br><br>
+                    <h5>Vypočítaj sústavy rovníc</h5>
+                    <hr>
+                    <br>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 3rem; justify-items: center; align-items: center;">
+                        <div>$$ \begin{array}{rrrrrrrr}
+                            2x_1 & + &4x_2 & = & 6 & \\
+                            x_1 & - &x_2& = & 0 & \\
+                            \end{array}
+                            $$</div>
+                        <div>$$ \begin{array}{rrrrrrrr}
+                            3x_1 & + &4x_2 & = & 2 & \\
+                            2x_1 & + &2x_2& = & 1 & \\
+                            \end{array}
+                            $$</div>
+                        <div>
+                            \begin{array}{rrrrrrrr}
+                            -x_1 & + &3x_2 & & & = & -72 & \\
+                            3x_1 & + &4x_2& - & 4x_3 & = & -4 & \\
+                            -20x_1 &- &12x_2 & + &5x_3 & = & -50 & \\
+                            \end{array}
+                        </div>
+                        <div>
+                            \begin{array}{rrrrrrrr}
+                            x_1 & + &2x_2& + & 3x_3 &= & 14 & \\
+                            3x_1 & + &2x_2& + & x_3 & = & 10 & \\
+                            3x_1 &+ &x_2 & + &2x_3 & = & 11 & \\
+                            \end{array}
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="practice-problems" role="tabpanel"
+                <div class=" tab-pane fade" id="practice-problems" role="tabpanel"
                     aria-labelledby="practice-problems-tab">
                     <h5>Výpočet sústavy lineárnych rovníc pomocou rozšírenej matice sústavy</h5>
                     <br><br>
