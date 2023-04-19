@@ -13,6 +13,7 @@ function calcDerivate(f) {
     }
     // Take the derivative using mathjs
     der = math.derivative(f, variable);
+    
     return der.toString();
   }
   
