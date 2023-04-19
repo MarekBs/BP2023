@@ -82,30 +82,8 @@ function changeSize(){
     
   }
 
-// Define the function to plot
-function ln(x) {
-  return Math.log(x);
-}
-function lnx(){
-  // Set up the options for the plot
-var options = {
-  // Set the range for the x-axis
-  xAxis: {
-    domain: [0, 10]
-  },
-  // Set the range for the y-axis
-  yAxis: {
-    domain: [-5, 5]
-  },
-  // Set the function to plot
-  data: [{
-    fn: ln,
-    sampler: 'builtIn',  // Use the built-in sampler
-    graphType: 'polyline'  // Use a polyline to connect the samples
-  }]
-};
-
-// Call the function-plot library with the options to create the plot
-functionPlot(options);
-}
-
+  $("#derivateBtn").click(function(){
+    let f = document.querySelector("#functionInput").value;
+    let der = calcDerivate(f);
+    $("#resultDerivate").innerHTML = der;
+  });   
