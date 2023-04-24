@@ -159,6 +159,15 @@ input:focus {
   background-color: red;
   color: white;
 }
+
+.lineSplit {
+  width: 80%;
+  color: rgb(173, 173, 199);
+  margin: auto auto 2rem auto;
+
+}
+
+
 @media screen and (max-width: 991px) {
   .nav-item {
     width: 10rem;

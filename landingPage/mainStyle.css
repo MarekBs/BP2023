@@ -65,6 +65,10 @@ h2 {
 #intro {
   color: grey;
 }
+.plotPx {
+  max-width: 100%; 
+  height: auto;
+}
 
 @media screen and (max-width: 1250px) {
   body {
@@ -110,6 +114,7 @@ h2 {
   #header-container {
     width: 85%;
   }
+
 }
 @media screen and (max-width: 413px) {
   .pad {
