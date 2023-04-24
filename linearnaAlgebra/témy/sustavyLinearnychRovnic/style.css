@@ -18,4 +18,22 @@
 .blue-background {
     background-color: rgb(228, 228, 228);
   }
+
+
+.grid_examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 2rem;
+    justify-items:center; 
+    align-items: center;
+}
+
+@media screen and (max-width: 754px){
+    .grid_examples {
+      display: block;
+      text-align: center;
+      margin: auto 0.5rem auto 0.5rem;  
+    }
+  
+  }
   
