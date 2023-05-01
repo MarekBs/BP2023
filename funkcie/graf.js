@@ -18,9 +18,17 @@ var parameters = {
   
   
  ],
+ annotations: [ {
+  x: 0,
+  text: 'y',
+}, {
+  y: 0,
+  text: 'x'
+}],
   grid: true,
   yAxis: {domain: [-1, 1]},
   xAxis: {domain: [0, 2*Math.PI]}
+  
 };
 
 function plot(width) {
