@@ -38,8 +38,8 @@ var parameters = {
         f =f.replace("ln", "log");
         
     }
-     
 
+    
     let result1 = calcNormal(f,point);
     
     parameters.data[0].fn = f;
