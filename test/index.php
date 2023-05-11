@@ -4,25 +4,63 @@ require_once 'config.php';
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $sql = "INSERT INTO user (meno, heslo, test_count) VALUES (:name, :password,:test_count)";
+    if ($_POST['action'] == 'register') {
 
-    $name = $_POST['name'];
-    $password = $_POST['password'];
-    $test_count = 0;
+        // Check if user with same name already exists
+        $stmt = $db->prepare("SELECT * FROM user WHERE meno=:name");
+        $stmt->bindParam(':name', $_POST['name']);
+        $stmt->execute();
 
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Bind parameters to SQL
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(":name", $name, PDO::PARAM_STR);
-    $stmt->bindParam(":password", $hashed_password, PDO::PARAM_STR);
-    $stmt->bindParam(":test_count", $test_count, PDO::PARAM_STR);
+        if ($user) {
+            // User already exists, show error message or redirect to registration page
+            echo '<script>alert("Používateľ s rovnakým menom už existuje, zvol si iné meno!");</script>';
+        } else {
+            // Insert new user record
+            $sql = "INSERT INTO user (meno, heslo, test_count) VALUES (:name, :password,:test_count)";
 
-    $stmt->execute();
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $test_count = 0;
+
+            // Hash the password
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            // Bind parameters to SQL
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(":name", $name, PDO::PARAM_STR);
+            $stmt->bindParam(":password", $hashed_password, PDO::PARAM_STR);
+            $stmt->bindParam(":test_count", $test_count, PDO::PARAM_STR);
+
+            $stmt->execute();
+            echo '<script>alert("Registrácia prebehla úspešne, môžeš sa teraz prihlásiť!");</script>';
+
+        }
+    } elseif ($_POST['action'] == 'login') {
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $stmt = $db->prepare("SELECT * FROM user WHERE meno=:username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($user) {
+            if (password_verify($password, $user['heslo'])) {
+                $_SESSION["loggedin"] = true;
+                $_SESSION["id"] = $user["id"];
+                $_SESSION["username"] = $username;
+                header("location: restricted.php");
+            } else {
+                echo '<script>alert("Nesprávne meno alebo heslo!");</script>';
+            }
+        } else {
+            echo '<script>alert("Nesprávne meno alebo heslo!");</script>';
+        }
+    }
 }
-
-
 
 ?>
 
@@ -67,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li class="nav-item">
                             <a class="nav-link home"
                                 style=" color: white; background-color: #504e4e; border-radius: 4px;"
-                                href=" ../../landingPage/index.html">
+                                href=" ../landingPage/index.html">
                                 <svg style=" margin-right: 2px; margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                     <path
@@ -87,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <form id="loginForm" class="p-4 border rounded" method="POST" action="/BP2023/test/restricted.php">
+        <form id="loginForm" class="p-4 border rounded" method="POST" action="/BP2023/test/">
             <h2 class="mb-4">Prihlásiť sa</h2>
             <div class="form-group">
                 <label for="username">Meno:</label>
@@ -98,6 +136,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="password">Heslo:</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
+            <input type="hidden" name="action" value="login">
+
 
             <div class="d-flex justify-content-center mt-4">
                 <button type="submit" class="btn btn-primary">Login</button>
@@ -142,13 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label for="password">Heslo:</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-
-                    <div class="form-group">
-                        <label for="confirmPassword">Potvrdenie hesla:</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-                            required>
-                    </div>
-
+                    <input type="hidden" name="action" value="register">
                     <button type="submit" class="btn btn-primary btn-block mt-4">Registrovať sa</button>
                 </form>
             </div>
