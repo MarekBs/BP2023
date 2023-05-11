@@ -1,0 +1,17 @@
+#loginForm{
+    margin: 3rem auto 2rem ; 
+    width: 400px;
+}
+
+.modal {
+    top: 4rem !important;
+}
+  
+
+@media screen and (max-width: 500px){
+    #loginForm{
+        width: 100%;
+    }
+  
+}
+  
