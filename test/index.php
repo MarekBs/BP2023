@@ -2,6 +2,11 @@
 
 require_once 'config.php';
 session_start();
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
+    header("location: restricted.php");
+    exit;
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST['action'] == 'register') {
@@ -121,6 +126,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
     </header>
     <main style="width: 80%; margin: auto;">
+    <div style="text-align: center; margin-top: 2rem;">
+       <h3 style="color:darkblue">Otestuj si svoje vedomosti v TESTE.</h3>
+    <p>Pre prístup do testu sa musíš prihlásiť !</p> 
+    </div>
+    
         <!-- Login form -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
