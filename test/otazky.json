@@ -1,13 +1,13 @@
 [
   {
-    "question": "Aká je definícia matice?",
+    "question": "Čo je matica typu m x n?",
     "answers": [
-      "Matice je grafické zobrazenie matematického problému.",
-      "Matice je usporiadaný zoznam čísel usporiadaných do riadkov a stĺpcov.",
-      "Matice je základná jednotka pre výpočty v počítačovej grafike.",
-      "Matice je matematický operátor používaný na derivovanie funkcií."
+      "Sústava mn čísiel usporiadaných v tvare obdĺžnikovej 'tabuľky' s m riadkami a n stĺpcami.",
+      "Sústava m + n čísiel usporiadaných v tvare obdĺžnikovej 'tabuľky' s m riadkami a n stĺpcami.",
+      "Sústava m * n čísiel usporiadaných v tvare obdĺžnikovej 'tabuľky' s m riadkami a n stĺpcami.",
+      "Sústava m / n čísiel usporiadaných v tvare obdĺžnikovej 'tabuľky' s m riadkami a n stĺpcami."
     ],
-    "correctAnswer": 1
+    "correctAnswer": 0
   },
   {
     "question": "Aká je perioda funkcie sinus?",
@@ -91,6 +91,77 @@
       "Matica je v redukovanom stupňovitom tvare, ak má všetky prvky na diagonále rovné jednej."
     ],
     "correctAnswer": 0
+  },
+  {
+    "question": "Aký je definičný obor lineárnej funkcie f(x) = mx + c?",
+    "answers": [
+      "Definičný obor sú všetky kladné reálne čísla.",
+      "Definičný obor sú všetky záporné reálne čísla.",
+      "Definičný obor sú všetky reálne čísla.",
+      "Definičný obor závisí od hodnoty koeficientov m a c."
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Aká je správna derivácia funkcie f(x) = 3x^2 + 2x + 1?",
+    "answers": [
+      "f'(x) = 6x + 2",
+      "f'(x) = 3x + 1",
+      "f'(x) = 3x^2 + 2x + 1",
+      "f'(x) = 6x^2 + 2x + 1"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Ktorý z nasledujúcich predpisov kvadratických funkcií má obor hodnôt <1, ∞)?",
+    "answers": [
+      "f(x) = -x^2 + 2x + 3",
+      "f(x) = 2x^2 + 3x + 1",
+      "f(x) = x^2 + 4x + 5",
+      "f(x) = -2x^2 - 5x - 1"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Lineárna funkcia je:",
+    "answers": [
+      "rastúca, ak smernica je záporná",
+      "klesajúca, ak smernica je kladná",
+      "rastúca, ak smernica je kladná",
+      "klesajúca, ak smernica je záporná"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Čo je funkcia?",
+    "answers": [
+      "Predpis, podľa ktorého každému reálnemu číslu x z množiny A priradíme práve jedno reálne číslo y z množiny B.",
+      "Predpis, podľa ktorého každému reálnemu číslu y z množiny A priradíme práve jedno reálne číslo x z množiny B.",
+      "Predpis, podľa ktorého každému reálnemu číslu x z množiny A priradíme viacero reálnych čísel y z množiny B.",
+      "Predpis, podľa ktorého každému reálnemu číslu y z množiny A priradíme viacero reálnych čísel x z množiny B."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Čo ovplyvňuje, či je logaritmická funkcia rastúca alebo klesajúca?",
+    "answers": [
+      "Exponent logaritmu",
+      "Konštanta logaritmu",
+      "Argument logaritmu",
+      "Znamienko základu logaritmu"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Čo je grafom kvadratickej funkcie?",
+    "answers": [
+      
+      "Grafom kvadratickej funkcie je priamka.",
+      "Grafom kvadratickej funkcie je parabola.",
+      "Grafom kvadratickej funkcie je krivka.",
+      "Grafom kvadratickej funkcie je hyperbola."
+    ],
+    "correctAnswer": 1
   }
   
   
