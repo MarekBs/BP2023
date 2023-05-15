@@ -1,9 +1,12 @@
 <?php
+session_start();
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 require_once 'config.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-session_start();
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

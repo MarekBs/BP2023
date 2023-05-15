@@ -98,11 +98,11 @@ function finishTest() {
 
   // Create the data object to send in the request
   var data = {
-    score: result
+    score: score
   };
 
   // Send the POST request
-  fetch('restricted.php', {
+  fetch('postScore.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
