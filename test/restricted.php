@@ -52,7 +52,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link home"
-                                style=" color: white; background-color: #504e4e; border-radius: 4px;"
+                                style=" color: white;margin-top: 0.5rem; border-radius: 4px;"
                                 href=" ../landingPage/index.html">
                                 <svg style=" margin-right: 2px; margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -68,13 +68,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </nav>
     </header>
-    <main style="width: 80%; margin: auto; text-align: center;">
-    <div style=" text-align: left; margin-top: 2rem;"><h3>Vitaj <?php echo ($_SESSION["username"]) ?></h3>
+    <main>
+    <div style=" text-align: left; margin: 2rem auto 1rem auto; width: 80%;"><h3>Vitaj <?php echo ($_SESSION["username"]) ?></h3>
     <a href="logout.php" class="btn btn-danger">Odhlásiť sa!</a>
-    </div>
     <hr>
+    </div>
+    
     <br>
-    <section class="w-50" style="margin: auto;"> 
+    <section id="testDiv"> 
     <h1 class="text-center">Test</h1>
     <button id="start-button">Štart</button>
   <div id="question-container"></div>

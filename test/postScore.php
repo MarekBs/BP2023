@@ -1,10 +1,10 @@
 <?php
-
+require_once 'config.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-require_once 'config.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $score = $_POST["score"]; // Assuming the score is sent as a JSON object with a "score" property
@@ -21,7 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode($response);
 }
 ;
-
-
 
 ?>

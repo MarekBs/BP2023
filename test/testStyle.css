@@ -17,7 +17,7 @@
     background-color: rgb(77, 77, 77) ;
     padding: 10px 5px ;
     border-radius: 5px ;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     
   }
   #redoBtn {
@@ -52,3 +52,28 @@
     background-color: rgb(167, 37, 37);
     color: white;
   }
+  #testDiv{
+    width: 40rem;
+    margin: auto auto 5rem auto;
+  }
+  main {
+    width: 80%; 
+    margin: auto; 
+    text-align: center;
+}
+
+  @media screen and (max-width: 795px){
+    #testDiv{
+      width: 95%;
+    }
+  
+}
+
+@media screen and (max-width: 500px){
+  main{
+      width: 100%;
+  }
+
+}
+
+  

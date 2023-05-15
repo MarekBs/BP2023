@@ -205,13 +205,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     </main>
-    <footer class="text-center text-lg-start" style="background-color: lightgray; height: 4rem;">
-        <!-- Copyright -->
-        <p style="color: white; margin-bottom: 0; padding-top: 1rem; text-align: center;">© 2023 Copyright: Marek Belis
-        </p>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <footer class="fixed-bottom text-center text-lg-start bg-light" style="height: 4rem;">
+  <div class="container">
+    <p class="text-center mb-0 py-1">© 2023 Copyright: Marek Belis</p>
+  </div>
+</footer>
     <!-- Popper.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
