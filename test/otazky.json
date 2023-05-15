@@ -1,0 +1,98 @@
+[
+  {
+    "question": "Aká je definícia matice?",
+    "answers": [
+      "Matice je grafické zobrazenie matematického problému.",
+      "Matice je usporiadaný zoznam čísel usporiadaných do riadkov a stĺpcov.",
+      "Matice je základná jednotka pre výpočty v počítačovej grafike.",
+      "Matice je matematický operátor používaný na derivovanie funkcií."
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Aká je perioda funkcie sinus?",
+    "answers": [
+      "Perioda funkcie sinus je π/2.",
+      "Perioda funkcie sinus je π.",
+      "Perioda funkcie sinus je 2π.",
+      "Perioda funkcie sinus je 4π."
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Aký je definičný obor kvadratickej funkcie f(x) = ax^2 + bx + c?",
+    "answers": [
+      "Definičný obor závisí od hodnoty koeficientov a, b a c.",
+      "Definičný obor sú všetky kladné reálne čísla.",
+      "Definičný obor sú všetky záporné reálne čísla.",
+      "Definičný obor sú všetky reálne čísla."
+      
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Čo je transponovaná matica?",
+    "answers": [
+      "Transponovaná matica je matica, v ktorej sú prvky vymenené v rámci riadkov a stĺpcov.",
+      "Transponovaná matica je matica, ktorá je vynásobená svojím determinantom.",
+      "Transponovaná matica je matica, ktorá obsahuje iba nulové prvky.",
+      "Transponovaná matica je matica, ktorá má rovnaký počet riadkov a stĺpcov."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Kedy hovoríme o matici, že je regulárna?",
+    "answers": [
+      
+      "Matica je regulárna, ak obsahuje iba nenulové prvky.",
+      "Matica je regulárna, ak má rovnaký počet riadkov a stĺpcov.",
+      "Matica je regulárna, ak jej determinant je nenulový.",
+      "Matica je regulárna, ak sú jej prvky usporiadané vzostupne."
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Kedy hovoríme o matici, že je singulárna?",
+    "answers": [
+      "Matica je singulárna, ak obsahuje iba nulové prvky.",
+      "Matica je singulárna, ak jej determinant je nulový.",
+      "Matica je singulárna, ak má rovnaký počet riadkov a stĺpcov.",
+      "Matica je singulárna, ak sú jej prvky usporiadané zostupne."
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Čo je rozšírená matica sústavy lineárnych rovníc?",
+    "answers": [
+      
+      "Rozšírená matica je matica, ktorá obsahuje iba koeficienty lineárnych rovníc sústavy.",
+      "Rozšírená matica je matica, ktorá obsahuje iba pravé strany lineárnych rovníc sústavy.",
+      "Rozšírená matica je matica, ktorá obsahuje koeficienty a pravé strany lineárnych rovníc sústavy.",
+      "Rozšírená matica je matica, ktorá obsahuje iba premenné lineárnych rovníc sústavy."
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Kedy matica nemá inverznú maticu?",
+    "answers": [
+      "Matica nemá inverznú maticu, ak jej prvky nie sú reálne čísla.",
+      "Matica nemá inverznú maticu, ak má viac ako jednu nulovú riadkovú alebo stĺpcovú sumu.",
+      "Matica nemá inverznú maticu, ak jej veľkosť nie je štvorcová.",
+      "Matica nemá inverznú maticu, ak jej determinant je nulový."
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Čo znamená, že matica je v redukovanom stupňovitom tvare?",
+    "answers": [
+      "Matica je v redukovanom stupňovitom tvare, ak má všetky riadky s nulovými prvky pod riadkami s nenulovými prvky.",
+      "Matica je v redukovanom stupňovitom tvare, ak má všetky stĺpce s nulovými prvky pred stĺpcami s nenulovými prvky.",
+      "Matica je v redukovanom stupňovitom tvare, ak má iba jeden riadok a jeden stĺpec.",
+      "Matica je v redukovanom stupňovitom tvare, ak má všetky prvky na diagonále rovné jednej."
+    ],
+    "correctAnswer": 0
+  }
+  
+  
+]
+

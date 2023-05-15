@@ -26,6 +26,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
     <link rel="icon" type="image/png" href="../images/fav.png">
+    <link rel="stylesheet" href="testStyle.css">
     <title>Otestuj sa !</title>
 </head>
 
@@ -68,20 +69,29 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </header>
     <main style="width: 80%; margin: auto; text-align: center;">
     <div style=" text-align: left; margin-top: 2rem;"><h3>Vitaj <?php echo ($_SESSION["username"]) ?></h3>
-    <a href="logout.php" class="btn btn-danger">Odhlásiť sa!</a></div>
+    <a href="logout.php" class="btn btn-danger">Odhlásiť sa!</a>
+    </div>
+    <hr>
+    <br>
+    <section class="w-50" style="margin: auto;"> 
+    <h1 class="text-center">Test</h1>
+    <button id="start-button">Štart</button>
+  <div id="question-container"></div>
+  </section>
+  <button id = "redoBtn" onclick="startTest();">Nový test</button>
+  <script src="script.js"></script>
     
 
         
 
 
     </main>
-    <footer class="text-center text-lg-start" style="background-color: lightgray; height: 4rem;">
-        <!-- Copyright -->
-        <p style="color: white; margin-bottom: 0; padding-top: 1rem; text-align: center;">© 2023 Copyright: Marek Belis
-        </p>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <footer class="fixed-bottom text-center text-lg-start bg-light" style="height: 4rem;">
+  <div class="container">
+    <p class="text-center mb-0 py-1">© 2023 Copyright: Marek Belis</p>
+  </div>
+</footer>
+
     <!-- Popper.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
