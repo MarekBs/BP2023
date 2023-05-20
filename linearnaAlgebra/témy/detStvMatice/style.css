@@ -6,6 +6,7 @@
 }
 
 
+
 /* Chrome, Safari, Edge, Opera */
 .inputNum::-webkit-outer-spin-button,
 .inputNum::-webkit-inner-spin-button {
@@ -67,4 +68,18 @@ input[type=number] {
 #matrix-output table {
   border-right: 2px solid #f5c05d;
   border-left: 2px solid #f5c05d;
+}
+
+.grid {
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:0.5rem; 
+    justify-items: center; 
+    align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .grid {
+    display: block;
+  }
 }

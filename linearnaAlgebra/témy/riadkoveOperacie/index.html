@@ -66,14 +66,17 @@
                         <ul style="display: inline-block; text-align: left; margin: 2rem auto;" class="rules">
                            <li>O1: Vzájomná výmena niektorých dvoch riadkov matice.</li>
                            <li>O2: Vynásobenie niektorého riadku nenulovou konštantou.</li>
-                           <li>O2: Pripočítanie násobku jedného riadku matice k inému riadku.</li>
+                           <li>O3: Pripočítanie násobku jedného riadku matice k inému riadku.</li>
                         </ul>
                      </div>
                      </p>
-                     <p>Príklad 1. Nižšie uvedená matica <strong>B</strong> vznikla z matice <strong>A</strong>
+
+                     <p><strong>Príklad: </strong>Nižšie uvedená matica <strong>B</strong> vznikla z matice
+                        <strong>A</strong>
                         postupnou aplikáciou nasledujúcich troch riadkových operácií: Vynásobením druhého riadku
                         konštantou <strong>-1</strong>, pripočítaním trojnásobku tretieho riadku k prvému riadku, a
-                        napokon výmenou druhého a tretieho riadku.</p>
+                        napokon výmenou druhého a tretieho riadku.
+                     </p>
                      <br><br>
                      <div class="container">
                         <div class="row">
@@ -98,7 +101,7 @@
 
 
                      <br><br>
-                     <p>Dve matice nazveme ekvivalentné, ak jednu možno utvorit' z druhej pomocou konečnej postupnosti
+                     <p>Dve matice nazveme ekvivalentné, ak jednu možno vytvorit' z druhej pomocou konečnej postupnosti
                         riadkových operácií O1, O2, O3. Pre ekvivalenciu matíc rezervujeme symbol \(\cong\)
                         ; pre matice z nášho príkladu teda platí \({\bf A}\cong {\bf B}\).</p>
                   </div>
@@ -132,7 +135,7 @@
                               d & e & f \\
                               g & h & i
                               \end{pmatrix}
-                              \xrightarrow{R_2 \leftarrow 3R_2}
+                              \xrightarrow{R_2\ = \ 3R_2}
                               \begin{pmatrix}
                               a & b & c \\
                               3d & 3e & 3f \\
@@ -151,7 +154,7 @@
                               d & e & f \\
                               g & h & i
                               \end{pmatrix}
-                              \xrightarrow{R_1 \leftrightarrow R_1 + 2 R_2}
+                              \xrightarrow{R_1 \ = \ R_1 + 2 R_2}
                               \begin{pmatrix}
                               a + 2d & b + 2e & c + 2f \\
                               d & e & f \\

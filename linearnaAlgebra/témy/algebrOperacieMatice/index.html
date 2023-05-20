@@ -57,7 +57,8 @@
                <ul class="nav nav-tabs nav-fill" style="margin-bottom: 3rem;" id="myTab" role="tablist"></ul>
                <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="theory" role="tabpanel" aria-labelledby="theory-tab">
-                     <p>K základným algebraickým operáciám s maticami patria vynásobenie matice konštantou, súčet matíc,
+                     <p class="highlightNone">K základným algebraickým operáciám s maticami patria vynásobenie matice
+                        konštantou, súčet matíc,
                         a súčin matíc. Uvedieme tu aj definíciu transponovanej matice a jej vzt'ah k algebraickým
                         operáciám.</p>
                      <br><br>
@@ -75,9 +76,9 @@
                      </div>
                      <br><br>
                      <div>
-                        <h6 style="color: darkblue">Súčet matíc:</h6>
+                        <h6 class="highlightNone" style="color: darkblue">Súčet matíc:</h6>
 
-                        <p>Súčet matíc je definovaný len pre matice rovnakého typu: Ak $${\bf
+                        <p class="highlightNone">Súčet matíc je definovaný len pre matice rovnakého typu: Ak $${\bf
                            A}=[a_{ij}]{m\times n}$$ a $${\bf B}=[b_{ij}]{m\times
                            n}$$ sú dve matice typu $$m\times n$$, ich súčet je matica
                            $${\bf C}={\bf A}+{\bf B}$$, $${\bf C}=[c_{ij}]{m
@@ -118,14 +119,15 @@
                         $$\bf B$$ .
                         </p>
                      </div>
-                     <p style="margin-top: 2rem;">Pre počítanie s maticami platia analógie pravidiel platných pre
+                     <p class="highlightNone" style="margin-top: 2rem;">Pre počítanie s maticami platia analógie
+                        pravidiel platných pre
                         algebraické
                         operácie s reálnymi
                         číslami: komutatívny a asociatívny zákon pre sčítanie matíc, distributívny zákon pre násobenie
                         vzhl'adom k sčítaniu, a asociatívny zákon pre násobenie matíc. Násobenie matíc vo všeobecnosti
                         nie je komutatívne.</p>
                      <br><br>
-                     <section>
+                     <section class="highlightNone">
                         <h6 style="color: darkblue">Transponovaná matica:</h6>
                         <p>Nech $${\bf A}=[a_{ij}]$$ je matica typu $$m\times
                            n$$. Maticu
@@ -159,39 +161,40 @@
                      </section>
                   </div>
                   <div class="tab-pane fade" id="sample-problems" role="tabpanel" aria-labelledby="sample-problems-tab">
-                     <p>1. Vynásob maticu konštantou.</p>
-                     <br>
-                     <div style=" display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap:
-                     2rem; justify-items: center; align-items: center;">
-                        <div>
-                           $$
-                           \begin{pmatrix}
-                           2 & 2 & 3 \\
-                           1 & 4 & 2 \\
-                           0 & 0 & 2
-                           \end{pmatrix}
-                           \times 2
-                           =
-                           $$
+                     <section class="highlightNone">
+                        <p>1. Vynásob maticu konštantou.</p>
+                        <br>
+                        <div class="grid">
+                           <div class="mathjax_matrix">
+                              $$
+                              \begin{pmatrix}
+                              2 & 2 & 3 \\
+                              1 & 4 & 2 \\
+                              0 & 0 & 2
+                              \end{pmatrix}
+                              \times 2
+
+                              $$
+                           </div>
+                           <div class="mathjax_matrix">
+                              $$
+                              \begin{pmatrix}
+                              1 & 12 & 3 & 3 \\
+                              1 & 8 & 1 & 3\\
+                              12 & 3 & 2 & 3
+                              \end{pmatrix}
+                              \times 1.5
+
+                              $$
+                           </div>
                         </div>
-                        <div>
-                           $$
-                           \begin{pmatrix}
-                           1 & 12 & 3 & 3 \\
-                           1 & 8 & 1 & 3\\
-                           12 & 3 & 2 & 3
-                           \end{pmatrix}
-                           \times 1.5
-                           =
-                           $$
-                        </div>
-                     </div>
+                     </section>
+
                      <br><br>
-                     <section style="background-color: rgb(245, 245, 245); padding: 2rem; border-radius: 6px;">
+                     <section class="highlight">
                         <p>2. Sčítaj matice.</p>
-                        <div
-                           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
-                           <div>$$\begin{pmatrix}
+                        <div class="grid">
+                           <div class="table-responsive mathjax_matrix">$$\begin{pmatrix}
                               1 & 2 & 3 \\
                               4 & 5 & 6 \\
                               7 & 8 & 9 \\
@@ -202,8 +205,8 @@
                               6 & 5 & 4 \\
                               3 & 2 & 1 \\
                               \end{pmatrix}
-                              =$$</div>
-                           <div>
+                              $$</div>
+                           <div class="table-responsive mathjax_matrix">
                               $$\begin{pmatrix}
                               2 & 1 & 0 & 3 \\
                               4 & 2 & 5 & 0 \\
@@ -217,77 +220,79 @@
                               1 & 0 & 2 & 3 \\
                               3 & 5 & 2 & 1 \\
                               \end{pmatrix}
-                              =$$
+                              $$
                            </div>
 
                         </div>
                      </section>
                      <br><br>
-                     <p>Vynásob matice.</p>
-                     <br>
-                     <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
-                        <div>$$\begin{pmatrix}
-                           1 & 2 & 3 \\
-                           4 & 5 & 6 \\
-                           7 & 8 & 9 \\
-                           \end{pmatrix}
-                           \times
-                           \begin{pmatrix}
-                           9 & 8 & 7 \\
-                           6 & 5 & 4 \\
-                           3 & 2 & 1 \\
-                           \end{pmatrix}
-                           =$$</div>
-                        <div>
-                           $$\begin{pmatrix}
-                           1 & 2 & 3 \\
-                           4 & 5 & 6 \\
-                           \end{pmatrix}
-                           \times
-                           \begin{pmatrix}
-                           2 & 1 \\
-                           3 & 4 \\
-                           5 & 6 \\
-                           \end{pmatrix}
-                           =$$
+                     <section class="highlightNone">
+                        <p>3. Vynásob matice.</p>
+                        <br>
+                        <div class="grid">
+                           <div class="mathjax_matrix">$$\begin{pmatrix}
+                              1 & 2 & 3 \\
+                              4 & 5 & 6 \\
+                              7 & 8 & 9 \\
+                              \end{pmatrix}
+                              \times
+                              \begin{pmatrix}
+                              9 & 8 & 7 \\
+                              6 & 5 & 4 \\
+                              3 & 2 & 1 \\
+                              \end{pmatrix}
+                              $$</div>
+                           <div class="mathjax_matrix">
+                              $$\begin{pmatrix}
+                              1 & 2 & 3 \\
+                              4 & 5 & 6 \\
+                              \end{pmatrix}
+                              \times
+                              \begin{pmatrix}
+                              2 & 1 \\
+                              3 & 4 \\
+                              5 & 6 \\
+                              \end{pmatrix}
+                              $$
+                           </div>
+                           <div class="table-responsive mathjax_matrix">
+                              $$\begin{pmatrix}
+                              2 & 3 & 1 \\
+                              4 & 2 & 5 \\
+                              3 & 0 & 1 \\
+                              6 & 7 & 2 \\
+                              \end{pmatrix}
+                              \times
+                              \begin{pmatrix}
+                              1 & 2 & 3 & 4 & 5 \\
+                              6 & 7 & 8 & 9 & 10 \\
+                              11 & 12 & 13 & 14 & 15 \\
+                              \end{pmatrix}
+                              $$
+                           </div>
                         </div>
-                        <div>
-                           $$\begin{pmatrix}
-                           2 & 3 & 1 \\
-                           4 & 2 & 5 \\
-                           3 & 0 & 1 \\
-                           6 & 7 & 2 \\
-                           \end{pmatrix}
-                           \times
-                           \begin{pmatrix}
-                           1 & 2 & 3 & 4 & 5 \\
-                           6 & 7 & 8 & 9 & 10 \\
-                           11 & 12 & 13 & 14 & 15 \\
-                           \end{pmatrix}
-                           =$$
+                        <br><br>
+                        <p>4. Transponuj matice.</p>
+                        <br>
+                        <div class="grid">
+                           <div class="mathjax_matrix">$$\begin{pmatrix}
+                              1 & 2 \\
+                              3 & 4 \\
+                              5 & 6 \\
+                              \end{pmatrix}^\intercal
+                              $$</div>
+                           <div class="mathjax_matrix">$$\begin{pmatrix}
+                              2 & 6 & 3 & 8 \\
+                              1 & 9 & 4 & 5 \\
+                              7 & 8 & 2 & 4 \\
+                              5 & 1 & 7 & 3 \\
+                              0 & 6 & 9 & 2 \\
+                              \end{pmatrix}^\intercal
+                              $$</div>
                         </div>
-                     </div>
-                     <br><br>
-                     <p>Transponuj matice.</p>
-                     <br>
-                     <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 2rem; justify-items: center; align-items: center;">
-                        <div>$$\begin{pmatrix}
-                           1 & 2 \\
-                           3 & 4 \\
-                           5 & 6 \\
-                           \end{pmatrix}^\intercal
-                           =$$</div>
-                        <div>$$\begin{pmatrix}
-                           2 & 6 & 3 & 8 \\
-                           1 & 9 & 4 & 5 \\
-                           7 & 8 & 2 & 4 \\
-                           5 & 1 & 7 & 3 \\
-                           0 & 6 & 9 & 2 \\
-                           \end{pmatrix}^\intercal
-                           =$$</div>
-                     </div>
+                     </section>
+
+
 
                   </div>
                   <div class="tab-pane fade" id="practice-problems" role="tabpanel"

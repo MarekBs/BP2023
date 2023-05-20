@@ -112,6 +112,11 @@ mjx-container.MathJax {
   padding: 1rem;
   border-radius: 6px;
 }
+.highlightNone {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 6px;
+}
 .MathJax {
   display: inline !important;
   border: none !important;
@@ -139,6 +144,13 @@ mjx-container.MathJax {
 
 .navbar-light {
   background-color: rgb(235, 235, 94);;
+}
+.linkTo {
+  text-decoration: none;
+  color: /* Bootstrap blue */ #007bff;
+}
+.linkTo:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 992px){

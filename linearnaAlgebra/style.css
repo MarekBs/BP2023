@@ -59,6 +59,8 @@ body {
   display: none;
 }
 
+
+
 @media screen and (max-width: 992px) {
   .nav-link {
     text-align: center;
