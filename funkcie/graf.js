@@ -2,33 +2,30 @@ var parameters = {
   target: '#myFunction',
   graphType: 'polyline',
   data: [{
-    fn: 'sin(x)', 
-    graphType: 'polyline',
-    visible: "false",
-    derivative: {
-      fn: "cos(x)",
+      fn: 'sin(x)',
       graphType: 'polyline',
-      x0: 5,
-      
-    }
- }/* ,{
-  fn:"sin(1)-(1/cos(1))(x-1)"
- } */
-  
-  
-  
- ],
- annotations: [ {
-  x: 0,
-  text: 'y',
-}, {
-  y: 0,
-  text: 'x'
-}],
+      visible: "false",
+      derivative: {
+          fn: "cos(x)",
+          graphType: 'polyline',
+          x0: 5,
+
+      }
+  }],
+  annotations: [{
+      x: 0,
+      text: 'y',
+  }, {
+      y: 0,
+      text: 'x'
+  }],
   grid: true,
-  yAxis: {domain: [-1, 1]},
-  xAxis: {domain: [0, 2*Math.PI]}
-  
+  yAxis: {
+      domain: [-1, 1]
+  },
+  xAxis: {
+      domain: [0, 2 * Math.PI]
+  }
 };
 
 function plot(width) {
