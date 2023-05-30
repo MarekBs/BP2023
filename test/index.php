@@ -44,7 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(":test_count", $test_count, PDO::PARAM_STR);
 
             $stmt->execute();
-            echo '<script>alert("Registrácia prebehla úspešne, môžeš sa teraz prihlásiť!");</script>';
+            echo '
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("regSuccesBtn").click();
+        });
+    </script>';
 
         }
     } elseif ($_POST['action'] == 'login') {
@@ -216,6 +221,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary d-none" id="regSuccesBtn" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registrácia - info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+      Registrácia prebehla úspešne, teraz sa môžeš prihlásiť !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavrieť</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
