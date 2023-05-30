@@ -7,7 +7,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
     exit;
 }
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST['action'] == 'register') {
 
@@ -20,7 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user) {
             // User already exists, show error message or redirect to registration page
-            echo '<script>alert("Používateľ s rovnakým menom už existuje, zvol si iné meno!");</script>';
+            echo '
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById("alertNameReg").style.visibility = "visible";
+                    document.getElementById("regLink").click();
+                });
+            </script>';
         } else {
             // Insert new user record
             $sql = "INSERT INTO user (meno, heslo, test_count) VALUES (:name, :password,:test_count)";
@@ -59,14 +64,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["username"] = $username;
                 header("location: restricted.php");
             } else {
-                echo '<script>alert("Nesprávne meno alebo heslo!");</script>';
+                echo '
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("alertName").style.visibility = "visible";
+        });
+    </script>';
             }
         } else {
-            echo '<script>alert("Nesprávne meno alebo heslo!");</script>';
+            echo '
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("alertName").style.visibility = "visible";
+        });
+    </script>';
         }
     }
 }
-
 ?>
 
 
@@ -131,6 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p>Pre prístup do testu sa musíš prihlásiť !</p> 
     </div>
     
+    
         <!-- Login form -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -148,13 +163,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <input type="hidden" name="action" value="login">
 
-
+            <p class="text-center" id="alertName" style="color:red">Nesprávne meno alebo heslo!</p>
             <div class="d-flex justify-content-center mt-4">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary">Prihlásiť sa</button>
             </div>
 
             <p class="text-center mt-3">
-                <small>Ak ešte nemáš účet <a href="#" data-toggle="modal" data-target="#registrationModal">zaregistruj
+                <small>Ak ešte nemáš účet <a id=regLink href="#" data-toggle="modal" data-target="#registrationModal">zaregistruj
                         sa tu.</a> </small>
             </p>
         </form>
@@ -190,8 +205,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group">
                         <label for="password">Heslo:</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password1" name="password" required>
                     </div>
+                    <p class="text-center" id="alertNameReg" style="color:red">Používateľ s rovnakým menom už existuje, zvol si iné meno!</p>
                     <input type="hidden" name="action" value="register">
                     <button type="submit" class="btn btn-primary btn-block mt-4">Registrovať sa</button>
                 </form>
@@ -217,6 +233,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+        <script defer>
+    $('#alertName').css('visibility', 'hidden');
+  $('#alertNameReg').css('visibility', 'hidden');
+</script>
+
 </body>
 
 </html>
+

@@ -96,29 +96,4 @@ function finishTest() {
   questionContainer.innerHTML = result;
   redo.style.display = 'block';
 
-  // Create the data object to send in the request
-  var data = {
-    score: score
-  };
-
-  // Send the POST request
-  fetch('postScore.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(response => {
-    // Handle the response from the server if needed
-    // For example, you can check if the request was successful
-    if (response.ok) {
-      console.log('POST request successful');
-    } else {
-      console.error('POST request failed');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
 }
