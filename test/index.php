@@ -155,7 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <form id="loginForm" class="p-4 border rounded" method="POST" action="/BP2023/test/">
+        <form id="loginForm" class="p-4 border rounded" method="POST" action="#">
             <h2 class="mb-4">Prihlásiť sa</h2>
             <div class="form-group">
                 <label for="username">Meno:</label>
@@ -202,7 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/BP2023/test/">
+                <form method="POST" action="#">
                     <div class="form-group">
                         <label for="name">Meno:</label>
                         <input type="text" class="form-control" id="name" name="name" required>
