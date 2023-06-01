@@ -178,6 +178,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         sa tu.</a> </small>
             </p>
         </form>
+        <br>
+        <br>
 
         <!-- Add the Bootstrap JavaScript library -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
