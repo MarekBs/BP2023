@@ -11,7 +11,7 @@ function changeMode(){
     
     if(swch.checked){
       header.style.backgroundColor = "black";
-        changeColors("url('../images/newGM.svg')","#172130","white","#101722","white","white","white","white");
+        changeColors("url('../images/newGM3.svg')","#172130","white","#101722","white","white","white","white");
         changeBG();
         
         
@@ -20,7 +20,7 @@ function changeMode(){
     }
     else {
       header.style.backgroundColor = "white";
-        changeColors("url('../images/newBG.svg')","#ffffff","black","#054363","grey","black","black","grey");
+        changeColors("url('../images/newBG3.svg')","#ffffff","black","#054363","grey","black","black","grey");
         changeBG();
     }
     

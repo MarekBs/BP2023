@@ -1,0 +1,20 @@
+Webová aplikácia Matematika 1
+
+Návod na spustenie:
+Funkčná webstránka je prístupná na : matematika1.site
+Pre lokálne spustenie je potrebné nakonfigurovať databázu. (stu_mat1.sql súbor je dump z databázy)
+Hlavná stránka sa nachádza v priečinku landingPage/index.html
+
+Databáza funkčného riešenia je prístupná na adrese https://dbadmin.r5.websupport.sk/
+Prihlasovacie údaje: sú rovnaké ako v priečinku config.php
+
+Použité knižnice :
+
+Bootstrap: https://getbootstrap.com/
+JQuery: https://jquery.com/
+MathJS: https://mathjs.org/
+MathJax: https://www.mathjax.org/#gettingstarted
+FontAwesome: https://fontawesome.com/
+Google Fonts: https://fonts.google.com/
+Function plot: https://mauriciopoppe.github.io/function-plot/
+PopperJS: https://popper.js.org/
